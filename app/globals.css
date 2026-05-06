@@ -889,6 +889,17 @@ a:focus {
   font: inherit;
 }
 
+.contact-form input:disabled,
+.contact-form textarea:disabled,
+.contact-form button:disabled {
+  cursor: not-allowed;
+  opacity: 0.72;
+}
+
+.contact-honeypot {
+  display: none;
+}
+
 .contact-status {
   margin: 0 0 0.7rem;
   padding: 0.55rem 0.65rem;

@@ -152,6 +152,11 @@ export const content = {
       emailInput: "Email",
       messageInput: "Μήνυμα",
       submit: "Αποστολή μηνύματος",
+      sending: "Αποστολή...",
+      success:
+        "Το μήνυμά σας στάλθηκε επιτυχώς. Θα λάβετε επιβεβαίωση στο email σας.",
+      error:
+        "Δεν ήταν δυνατή η αποστολή του μηνύματος. Δοκιμάστε ξανά ή στείλτε μας email.",
     },
     frontPageContent:
       "Η αυτοφροντίδα δεν χρειάζεται να είναι σύνθετη. Μικρές και σταθερές κινήσεις μέσα στην εβδομάδα μπορούν να ενισχύσουν την ψυχική ανθεκτικότητα.",
@@ -288,6 +293,11 @@ export const content = {
       emailInput: "Email",
       messageInput: "Message",
       submit: "Send message",
+      sending: "Sending...",
+      success:
+        "Your message was sent successfully. You will receive a confirmation by email.",
+      error:
+        "The message could not be sent. Please try again or email us directly.",
     },
     frontPageContent:
       "Self-care does not need to be complicated. Small and steady actions during the week can strengthen psychological resilience.",

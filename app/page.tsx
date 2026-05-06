@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ContactForm } from "@/components/contact-form";
 import { SiteShell } from "@/components/site-shell";
 import { content, resolveLanguage, services } from "@/lib/site-content";
 
@@ -195,28 +196,7 @@ export default async function Home({ searchParams }: HomePageProps) {
                 <strong>{t.contact.addressLabel}</strong> {t.location.address}
               </p>
             </div>
-            <form
-              className="contact-form"
-              action={`mailto:${t.contact.email}`}
-              method="post"
-              encType="text/plain"
-            >
-              <label>
-                <span>{t.contact.nameInput}</span>
-                <input type="text" name="name" required />
-              </label>
-              <label>
-                <span>{t.contact.emailInput}</span>
-                <input type="email" name="email" required />
-              </label>
-              <label>
-                <span>{t.contact.messageInput}</span>
-                <textarea name="message" rows={5} required />
-              </label>
-              <button className="button" type="submit">
-                {t.contact.submit}
-              </button>
-            </form>
+            <ContactForm language={language} labels={t.contact} />
           </div>
         </section>
 
