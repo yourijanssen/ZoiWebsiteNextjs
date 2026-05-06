@@ -1373,18 +1373,6 @@ body::after,
   gap: 48px;
 }
 
-.breadcrumb-strip {
-  width: 100%;
-  border-bottom: 1px solid #edf1ee;
-  background: #fff;
-  color: #7a8781;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  padding: 0.82rem max(1.2rem, calc((100vw - var(--container)) / 2));
-  text-transform: uppercase;
-}
-
 .therapist-hero {
   display: grid;
   min-height: clamp(520px, 72vh, 760px);

@@ -16,7 +16,6 @@ export default async function Home({ searchParams }: HomePageProps) {
   return (
     <SiteShell language={language}>
       <main className="site-main container">
-        <div className="breadcrumb-strip">Home</div>
         <section className="therapist-hero">
           <div className="hero-copy">
             <p className="hero-kicker">{t.hero.kicker}</p>
