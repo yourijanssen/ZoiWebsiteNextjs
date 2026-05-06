@@ -1,4 +1,5 @@
 import { Resend } from "resend";
+import nodemailer from "nodemailer";
 
 export const runtime = "nodejs";
 
@@ -21,6 +22,14 @@ type ContactPayload = {
   message?: unknown;
   language?: unknown;
   website?: unknown;
+};
+
+type EmailMessage = {
+  from: string;
+  to: string | string[];
+  replyTo?: string;
+  subject: string;
+  html: string;
 };
 
 // Escapes user-submitted values before inserting them in email HTML.
@@ -90,15 +99,50 @@ function buildVisitorEmail({
   };
 }
 
+// Sends emails through Ethereal when running locally without a production provider.
+async function sendWithLocalPreview(messages: EmailMessage[]) {
+  const testAccount = await nodemailer.createTestAccount();
+  const transporter = nodemailer.createTransport({
+    host: testAccount.smtp.host,
+    port: testAccount.smtp.port,
+    secure: testAccount.smtp.secure,
+    auth: {
+      user: testAccount.user,
+      pass: testAccount.pass,
+    },
+  });
+
+  const results = await Promise.all(
+    messages.map((message) => transporter.sendMail(message)),
+  );
+
+  return results
+    .map((result) => nodemailer.getTestMessageUrl(result))
+    .filter((url): url is string => Boolean(url));
+}
+
+async function sendWithResend(apiKey: string, messages: EmailMessage[]) {
+  const resend = new Resend(apiKey);
+  const results = await Promise.all(
+    messages.map((message) =>
+      resend.emails.send({
+        from: message.from,
+        to: message.to,
+        replyTo: message.replyTo,
+        subject: message.subject,
+        html: message.html,
+      }),
+    ),
+  );
+
+  const failedResult = results.find((result) => result.error);
+  if (failedResult?.error) {
+    throw new Error(failedResult.error.message);
+  }
+}
+
 export async function POST(request: Request) {
   const resendApiKey = process.env.RESEND_API_KEY;
-
-  if (!resendApiKey) {
-    return Response.json(
-      { error: "Email service is not configured." },
-      { status: 500 },
-    );
-  }
 
   let payload: ContactPayload;
 
@@ -117,43 +161,54 @@ export async function POST(request: Request) {
   const message = normalizeField(payload.message, 4000);
   const language = normalizeField(payload.language, 2) === "el" ? "el" : "en";
 
-  if (!name || !emailPattern.test(email) || message.length < 10) {
+  if (!name || !emailPattern.test(email) || !message) {
     return Response.json(
       { error: "Please fill in all required fields correctly." },
       { status: 400 },
     );
   }
 
-  const resend = new Resend(resendApiKey);
   const visitorEmail = buildVisitorEmail({ name, language });
-
-  const [adminResult, visitorResult] = await Promise.all([
-    resend.emails.send({
+  const messages: EmailMessage[] = [
+    {
       from: fromEmail,
       to: adminRecipients,
       replyTo: email,
       subject: `New contact form message from ${name}`,
       html: buildAdminEmail({ name, email, message }),
-    }),
-    resend.emails.send({
+    },
+    {
       from: fromEmail,
       to: email,
       subject: visitorEmail.subject,
       html: visitorEmail.html,
-    }),
-  ]);
+    },
+  ];
 
-  if (adminResult.error || visitorResult.error) {
+  try {
+    if (resendApiKey) {
+      await sendWithResend(resendApiKey, messages);
+
+      return Response.json({ ok: true, provider: "resend" });
+    }
+
+    if (process.env.NODE_ENV !== "production") {
+      const previews = await sendWithLocalPreview(messages);
+
+      return Response.json({ ok: true, provider: "ethereal", previews });
+    }
+
+    return Response.json(
+      { error: "Email service is not configured." },
+      { status: 500 },
+    );
+  } catch (error) {
     return Response.json(
       {
         error:
-          adminResult.error?.message ||
-          visitorResult.error?.message ||
-          "Email could not be sent.",
+          error instanceof Error ? error.message : "Email could not be sent.",
       },
       { status: 502 },
     );
   }
-
-  return Response.json({ ok: true });
 }

@@ -18,17 +18,26 @@ type ContactFormProps = {
 
 type SubmitState = "idle" | "sending" | "success" | "error";
 
+type ContactResponse = {
+  error?: string;
+  previews?: string[];
+  provider?: string;
+};
+
 // Submits contact requests to the server-side email route and reports form status.
 export function ContactForm({ language, labels }: ContactFormProps) {
   const [submitState, setSubmitState] = useState<SubmitState>("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const [previewUrls, setPreviewUrls] = useState<string[]>([]);
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    const form = event.currentTarget;
     setSubmitState("sending");
     setErrorMessage("");
+    setPreviewUrls([]);
 
-    const formData = new FormData(event.currentTarget);
+    const formData = new FormData(form);
 
     try {
       const response = await fetch("/api/contact", {
@@ -45,13 +54,14 @@ export function ContactForm({ language, labels }: ContactFormProps) {
         }),
       });
 
-      const result = (await response.json()) as { error?: string };
+      const result = (await response.json()) as ContactResponse;
 
       if (!response.ok) {
         throw new Error(result.error || labels.error);
       }
 
-      event.currentTarget.reset();
+      form.reset();
+      setPreviewUrls(result.previews || []);
       setSubmitState("success");
     } catch (error) {
       setSubmitState("error");
@@ -64,29 +74,47 @@ export function ContactForm({ language, labels }: ContactFormProps) {
   return (
     <form className="contact-form" onSubmit={handleSubmit}>
       <label>
-        <span>{labels.nameInput}</span>
+        <span>
+          {labels.nameInput} <span className="required-marker">*</span>
+        </span>
         <input type="text" name="name" required disabled={isSending} />
       </label>
       <label>
-        <span>{labels.emailInput}</span>
+        <span>
+          {labels.emailInput} <span className="required-marker">*</span>
+        </span>
         <input type="email" name="email" required disabled={isSending} />
       </label>
       <label>
-        <span>{labels.messageInput}</span>
+        <span>
+          {labels.messageInput} <span className="required-marker">*</span>
+        </span>
         <textarea name="message" rows={5} required disabled={isSending} />
       </label>
-      <label className="contact-honeypot" aria-hidden="true">
+      <label className="contact-honeypot">
         <span>Website</span>
         <input
           type="text"
           name="website"
           tabIndex={-1}
           autoComplete="off"
+          aria-hidden="true"
           disabled={isSending}
         />
       </label>
       {submitState === "success" ? (
-        <p className="contact-status success">{labels.success}</p>
+        <div className="contact-status success">
+          <p>{labels.success}</p>
+          {previewUrls.length ? (
+            <div className="contact-preview-links">
+              {previewUrls.map((url, index) => (
+                <a href={url} target="_blank" rel="noreferrer" key={url}>
+                  Open local test email {index + 1}
+                </a>
+              ))}
+            </div>
+          ) : null}
+        </div>
       ) : null}
       {submitState === "error" ? (
         <p className="contact-status error">{errorMessage || labels.error}</p>

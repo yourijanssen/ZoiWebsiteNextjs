@@ -878,6 +878,10 @@ a:focus {
   font-weight: 600;
 }
 
+.contact-form .required-marker {
+  color: #8a2d2a;
+}
+
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -897,7 +901,11 @@ a:focus {
 }
 
 .contact-honeypot {
-  display: none;
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 .contact-status {
@@ -906,6 +914,21 @@ a:focus {
   border-radius: var(--radius-sm);
   font-size: 0.9rem;
   font-weight: 600;
+}
+
+.contact-status p {
+  margin: 0;
+}
+
+.contact-preview-links {
+  display: grid;
+  gap: 0.35rem;
+  margin-top: 0.55rem;
+}
+
+.contact-preview-links a {
+  color: inherit;
+  text-decoration: underline;
 }
 
 .contact-status.success {
