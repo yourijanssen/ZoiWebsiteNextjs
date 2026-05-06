@@ -46,6 +46,8 @@ export function SiteShell({ language, children }: SiteShellProps) {
     return `${pathname}?${params.toString()}`;
   };
 
+  const closeMenu = () => setIsMenuOpen(false);
+
   return (
     <>
       <header className={`site-header${isMenuOpen ? " is-menu-open" : ""}`}>
@@ -72,17 +74,26 @@ export function SiteShell({ language, children }: SiteShellProps) {
             <nav className="site-nav" aria-label={t.nav.mainLabel}>
               <ul className="menu">
                 <li className="menu-item current-menu-item">
-                  <Link href={withLanguage(homeAnchors.home, currentLang)}>
+                  <Link
+                    href={withLanguage(homeAnchors.home, currentLang)}
+                    onClick={closeMenu}
+                  >
                     {t.nav.home}
                   </Link>
                 </li>
                 <li className="menu-item">
-                  <Link href={withLanguage(homeAnchors.about, currentLang)}>
+                  <Link
+                    href={withLanguage(homeAnchors.about, currentLang)}
+                    onClick={closeMenu}
+                  >
                     {t.nav.about}
                   </Link>
                 </li>
                 <li className="menu-item menu-item-has-children">
-                  <Link href={withLanguage(homeAnchors.therapies, currentLang)}>
+                  <Link
+                    href={withLanguage(homeAnchors.therapies, currentLang)}
+                    onClick={closeMenu}
+                  >
                     {t.nav.therapies}
                   </Link>
                   <ul className="sub-menu">
@@ -93,6 +104,7 @@ export function SiteShell({ language, children }: SiteShellProps) {
                             `/ypiresies/${service.slug}`,
                             currentLang,
                           )}
+                          onClick={closeMenu}
                         >
                           {service.title}
                         </Link>
@@ -101,22 +113,34 @@ export function SiteShell({ language, children }: SiteShellProps) {
                   </ul>
                 </li>
                 <li className="menu-item">
-                  <Link href={withLanguage(homeAnchors.faq, currentLang)}>
+                  <Link
+                    href={withLanguage(homeAnchors.faq, currentLang)}
+                    onClick={closeMenu}
+                  >
                     {t.nav.faq}
                   </Link>
                 </li>
                 <li className="menu-item">
-                  <Link href={withLanguage(homeAnchors.articles, currentLang)}>
+                  <Link
+                    href={withLanguage(homeAnchors.articles, currentLang)}
+                    onClick={closeMenu}
+                  >
                     {t.nav.articles}
                   </Link>
                 </li>
                 <li className="menu-item">
-                  <Link href={withLanguage(homeAnchors.location, currentLang)}>
+                  <Link
+                    href={withLanguage(homeAnchors.location, currentLang)}
+                    onClick={closeMenu}
+                  >
                     {t.nav.location}
                   </Link>
                 </li>
                 <li className="menu-item">
-                  <Link href={withLanguage(homeAnchors.contact, currentLang)}>
+                  <Link
+                    href={withLanguage(homeAnchors.contact, currentLang)}
+                    onClick={closeMenu}
+                  >
                     {t.nav.contact}
                   </Link>
                 </li>
@@ -136,6 +160,7 @@ export function SiteShell({ language, children }: SiteShellProps) {
                     hrefLang={lang}
                     lang={lang}
                     title={lang === "el" ? t.nav.greek : t.nav.english}
+                    onClick={closeMenu}
                     key={lang}
                   >
                     {lang}

@@ -1,4 +1,3 @@
-import { Resend } from "resend";
 import nodemailer from "nodemailer";
 
 export const runtime = "nodejs";
@@ -122,23 +121,39 @@ async function sendWithLocalPreview(messages: EmailMessage[]) {
 }
 
 async function sendWithResend(apiKey: string, messages: EmailMessage[]) {
-  const resend = new Resend(apiKey);
   const results = await Promise.all(
-    messages.map((message) =>
-      resend.emails.send({
-        from: message.from,
-        to: message.to,
-        replyTo: message.replyTo,
-        subject: message.subject,
-        html: message.html,
-      }),
-    ),
+    messages.map(async (message) => {
+      const response = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          from: message.from,
+          to: message.to,
+          reply_to: message.replyTo,
+          subject: message.subject,
+          html: message.html,
+        }),
+      });
+
+      if (response.ok) {
+        return;
+      }
+
+      const result = (await response.json().catch(() => null)) as {
+        message?: string;
+        error?: string;
+      } | null;
+
+      throw new Error(
+        result?.message || result?.error || "Resend could not send the email.",
+      );
+    }),
   );
 
-  const failedResult = results.find((result) => result.error);
-  if (failedResult?.error) {
-    throw new Error(failedResult.error.message);
-  }
+  return results;
 }
 
 export async function POST(request: Request) {
