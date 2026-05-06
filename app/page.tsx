@@ -16,6 +16,7 @@ export default async function Home({ searchParams }: HomePageProps) {
   return (
     <SiteShell language={language}>
       <main className="site-main container">
+        <div className="breadcrumb-strip">Home</div>
         <section className="therapist-hero">
           <div className="hero-copy">
             <p className="hero-kicker">{t.hero.kicker}</p>
@@ -30,7 +31,7 @@ export default async function Home({ searchParams }: HomePageProps) {
               </a>
             </div>
           </div>
-          <div className="hero-media">
+          <div className="hero-media" aria-hidden="true">
             <div className="image-placeholder">
               <p>{t.hero.imagePlaceholder}</p>
             </div>
@@ -141,38 +142,6 @@ export default async function Home({ searchParams }: HomePageProps) {
           </div>
         </section>
 
-        <section className="location-section content-card" id="pou-eimaste">
-          <header className="section-heading">
-            <h2>{t.location.title}</h2>
-          </header>
-          <div className="location-layout">
-            <div className="location-copy">
-              <p>
-                <strong>{t.location.addressLabel}</strong> {t.location.address}
-              </p>
-              <p>
-                <strong>{t.location.hoursLabel}</strong> {t.location.hours}
-              </p>
-              <p>
-                <strong>{t.location.accessLabel}</strong> {t.location.access}
-              </p>
-              <p>
-                <a className="text-link" href="#epikoinonia">
-                  {t.location.appointment}
-                </a>
-              </p>
-            </div>
-            <div className="location-map">
-              <iframe
-                src={t.location.mapUrl}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title={t.location.mapTitle}
-              />
-            </div>
-          </div>
-        </section>
-
         <section className="contact-band" id="epikoinonia">
           <header className="section-heading">
             <h2>{t.contact.title}</h2>
@@ -191,9 +160,6 @@ export default async function Home({ searchParams }: HomePageProps) {
               <p>
                 <strong>{t.contact.emailLabel}</strong>{" "}
                 <a href={`mailto:${t.contact.email}`}>{t.contact.email}</a>
-              </p>
-              <p>
-                <strong>{t.contact.addressLabel}</strong> {t.location.address}
               </p>
             </div>
             <ContactForm language={language} labels={t.contact} />

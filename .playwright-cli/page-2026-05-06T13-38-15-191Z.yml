@@ -1,0 +1,206 @@
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Ζωή Παντού" [ref=e4] [cursor=pointer]:
+        - /url: /?lang=el
+        - generic [ref=e5]: ΖΠ
+        - text: Ζωή Παντού
+      - button "Μενού" [expanded] [active] [ref=e185] [cursor=pointer]:
+        - generic [ref=e188]: Μενού
+      - generic [ref=e6]:
+        - navigation "Κεντρικό μενού" [ref=e7]:
+          - list [ref=e8]:
+            - listitem [ref=e9]:
+              - link "Αρχική" [ref=e10] [cursor=pointer]:
+                - /url: /?lang=el
+            - listitem [ref=e11]:
+              - link "Σχετικά" [ref=e12] [cursor=pointer]:
+                - /url: /?lang=el#sxetika
+            - listitem [ref=e13]:
+              - link "Θεραπείες ▾" [ref=e189] [cursor=pointer]:
+                - /url: /?lang=el#ypiresies
+              - list [ref=e190]:
+                - listitem [ref=e191]:
+                  - link "Ατομική Ψυχοθεραπεία" [ref=e192] [cursor=pointer]:
+                    - /url: /ypiresies/atomiki-psychotherapeia?lang=el
+                - listitem [ref=e193]:
+                  - link "Συμβουλευτική Ζεύγους" [ref=e194] [cursor=pointer]:
+                    - /url: /ypiresies/symvouleutiki-zeugous?lang=el
+                - listitem [ref=e195]:
+                  - link "Οικογενειακή Ψυχοθεραπεία" [ref=e196] [cursor=pointer]:
+                    - /url: /ypiresies/oikogeneiaki-psychotherapeia?lang=el
+                - listitem [ref=e197]:
+                  - link "Online Συνεδρίες" [ref=e198] [cursor=pointer]:
+                    - /url: /ypiresies/online-synedries?lang=el
+            - listitem [ref=e15]:
+              - link "Συχνές ερωτήσεις" [ref=e16] [cursor=pointer]:
+                - /url: /?lang=el#syxnes-erotiseis
+            - listitem [ref=e17]:
+              - link "Άρθρα" [ref=e18] [cursor=pointer]:
+                - /url: /?lang=el
+            - listitem [ref=e19]:
+              - link "Πού θα μας βρείτε" [ref=e20] [cursor=pointer]:
+                - /url: /?lang=el#pou-eimaste
+            - listitem [ref=e21]:
+              - link "Επικοινωνία" [ref=e22] [cursor=pointer]:
+                - /url: /?lang=el#epikoinonia
+        - generic "Αλλαγή γλώσσας" [ref=e24]:
+          - link "el" [ref=e25] [cursor=pointer]:
+            - /url: /?lang=el
+          - link "en" [ref=e26] [cursor=pointer]:
+            - /url: /?lang=en
+  - main [ref=e27]:
+    - generic [ref=e28]: Home
+    - generic [ref=e30]:
+      - paragraph [ref=e31]: Ψυχοθεραπεία στην Αθήνα
+      - heading "Θεραπευτικός χώρος με ζεστασιά, διακριτικότητα και φροντίδα" [level=1] [ref=e32]
+      - paragraph [ref=e33]: Είμαι 26 ετών, με καταγωγή από την Ελλάδα, και προσφέρω ψυχοθεραπεία στα ελληνικά σε ένα ήρεμο πλαίσιο εμπιστοσύνης, δια ζώσης και online.
+      - generic [ref=e34]:
+        - link "Δείτε θεραπείες" [ref=e35] [cursor=pointer]:
+          - /url: "#ypiresies"
+        - link "Κλείστε ραντεβού" [ref=e36] [cursor=pointer]:
+          - /url: "#epikoinonia"
+    - generic [ref=e37]:
+      - article [ref=e38]:
+        - paragraph [ref=e40]: Φωτογραφία γραφείου 1
+      - article [ref=e41]:
+        - paragraph [ref=e43]: Φωτογραφία γραφείου 2
+    - generic [ref=e44]:
+      - paragraph [ref=e47]: Ζεστός, ήσυχος θεραπευτικός χώρος
+      - generic [ref=e48]:
+        - heading "Η προσέγγιση" [level=2] [ref=e49]
+        - paragraph [ref=e50]: Η θεραπευτική σχέση βασίζεται στην εμπιστοσύνη, στην αποδοχή και στη σταθερότητα. Σε κάθε συνεδρία δίνουμε χώρο στο βίωμα, οργανώνουμε το αίτημα και συνδέουμε τη θεωρία με πρακτικά βήματα καθημερινής αλλαγής.
+        - paragraph [ref=e51]: Η διαδικασία προσαρμόζεται στον ρυθμό του κάθε ανθρώπου. Στόχος είναι η ουσιαστική κατανόηση των δυσκολιών, η ενίσχυση της αυτογνωσίας και η δημιουργία νέων τρόπων σύνδεσης με τον εαυτό και τους άλλους.
+        - list [ref=e52]:
+          - listitem [ref=e53]: Σταθερό πλαίσιο και σαφή θεραπευτικά όρια
+          - listitem [ref=e54]: Εξατομικευμένο πλάνο θεραπείας
+          - listitem [ref=e55]: Τακτική αξιολόγηση προόδου
+    - blockquote [ref=e57]:
+      - paragraph [ref=e58]: Η ψυχοθεραπεία είναι ένας ασφαλής τόπος όπου η φωνή μας ακούγεται χωρίς φόβο και η αλλαγή χτίζεται με συνέπεια.
+      - text: Ζωή Παντού
+    - generic [ref=e59]:
+      - paragraph [ref=e62]: Φωτογραφία προφίλ θεραπεύτριας/θεραπευτή
+      - generic [ref=e63]:
+        - paragraph [ref=e64]: Προφίλ
+        - heading "Ζωή Παντού" [level=2] [ref=e65]
+        - paragraph [ref=e66]: Ψυχολόγος - Ψυχοθεραπεύτρια
+        - paragraph [ref=e67]: Με σύγχρονη κλινική εκπαίδευση και έμφαση στη θεραπευτική σχέση, προσφέρω ένα σταθερό και ανθρώπινο πλαίσιο για ουσιαστική προσωπική αλλαγή.
+        - list [ref=e68]:
+          - listitem [ref=e69]: Άδεια άσκησης επαγγέλματος ψυχολόγου
+          - listitem [ref=e70]: Μεταπτυχιακή εξειδίκευση στην ψυχοθεραπεία
+          - listitem [ref=e71]: Συνεχής εποπτεία και επαγγελματική επιμόρφωση
+    - generic [ref=e72]:
+      - generic [ref=e73]:
+        - heading "Θεραπείες" [level=2] [ref=e74]
+        - paragraph [ref=e75]: Επιλέξτε την ενότητα που ανταποκρίνεται στο αίτημά σας και δείτε αναλυτικές πληροφορίες για κάθε πλαίσιο.
+      - generic [ref=e76]:
+        - article [ref=e77]:
+          - heading "Ατομική Ψυχοθεραπεία" [level=3] [ref=e79]
+          - paragraph [ref=e80]: Εξατομικευμένη θεραπευτική εργασία για άγχος, αυτοεκτίμηση, συναισθηματική ρύθμιση και προσωπικούς στόχους.
+          - link "Δείτε αναλυτικά" [ref=e81] [cursor=pointer]:
+            - /url: /ypiresies/atomiki-psychotherapeia?lang=el
+        - article [ref=e82]:
+          - heading "Συμβουλευτική Ζεύγους" [level=3] [ref=e84]
+          - paragraph [ref=e85]: Δομημένη υποστήριξη για επικοινωνία, επανασύνδεση και διαχείριση επαναλαμβανόμενων συγκρούσεων.
+          - link "Δείτε αναλυτικά" [ref=e86] [cursor=pointer]:
+            - /url: /ypiresies/symvouleutiki-zeugous?lang=el
+        - article [ref=e87]:
+          - heading "Οικογενειακή Ψυχοθεραπεία" [level=3] [ref=e89]
+          - paragraph [ref=e90]: Συστημική προσέγγιση για βελτίωση σχέσεων, ρόλων και ορίων μέσα στο οικογενειακό πλαίσιο.
+          - link "Δείτε αναλυτικά" [ref=e91] [cursor=pointer]:
+            - /url: /ypiresies/oikogeneiaki-psychotherapeia?lang=el
+        - article [ref=e92]:
+          - heading "Online Συνεδρίες" [level=3] [ref=e94]
+          - paragraph [ref=e95]: Συνεδρίες εξ αποστάσεως με σταθερό πλαίσιο, εμπιστευτικότητα και ευελιξία για άτομα στην Ελλάδα ή στο εξωτερικό.
+          - link "Δείτε αναλυτικά" [ref=e96] [cursor=pointer]:
+            - /url: /ypiresies/online-synedries?lang=el
+    - generic [ref=e97]:
+      - heading "Πώς ξεκινά η διαδικασία" [level=2] [ref=e98]
+      - list [ref=e99]:
+        - listitem [ref=e100]: Σύντομη επικοινωνία για διαθεσιμότητα και πρώτο αίτημα.
+        - listitem [ref=e101]: Πρώτη συνεδρία αξιολόγησης και συμφωνία θεραπευτικού πλαισίου.
+        - listitem [ref=e102]: Σταθερές συνεδρίες με στόχους και επαναξιολόγηση.
+    - generic [ref=e103]:
+      - heading "Συχνές ερωτήσεις" [level=2] [ref=e104]
+      - generic [ref=e105]:
+        - group [ref=e106]:
+          - generic "Πόσο διαρκεί μια συνεδρία;" [ref=e107] [cursor=pointer]
+        - group [ref=e108]:
+          - generic "Πόσες συνεδρίες χρειάζονται;" [ref=e109] [cursor=pointer]
+        - group [ref=e110]:
+          - generic "Οι συνεδρίες είναι εμπιστευτικές;" [ref=e111] [cursor=pointer]
+    - generic [ref=e112]:
+      - heading "Πού θα μας βρείτε" [level=2] [ref=e114]
+      - generic [ref=e115]:
+        - generic [ref=e116]:
+          - paragraph [ref=e117]:
+            - strong [ref=e118]: "Διεύθυνση:"
+            - text: Λεωφ. Κηφισίας 00, Αθήνα
+          - paragraph [ref=e119]:
+            - strong [ref=e120]: "Ώρες λειτουργίας:"
+            - text: Δευτέρα - Παρασκευή, 10:00 - 20:00
+          - paragraph [ref=e121]:
+            - strong [ref=e122]: "Πρόσβαση:"
+            - text: Πρόσβαση με μετρό και λεωφορεία, κοντά σε κεντρικούς οδικούς άξονες.
+          - paragraph [ref=e123]:
+            - link "Κλείστε ραντεβού επικοινωνίας" [ref=e124] [cursor=pointer]:
+              - /url: "#epikoinonia"
+        - iframe [ref=e126]
+    - generic [ref=e127]:
+      - generic [ref=e128]:
+        - heading "Επικοινωνία και ραντεβού" [level=2] [ref=e129]
+        - paragraph [ref=e130]: Συμπληρώστε τη φόρμα και θα επικοινωνήσουμε μαζί σας για το πρώτο ραντεβού γνωριμίας.
+      - generic [ref=e131]:
+        - generic [ref=e132]:
+          - paragraph [ref=e133]:
+            - strong [ref=e134]: "Σταθερό:"
+            - link "+30 210 0000000" [ref=e135] [cursor=pointer]:
+              - /url: tel:+302100000000
+          - paragraph [ref=e136]:
+            - strong [ref=e137]: "Κινητό:"
+            - link "+30 69 00000000" [ref=e138] [cursor=pointer]:
+              - /url: tel:+306900000000
+          - paragraph [ref=e139]:
+            - strong [ref=e140]: "Email:"
+            - link "zipalife@gmail.com" [ref=e141] [cursor=pointer]:
+              - /url: mailto:zipalife@gmail.com
+          - paragraph [ref=e142]:
+            - strong [ref=e143]: "Διεύθυνση:"
+            - text: Λεωφ. Κηφισίας 00, Αθήνα
+        - generic [ref=e144]:
+          - generic [ref=e145]:
+            - generic [ref=e146]: Ονοματεπώνυμο *
+            - textbox "Ονοματεπώνυμο *" [ref=e147]
+          - generic [ref=e148]:
+            - generic [ref=e149]: Email *
+            - textbox "Email *" [ref=e150]
+          - generic [ref=e151]:
+            - generic [ref=e152]: Μήνυμα *
+            - textbox "Μήνυμα *" [ref=e153]
+          - generic [ref=e154]:
+            - generic [ref=e155]: Website
+            - textbox [ref=e156]
+          - button "Αποστολή μηνύματος" [ref=e157]
+    - paragraph [ref=e159]: Η αυτοφροντίδα δεν χρειάζεται να είναι σύνθετη. Μικρές και σταθερές κινήσεις μέσα στην εβδομάδα μπορούν να ενισχύσουν την ψυχική ανθεκτικότητα.
+  - contentinfo [ref=e160]:
+    - generic [ref=e161]:
+      - generic [ref=e162]:
+        - paragraph [ref=e163]: 2026 Ζωή Παντού
+        - paragraph [ref=e164]: Made by Youri Janssen
+      - navigation "Μενού υποσέλιδου" [ref=e165]:
+        - list [ref=e166]:
+          - listitem [ref=e167]:
+            - link "Αρχική" [ref=e168] [cursor=pointer]:
+              - /url: /?lang=el
+          - listitem [ref=e169]:
+            - link "Άρθρα" [ref=e170] [cursor=pointer]:
+              - /url: /?lang=el
+          - listitem [ref=e171]:
+            - link "Πού θα μας βρείτε" [ref=e172] [cursor=pointer]:
+              - /url: /?lang=el#pou-eimaste
+          - listitem [ref=e173]:
+            - link "Επικοινωνία" [ref=e174] [cursor=pointer]:
+              - /url: /?lang=el#epikoinonia
+  - button "Open Next.js Dev Tools" [ref=e180] [cursor=pointer]:
+    - img [ref=e181]
+  - alert [ref=e184]

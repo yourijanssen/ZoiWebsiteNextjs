@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Ζωή Παντού",
   description:
-    "Ψυχοθεραπεία στην Αθήνα και online, με έμφαση στην εμπιστοσύνη, τη σταθερότητα και την προσωπική φροντίδα.",
+    "Online ψυχοθεραπεία στα ελληνικά με σταθερό πλαίσιο, εμπιστοσύνη και κόστος 40 ευρώ ανά ώρα.",
 };
 
 export default function RootLayout({

@@ -32,7 +32,7 @@ export const content = {
     brandMark: "ΖΠ",
     metaTitle: "Ζωή Παντού",
     metaDescription:
-      "Ψυχοθεραπεία στην Αθήνα και online, με έμφαση στην εμπιστοσύνη, τη σταθερότητα και την προσωπική φροντίδα.",
+      "Online ψυχοθεραπεία στα ελληνικά με σταθερό πλαίσιο, εμπιστοσύνη και κόστος 40 ευρώ ανά ώρα.",
     nav: {
       mainLabel: "Κεντρικό μενού",
       footerLabel: "Μενού υποσέλιδου",
@@ -42,25 +42,24 @@ export const content = {
       therapies: "Θεραπείες",
       faq: "Συχνές ερωτήσεις",
       articles: "Άρθρα",
-      location: "Πού θα μας βρείτε",
       contact: "Επικοινωνία",
       greek: "Ελληνικά",
       english: "Αγγλικά",
       menu: "Μενού",
     },
     hero: {
-      kicker: "Ψυχοθεραπεία στην Αθήνα",
+      kicker: "Online ψυχοθεραπεία",
       title: "Θεραπευτικός χώρος με ζεστασιά, διακριτικότητα και φροντίδα",
-      lead: "Είμαι 26 ετών, με καταγωγή από την Ελλάδα, και προσφέρω ψυχοθεραπεία στα ελληνικά σε ένα ήρεμο πλαίσιο εμπιστοσύνης, δια ζώσης και online.",
+      lead: "Προσφέρω online ψυχοθεραπεία στα ελληνικά σε ένα ήρεμο πλαίσιο εμπιστοσύνης. Προς το παρόν οι συνεδρίες πραγματοποιούνται μόνο online και κοστίζουν 40 ευρώ ανά ώρα.",
       servicesCta: "Δείτε θεραπείες",
       contactCta: "Κλείστε ραντεβού",
       imagePlaceholder:
         "Προσθέστε κεντρική φωτογραφία χώρου ή πορτρέτο από τη σελίδα Αρχικής (Featured Image).",
     },
     gallery: {
-      one: "Φωτογραφία γραφείου 1",
-      two: "Φωτογραφία γραφείου 2",
-      approachImage: "Ζεστός, ήσυχος θεραπευτικός χώρος",
+      one: "Ήρεμο online θεραπευτικό πλαίσιο",
+      two: "Συνεδρίες από τον δικό σας ασφαλή χώρο",
+      approachImage: "Ζεστός, ήσυχος online θεραπευτικός χώρος",
       profileImage: "Φωτογραφία προφίλ θεραπεύτριας/θεραπευτή",
     },
     approach: {
@@ -91,8 +90,8 @@ export const content = {
       ],
     },
     servicesHeading: {
-      title: "Θεραπείες",
-      text: "Επιλέξτε την ενότητα που ανταποκρίνεται στο αίτημά σας και δείτε αναλυτικές πληροφορίες για κάθε πλαίσιο.",
+      title: "Online συνεδρίες",
+      text: "Προς το παρόν είναι διαθέσιμες μόνο online συνεδρίες ψυχοθεραπείας με κόστος 40 ευρώ ανά ώρα.",
       link: "Δείτε αναλυτικά",
       includes: "Τι περιλαμβάνει",
       back: "Επιστροφή στις θεραπείες",
@@ -101,8 +100,8 @@ export const content = {
       title: "Πώς ξεκινά η διαδικασία",
       items: [
         "Σύντομη επικοινωνία για διαθεσιμότητα και πρώτο αίτημα.",
-        "Πρώτη συνεδρία αξιολόγησης και συμφωνία θεραπευτικού πλαισίου.",
-        "Σταθερές συνεδρίες με στόχους και επαναξιολόγηση.",
+        "Πρώτη online συνεδρία αξιολόγησης και συμφωνία θεραπευτικού πλαισίου.",
+        "Σταθερές online συνεδρίες διάρκειας μίας ώρας με κόστος 40 ευρώ.",
       ],
     },
     faq: {
@@ -111,7 +110,7 @@ export const content = {
         {
           question: "Πόσο διαρκεί μια συνεδρία;",
           answer:
-            "Η διάρκεια είναι συνήθως 50 λεπτά. Η συχνότητα συμφωνείται μαζί με βάση τις ανάγκες σας.",
+            "Η διάρκεια είναι μία ώρα και το κόστος είναι 40 ευρώ ανά συνεδρία.",
         },
         {
           question: "Πόσες συνεδρίες χρειάζονται;",
@@ -125,26 +124,12 @@ export const content = {
         },
       ],
     },
-    location: {
-      title: "Πού θα μας βρείτε",
-      addressLabel: "Διεύθυνση:",
-      hoursLabel: "Ώρες λειτουργίας:",
-      accessLabel: "Πρόσβαση:",
-      address: "Λεωφ. Κηφισίας 00, Αθήνα",
-      hours: "Δευτέρα - Παρασκευή, 10:00 - 20:00",
-      access:
-        "Πρόσβαση με μετρό και λεωφορεία, κοντά σε κεντρικούς οδικούς άξονες.",
-      appointment: "Κλείστε ραντεβού επικοινωνίας",
-      mapTitle: "Χάρτης γραφείου",
-      mapUrl: "https://www.google.com/maps?q=Athens%20Greece&output=embed",
-    },
     contact: {
       title: "Επικοινωνία και ραντεβού",
-      text: "Συμπληρώστε τη φόρμα και θα επικοινωνήσουμε μαζί σας για το πρώτο ραντεβού γνωριμίας.",
+      text: "Συμπληρώστε τη φόρμα και θα επικοινωνήσουμε μαζί σας για το πρώτο online ραντεβού. Οι συνεδρίες κοστίζουν 40 ευρώ ανά ώρα.",
       phoneLabel: "Σταθερό:",
       mobileLabel: "Κινητό:",
       emailLabel: "Email:",
-      addressLabel: "Διεύθυνση:",
       phone: "+30 210 0000000",
       mobile: "+30 69 00000000",
       email: "zipalife@gmail.com",
@@ -173,7 +158,7 @@ export const content = {
     brandMark: "ZP",
     metaTitle: "Zoi Pantou",
     metaDescription:
-      "Psychotherapy in Athens and online, with emphasis on trust, consistency and personal care.",
+      "Online psychotherapy in Greek with a steady framework, trust and a rate of 40 euros per hour.",
     nav: {
       mainLabel: "Main menu",
       footerLabel: "Footer menu",
@@ -183,25 +168,24 @@ export const content = {
       therapies: "Therapies",
       faq: "FAQ",
       articles: "Articles",
-      location: "Find us",
       contact: "Contact",
       greek: "Greek",
       english: "English",
       menu: "Menu",
     },
     hero: {
-      kicker: "Psychotherapy in Athens",
+      kicker: "Online psychotherapy",
       title: "A therapeutic space with warmth, discretion and care",
-      lead: "I am 26 years old, originally from Greece, and I offer psychotherapy in Greek within a calm framework of trust, both in person and online.",
+      lead: "I offer online psychotherapy in Greek within a calm framework of trust. For now, sessions are available online only and cost 40 euros per hour.",
       servicesCta: "View therapies",
       contactCta: "Book an appointment",
       imagePlaceholder:
         "Add a central practice-room photo or portrait from the homepage featured image.",
     },
     gallery: {
-      one: "Office photo 1",
-      two: "Office photo 2",
-      approachImage: "Warm, quiet therapeutic space",
+      one: "Calm online therapeutic framework",
+      two: "Sessions from your own safe space",
+      approachImage: "Warm, quiet online therapeutic space",
       profileImage: "Therapist profile photo",
     },
     approach: {
@@ -232,8 +216,8 @@ export const content = {
       ],
     },
     servicesHeading: {
-      title: "Therapies",
-      text: "Choose the area that fits your request and read detailed information about each framework.",
+      title: "Online sessions",
+      text: "For now, only online psychotherapy sessions are available at 40 euros per hour.",
       link: "View details",
       includes: "What it includes",
       back: "Back to therapies",
@@ -242,8 +226,8 @@ export const content = {
       title: "How the process starts",
       items: [
         "Brief contact about availability and your initial request.",
-        "First assessment session and agreement on the therapeutic framework.",
-        "Steady sessions with goals and reassessment.",
+        "First online assessment session and agreement on the therapeutic framework.",
+        "Steady one-hour online sessions at 40 euros per session.",
       ],
     },
     faq: {
@@ -252,7 +236,7 @@ export const content = {
         {
           question: "How long is a session?",
           answer:
-            "Sessions usually last 50 minutes. Frequency is agreed together based on your needs.",
+            "Sessions last one hour and cost 40 euros per session.",
         },
         {
           question: "How many sessions are needed?",
@@ -266,26 +250,12 @@ export const content = {
         },
       ],
     },
-    location: {
-      title: "Find us",
-      addressLabel: "Address:",
-      hoursLabel: "Opening hours:",
-      accessLabel: "Access:",
-      address: "Kifisias Avenue 00, Athens",
-      hours: "Monday - Friday, 10:00 - 20:00",
-      access:
-        "Accessible by metro and buses, close to central road connections.",
-      appointment: "Book a contact appointment",
-      mapTitle: "Office map",
-      mapUrl: "https://www.google.com/maps?q=Athens%20Greece&output=embed",
-    },
     contact: {
       title: "Contact and appointments",
-      text: "Fill in the form and we will contact you about the first introductory appointment.",
+      text: "Fill in the form and we will contact you about the first online appointment. Sessions cost 40 euros per hour.",
       phoneLabel: "Landline:",
       mobileLabel: "Mobile:",
       emailLabel: "Email:",
-      addressLabel: "Address:",
       phone: "+30 210 0000000",
       mobile: "+30 69 00000000",
       email: "zipalife@gmail.com",
@@ -313,101 +283,29 @@ export const content = {
 export const services = {
   el: [
     {
-      key: "individual",
-      slug: "atomiki-psychotherapeia",
-      title: "Ατομική Ψυχοθεραπεία",
-      summary:
-        "Εξατομικευμένη θεραπευτική εργασία για άγχος, αυτοεκτίμηση, συναισθηματική ρύθμιση και προσωπικούς στόχους.",
-      points: [
-        "Διαχείριση άγχους και κρίσεων πανικού",
-        "Ενίσχυση αυτοεκτίμησης και ορίων",
-        "Πρακτικά εργαλεία για την καθημερινότητα",
-      ],
-    },
-    {
-      key: "couples",
-      slug: "symvouleutiki-zeugous",
-      title: "Συμβουλευτική Ζεύγους",
-      summary:
-        "Δομημένη υποστήριξη για επικοινωνία, επανασύνδεση και διαχείριση επαναλαμβανόμενων συγκρούσεων.",
-      points: [
-        "Ασφαλής χώρος διαλόγου χωρίς κατηγορία",
-        "Κατανόηση κύκλων σύγκρουσης",
-        "Εργαλεία επικοινωνίας και συνεργασίας",
-      ],
-    },
-    {
-      key: "family",
-      slug: "oikogeneiaki-psychotherapeia",
-      title: "Οικογενειακή Ψυχοθεραπεία",
-      summary:
-        "Συστημική προσέγγιση για βελτίωση σχέσεων, ρόλων και ορίων μέσα στο οικογενειακό πλαίσιο.",
-      points: [
-        "Αποσαφήνιση ρόλων και προσδοκιών",
-        "Ενίσχυση συνεργασίας γονέων και παιδιών",
-        "Υποστήριξη σε μεταβατικές περιόδους",
-      ],
-    },
-    {
       key: "online",
       slug: "online-synedries",
       title: "Online Συνεδρίες",
       summary:
-        "Συνεδρίες εξ αποστάσεως με σταθερό πλαίσιο, εμπιστευτικότητα και ευελιξία για άτομα στην Ελλάδα ή στο εξωτερικό.",
+        "Online ψυχοθεραπευτικές συνεδρίες διάρκειας μίας ώρας, με σταθερό πλαίσιο, εμπιστευτικότητα και κόστος 40 ευρώ.",
       points: [
-        "Σταθερό εβδομαδιαίο ραντεβού",
+        "Σταθερό online ραντεβού διάρκειας μίας ώρας",
+        "Κόστος 40 ευρώ ανά συνεδρία",
         "Ασφαλής πλατφόρμα επικοινωνίας",
-        "Ίδια θεραπευτική ποιότητα με τη δια ζώσης συνεδρία",
       ],
     },
   ],
   en: [
     {
-      key: "individual",
-      slug: "atomiki-psychotherapeia",
-      title: "Individual Psychotherapy",
-      summary:
-        "Personalized therapeutic work for anxiety, self-esteem, emotional regulation and personal goals.",
-      points: [
-        "Managing anxiety and panic attacks",
-        "Strengthening self-esteem and boundaries",
-        "Practical tools for everyday life",
-      ],
-    },
-    {
-      key: "couples",
-      slug: "symvouleutiki-zeugous",
-      title: "Couples Counseling",
-      summary:
-        "Structured support for communication, reconnection and managing recurring conflicts.",
-      points: [
-        "A safe space for dialogue without blame",
-        "Understanding cycles of conflict",
-        "Tools for communication and cooperation",
-      ],
-    },
-    {
-      key: "family",
-      slug: "oikogeneiaki-psychotherapeia",
-      title: "Family Therapy",
-      summary:
-        "A systemic approach to improving relationships, roles and boundaries within the family framework.",
-      points: [
-        "Clarifying roles and expectations",
-        "Strengthening cooperation between parents and children",
-        "Support during transitional periods",
-      ],
-    },
-    {
       key: "online",
       slug: "online-synedries",
       title: "Online Sessions",
       summary:
-        "Remote sessions with a stable framework, confidentiality and flexibility for people in Greece or abroad.",
+        "One-hour online psychotherapy sessions with a steady framework, confidentiality and a rate of 40 euros.",
       points: [
-        "Stable weekly appointment",
+        "Stable one-hour online appointment",
+        "40 euros per session",
         "Secure communication platform",
-        "The same therapeutic quality as in-person sessions",
       ],
     },
   ],

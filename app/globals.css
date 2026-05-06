@@ -99,7 +99,7 @@ h3 {
   margin-top: 0;
   font-family: "Literata", "Palatino Linotype", serif;
   line-height: 1.2;
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
 }
 
 a {
@@ -641,8 +641,7 @@ a:focus {
 .office-gallery,
 .quote-highlight,
 .therapist-profile,
-.session-steps,
-.location-section {
+.session-steps {
   margin-bottom: 0;
 }
 
@@ -838,19 +837,6 @@ a:focus {
   gap: 0.6rem;
   margin: 1rem 0 0;
   padding-left: 1rem;
-}
-
-.location-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  gap: 1rem;
-}
-
-.location-map iframe {
-  width: 100%;
-  min-height: 280px;
-  border: 0;
-  border-radius: var(--radius-md);
 }
 
 .contact-layout {
@@ -1322,6 +1308,316 @@ a:focus {
   margin-top: 1.2rem;
 }
 
+/* Reference-inspired editorial restyle for the public website. */
+body {
+  background: #fff;
+}
+
+body::before,
+body::after,
+.site-main::before,
+.therapist-hero::before,
+.therapist-hero::after,
+.hero-copy::after,
+.contact-band::before,
+.contact-band::after,
+.service-card::before,
+.service-card::after,
+.content-card::before,
+.approach-copy::before,
+.quote-highlight::before {
+  display: none;
+}
+
+.site-header,
+.site-footer {
+  background: #fff;
+  backdrop-filter: none;
+}
+
+.site-header {
+  border-bottom-color: #edf1ee;
+}
+
+.header-inner {
+  min-height: 84px;
+  padding: 0.85rem 0;
+}
+
+.site-branding {
+  font-size: clamp(1.55rem, 2.1vw, 2rem);
+  gap: 0.72rem;
+}
+
+.brand-mark {
+  width: 2.35rem;
+  height: 2.35rem;
+  background: #fff;
+  border-color: #9bc4b5;
+}
+
+.menu {
+  justify-content: flex-end;
+  gap: clamp(0.7rem, 1.5vw, 1.4rem);
+}
+
+.menu-item a,
+.menu .page_item a {
+  font-size: 0.94rem;
+  font-weight: 700;
+}
+
+.site-main.container {
+  width: 100%;
+  padding: 0 0 1rem;
+  gap: 48px;
+}
+
+.breadcrumb-strip {
+  width: 100%;
+  border-bottom: 1px solid #edf1ee;
+  background: #fff;
+  color: #7a8781;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.82rem max(1.2rem, calc((100vw - var(--container)) / 2));
+  text-transform: uppercase;
+}
+
+.therapist-hero {
+  display: grid;
+  min-height: clamp(520px, 72vh, 760px);
+  place-items: center;
+  padding: clamp(4rem, 9vw, 7rem) 1.2rem;
+  background:
+    linear-gradient(rgba(29, 45, 40, 0.18), rgba(29, 45, 40, 0.34)),
+    linear-gradient(90deg, rgba(41, 70, 56, 0.92) 0 29%, rgba(214, 181, 139, 0.84) 29% 55%, rgba(239, 224, 201, 0.86) 55% 100%),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0 1px, transparent 1px 42px);
+  overflow: hidden;
+}
+
+.hero-copy {
+  max-width: 760px;
+  padding: 0;
+  text-align: center;
+  overflow: visible;
+}
+
+.hero-kicker {
+  margin-bottom: 1rem;
+  padding: 0;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+}
+
+.therapist-hero h1 {
+  margin-bottom: 1.1rem;
+  color: #fff;
+  font-size: clamp(2.35rem, 5.2vw, 4.9rem);
+  text-shadow: 0 2px 16px rgba(12, 24, 20, 0.28);
+}
+
+.hero-lead {
+  max-width: 62ch;
+  margin: 0 auto 1.7rem;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: clamp(1rem, 1.4vw, 1.18rem);
+}
+
+.hero-actions {
+  justify-content: center;
+}
+
+.button {
+  border-radius: 4px;
+  padding: 0.76rem 1.15rem;
+}
+
+.therapist-hero .button {
+  background: #fff;
+  color: var(--text);
+}
+
+.therapist-hero .button:hover,
+.therapist-hero .button:focus {
+  background: #f1f5f1;
+  color: var(--text);
+}
+
+.therapist-hero .button-outline {
+  border-color: rgba(255, 255, 255, 0.72);
+  background: transparent;
+  color: #fff;
+}
+
+.therapist-hero .button-outline:hover,
+.therapist-hero .button-outline:focus {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+.hero-media {
+  display: none;
+}
+
+.office-gallery,
+.approach,
+.quote-highlight,
+.therapist-profile,
+.services,
+.session-steps,
+.faq-section,
+.contact-band,
+.front-page-content {
+  width: min(var(--container), calc(100% - 2.4rem));
+  margin-inline: auto;
+}
+
+.image-placeholder {
+  background:
+    linear-gradient(rgba(32, 54, 51, 0.05), rgba(32, 54, 51, 0.05)),
+    linear-gradient(135deg, #f4f1ea 0%, #e8efe9 46%, #d9e6dd 100%);
+  color: #73817a;
+}
+
+.gallery-card,
+.profile-media,
+.hero-media,
+.approach-media,
+.content-card,
+.service-card,
+.approach-copy,
+.quote-highlight,
+.contact-band,
+.faq-list details,
+.widget {
+  border-color: #e5ece8;
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+.content-card,
+.service-card,
+.approach-copy,
+.faq-list details,
+.widget {
+  background: #fff;
+}
+
+.quote-highlight {
+  border-width: 0 0 0 3px;
+  padding: 1rem 0 1rem 1.35rem;
+  background: transparent;
+}
+
+.quote-highlight p {
+  font-size: clamp(1.25rem, 2.4vw, 1.8rem);
+}
+
+.service-card {
+  padding: 0;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(26, 58, 56, 0.08);
+}
+
+.service-card h3,
+.service-card p,
+.service-card .text-link {
+  margin-inline: 1rem;
+}
+
+.service-card .text-link {
+  margin-bottom: 1rem;
+}
+
+.service-media {
+  border-radius: 4px 4px 0 0;
+}
+
+.approach-copy,
+.content-card,
+.contact-band {
+  padding: clamp(1.35rem, 3vw, 2.2rem);
+}
+
+.contact-band {
+  text-align: left;
+  background: #f6f8f4;
+}
+
+.contact-band .section-heading {
+  margin-inline: 0;
+}
+
+.contact-band p {
+  margin-inline: 0;
+}
+
+/* Adds more breathing room between homepage sections and dense content blocks. */
+.site-main.container {
+  gap: clamp(64px, 6.5vw, 96px);
+}
+
+.office-gallery,
+.approach,
+.therapist-profile,
+.contact-layout,
+.services-grid {
+  gap: clamp(1.5rem, 3vw, 2.4rem);
+}
+
+.section-heading {
+  margin-bottom: clamp(1.4rem, 2.6vw, 2.1rem);
+}
+
+.section-heading h2,
+.contact-band h2,
+.faq-section h2,
+.session-steps h2 {
+  margin-bottom: 0.85rem;
+}
+
+.approach-copy,
+.content-card,
+.contact-band {
+  padding: clamp(1.8rem, 4vw, 3rem);
+}
+
+.quote-highlight {
+  padding: 1.55rem 0 1.55rem 1.75rem;
+}
+
+.service-card h3,
+.service-card p,
+.service-card .text-link {
+  margin-inline: clamp(1.25rem, 2.4vw, 1.75rem);
+}
+
+.service-card h3 {
+  margin-top: 1.25rem;
+}
+
+.service-card .text-link {
+  margin-bottom: 1.45rem;
+}
+
+.session-steps .steps-list,
+.faq-list,
+.contact-form {
+  gap: 1rem;
+}
+
+.contact-details p {
+  margin-bottom: 0.95rem;
+}
+
 @keyframes ambient-shift {
   from {
     transform: translate3d(-1.2%, -1.2%, 0) scale(1);
@@ -1346,7 +1642,6 @@ a:focus {
   .therapist-hero,
   .approach,
   .therapist-profile,
-  .location-layout,
   .contact-layout {
     grid-template-columns: 1fr;
   }
@@ -1366,6 +1661,10 @@ a:focus {
 
   .office-gallery {
     grid-template-columns: 1fr;
+  }
+
+  .site-main.container {
+    gap: clamp(52px, 8vw, 72px);
   }
 }
 
@@ -1484,8 +1783,10 @@ a:focus {
     width: min(var(--container), calc(100% - 1.3rem));
   }
 
-  .site-main {
-    padding-top: 1.7rem;
+  .site-main,
+  .site-main.container {
+    gap: 44px;
+    padding-bottom: 1.5rem;
   }
 
   .services-grid {
@@ -1517,7 +1818,20 @@ a:focus {
   }
 
   .contact-band {
-    padding: 2rem 1rem;
+    padding: 2.1rem 1.15rem;
+  }
+
+  .approach-copy,
+  .content-card {
+    padding: 1.45rem;
+  }
+
+  .office-gallery,
+  .approach,
+  .therapist-profile,
+  .contact-layout,
+  .services-grid {
+    gap: 1.15rem;
   }
 
   .footer-menu {

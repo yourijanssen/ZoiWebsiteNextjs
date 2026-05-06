@@ -16,7 +16,6 @@ const homeAnchors = {
   therapies: "/#ypiresies",
   faq: "/#syxnes-erotiseis",
   articles: "/",
-  location: "/#pou-eimaste",
   contact: "/#epikoinonia",
 };
 
@@ -130,14 +129,6 @@ export function SiteShell({ language, children }: SiteShellProps) {
                 </li>
                 <li className="menu-item">
                   <Link
-                    href={withLanguage(homeAnchors.location, currentLang)}
-                    onClick={closeMenu}
-                  >
-                    {t.nav.location}
-                  </Link>
-                </li>
-                <li className="menu-item">
-                  <Link
                     href={withLanguage(homeAnchors.contact, currentLang)}
                     onClick={closeMenu}
                   >
@@ -190,11 +181,6 @@ export function SiteShell({ language, children }: SiteShellProps) {
               <li className="menu-item">
                 <Link href={withLanguage(homeAnchors.articles, currentLang)}>
                   {t.nav.articles}
-                </Link>
-              </li>
-              <li className="menu-item">
-                <Link href={withLanguage(homeAnchors.location, currentLang)}>
-                  {t.nav.location}
                 </Link>
               </li>
               <li className="menu-item">
