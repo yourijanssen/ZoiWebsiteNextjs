@@ -145,7 +145,7 @@ export const content = {
     },
     frontPageContent:
       "Η αυτοφροντίδα δεν χρειάζεται να είναι σύνθετη. Μικρές και σταθερές κινήσεις μέσα στην εβδομάδα μπορούν να ενισχύσουν την ψυχική ανθεκτικότητα.",
-    footerCredit: "Made by Youri Janssen",
+    footerCredit: "Made by Youri Janssen™",
     notFound: {
       title: "Η σελίδα δεν βρέθηκε",
       text: "Η σελίδα που αναζητάτε δεν υπάρχει.",
@@ -271,7 +271,7 @@ export const content = {
     },
     frontPageContent:
       "Self-care does not need to be complicated. Small and steady actions during the week can strengthen psychological resilience.",
-    footerCredit: "Made by Youri Janssen",
+    footerCredit: "Made by Youri Janssen™",
     notFound: {
       title: "Page not found",
       text: "The page you are looking for does not exist.",
