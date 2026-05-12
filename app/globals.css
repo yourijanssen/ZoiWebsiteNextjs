@@ -39,10 +39,12 @@
   --radius-md: 16px;
   --radius-sm: 12px;
   --container: 1160px;
+  --header-offset: 85px;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-offset) + 1rem);
   overflow-x: clip;
 }
 
@@ -58,6 +60,7 @@ body {
   position: relative;
   isolation: isolate;
   overflow-x: clip;
+  padding-top: var(--header-offset);
   background:
     radial-gradient(circle at 8% 12%, #f9e8d2 0%, transparent 28%),
     radial-gradient(circle at 92% 10%, #d8ece9 0%, transparent 24%),
@@ -126,9 +129,15 @@ a:focus {
 }
 
 .site-header {
-  position: sticky;
+  position: fixed;
+  left: 0;
+  right: 0;
   top: 0;
-  z-index: 40;
+  width: 100%;
+  z-index: 100;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
 }
 
 .site-footer {
@@ -1696,7 +1705,9 @@ body::after,
     border-top: 1px solid var(--line);
     overflow-x: hidden;
     overflow-y: auto;
-    max-height: calc(100dvh - 5.5rem);
+    max-height: calc(100svh - var(--header-offset));
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
   }
 
   .site-header:not(.is-menu-open) .header-panel {
@@ -1767,6 +1778,14 @@ body::after,
 }
 
 @media (max-width: 575px) {
+  :root {
+    --header-offset: 78px;
+  }
+
+  .header-inner {
+    min-height: var(--header-offset);
+  }
+
   .container {
     width: min(var(--container), calc(100% - 1.3rem));
   }
