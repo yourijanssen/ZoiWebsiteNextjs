@@ -1,21 +1,62 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ContactForm } from "@/components/contact-form";
 import { SiteShell } from "@/components/site-shell";
 import { content, resolveLanguage, services } from "@/lib/site-content";
+import { buildHomeStructuredData, languageUrls } from "@/lib/seo";
 
 type HomePageProps = {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 };
+
+export async function generateMetadata({
+  searchParams,
+}: HomePageProps): Promise<Metadata> {
+  const language = resolveLanguage((await searchParams).lang);
+  const t = content[language];
+
+  return {
+    title: {
+      absolute: t.metaTitle,
+    },
+    description: t.metaDescription,
+    alternates: {
+      canonical: languageUrls[language],
+      languages: {
+        el: languageUrls.el,
+        en: languageUrls.en,
+      },
+    },
+    openGraph: {
+      title: t.metaTitle,
+      description: t.metaDescription,
+      url: languageUrls[language],
+      siteName: t.brand,
+      locale: language === "el" ? "el_GR" : "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary",
+      title: t.metaTitle,
+      description: t.metaDescription,
+    },
+  };
+}
 
 export default async function Home({ searchParams }: HomePageProps) {
   const language = resolveLanguage((await searchParams).lang);
   const t = content[language];
   const localizedServices = services[language];
   const langQuery = `?lang=${language}`;
+  const structuredData = buildHomeStructuredData(language);
 
   return (
     <SiteShell language={language}>
       <main className="site-main container">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
         <section className="therapist-hero">
           <div className="hero-copy">
             <p className="hero-kicker">{t.hero.kicker}</p>

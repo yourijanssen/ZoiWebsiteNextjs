@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SiteShell } from "@/components/site-shell";
 import {
@@ -7,6 +8,10 @@ import {
   resolveLanguage,
   services,
 } from "@/lib/site-content";
+import {
+  buildServiceStructuredData,
+  siteUrl,
+} from "@/lib/seo";
 
 type ServicePageProps = {
   params: Promise<{ slug: string }>;
@@ -20,7 +25,7 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
   searchParams,
-}: ServicePageProps) {
+}: ServicePageProps): Promise<Metadata> {
   const language = resolveLanguage((await searchParams).lang);
   const service = getServiceBySlug(language, (await params).slug);
 
@@ -29,8 +34,33 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${service.title} | ${content[language].brand}`,
+    title: {
+      absolute:
+        language === "el"
+          ? `Online συνεδρίες ψυχοθεραπείας | ${content[language].brand}`
+          : `Online psychotherapy sessions | ${content[language].brand}`,
+    },
     description: service.summary,
+    alternates: {
+      canonical: `${siteUrl}/ypiresies/${service.slug}?lang=${language}`,
+      languages: {
+        el: `${siteUrl}/ypiresies/${service.slug}?lang=el`,
+        en: `${siteUrl}/ypiresies/${service.slug}?lang=en`,
+      },
+    },
+    openGraph: {
+      title: service.title,
+      description: service.summary,
+      url: `${siteUrl}/ypiresies/${service.slug}?lang=${language}`,
+      siteName: content[language].brand,
+      locale: language === "el" ? "el_GR" : "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary",
+      title: service.title,
+      description: service.summary,
+    },
   };
 }
 
@@ -48,10 +78,15 @@ export default async function ServicePage({
 
   const t = content[language];
   const langQuery = `?lang=${language}`;
+  const structuredData = buildServiceStructuredData(language);
 
   return (
     <SiteShell language={language}>
       <main className="site-main container service-single">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
         <article className="content-card service-single-card">
           <p className="hero-kicker">{t.servicesHeading.title}</p>
           <h1>{service.title}</h1>
@@ -68,7 +103,10 @@ export default async function ServicePage({
             <Link className="button" href={`/${langQuery}#epikoinonia`}>
               {t.hero.contactCta}
             </Link>
-            <Link className="button button-outline" href={`/${langQuery}#ypiresies`}>
+            <Link
+              className="button button-outline"
+              href={`/${langQuery}#ypiresies`}
+            >
               {t.servicesHeading.back}
             </Link>
           </div>
