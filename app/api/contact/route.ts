@@ -80,7 +80,7 @@ function buildVisitorEmail({
         <div style="font-family: Arial, sans-serif; color: #17302f; line-height: 1.6;">
           <h1 style="font-size: 22px;">Σας ευχαριστούμε, ${escapeHtml(name)}</h1>
           <p>Λάβαμε το μήνυμά σας και θα επικοινωνήσουμε μαζί σας σύντομα.</p>
-          <p>Ζωή Παντού</p>
+          <p>Ζωή Πάντου</p>
         </div>
       `,
     };
