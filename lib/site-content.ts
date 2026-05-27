@@ -165,7 +165,7 @@ export const content = {
     },
     frontPageContent:
       "Οι online συνεδρίες συστημικής ψυχοθεραπείας με ψυχολόγο και ψυχοθεραπεύτρια μπορούν να υποστηρίξουν θέματα άγχους, αυτογνωσίας, σχέσεων, ορίων και συναισθηματικής δυσκολίας. Η πρώτη επικοινωνία βοηθά να δούμε αν το πλαίσιο ταιριάζει στις ανάγκες σας.",
-    footerCredit: "Made by Youri Janssen™",
+    footerCredit: "© Youri Janssen",
     notFound: {
       title: "Η σελίδα δεν βρέθηκε",
       text: "Η σελίδα που αναζητάτε δεν υπάρχει.",
@@ -310,7 +310,7 @@ export const content = {
     },
     frontPageContent:
       "Online systemic psychotherapy sessions with a psychologist and psychotherapist can support anxiety, self-awareness, relationships, boundaries and emotional difficulty. The first contact helps us see whether the framework fits your needs.",
-    footerCredit: "Made by Youri Janssen™",
+    footerCredit: "© Youri Janssen",
     notFound: {
       title: "Page not found",
       text: "The page you are looking for does not exist.",
