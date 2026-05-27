@@ -91,25 +91,6 @@ export default async function Home({ searchParams }: HomePageProps) {
           </article>
         </section>
 
-        <section className="approach" id="sxetika">
-          <div className="approach-media">
-            <div className="image-placeholder">
-              <p>{t.gallery.approachImage}</p>
-            </div>
-          </div>
-          <div className="approach-copy">
-            <h2>{t.approach.title}</h2>
-            {t.approach.body.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-            <ul className="approach-list">
-              {t.approach.points.map((point) => (
-                <li key={point}>{point}</li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
         <section className="quote-highlight">
           <blockquote>
             <p>{t.quote.text}</p>

@@ -65,15 +65,17 @@ export const content = {
         "Ζωή Πάντου, ψυχολόγος και ψυχοθεραπεύτρια για online συστημική ψυχοθεραπεία",
     },
     approach: {
-      title: "Συστημική ψυχοθεραπεία online",
+      title: "Ζωή Πάντου, Ψυχολόγος ΑΠΘ, MSc, ΜΑ",
       body: [
-        "Η συστημική ψυχοθεραπεία online βασίζεται στην εμπιστοσύνη, στην αποδοχή και στη σταθερότητα. Σε κάθε συνεδρία δίνουμε χώρο στο βίωμα, οργανώνουμε το αίτημα και εξετάζουμε τον άνθρωπο μέσα στις σχέσεις, την οικογένεια και τα πλαίσια που επηρεάζουν την καθημερινότητά του.",
-        "Η διαδικασία προσαρμόζεται στον ρυθμό του κάθε ανθρώπου. Στόχος είναι η ουσιαστική κατανόηση των δυσκολιών, η ενίσχυση της αυτογνωσίας και η δημιουργία νέων τρόπων σύνδεσης με τον εαυτό και τους άλλους μέσα από ένα ασφαλές online θεραπευτικό πλαίσιο.",
+        "Η Ζωή Πάντου είναι ψυχολόγος με βασικές προπτυχιακές σπουδές στο τμήμα Ψυχολογίας του Αριστοτελείου Πανεπιστημίου Θεσσαλονίκης (ΑΠΘ) και κατέχει άδεια ασκήσεως επαγγέλματος ψυχολόγου (Αριθ. Πρωτ. ΔΔΥΚΜ/Μ.Ε.Θ. 537827/17822). Είναι κάτοχος του μεταπτυχιακού διπλώματος «Μουσική και Κοινωνία με ειδίκευση στη Μουσικοθεραπεία» από το Πανεπιστήμιο Μακεδονίας (ΠΑΜΑΚ) και του μεταπτυχιακού διπλώματος «Εφαρμοσμένη Γνωστική Ψυχολογία» από το Πανεπιστήμιο της Ουτρέχτης. Βρίσκεται επιπλέον στο τελευταίο έτος της τετραετούς εκπαίδευσης στη Συστημική Ψυχοθεραπεία και Συμβουλευτική στο Κέντρο Συστημικής Μελέτης και Θεραπείας (πιστοποιημένη από την E.F.T.A. – European Family Therapy Association και την Εθνική Εταιρεία Ψυχοθεραπείας Ελλάδος – Ε.Ε.Ψ.Ε., εκπρόσωπο της European Association for Psychotherapy – EAP).",
+        "Έχει εργαστεί με παιδιά, εφήβους και ενήλικες σε αναγνωρισμένα κέντρα ειδικών θεραπειών και δομές αποκατάστασης στη Θεσσαλονίκη (Speechbox, ΕΛΕΠΑΠ Θεσσαλονίκης), διαθέτοντας κλινική εμπειρία στην ατομική ψυχοθεραπεία, την πρώιμη παρέμβαση και τη συμβουλευτική γονέων. Παράλληλα, έχει σχεδιάσει και υλοποιήσει υπό εποπτεία μουσικοθεραπευτικές ομαδικές και ατομικές συνεδρίες για την υποστήριξη ευπαθών ομάδων και ατόμων τρίτης ηλικίας (Οίκος Ευγηρίας «Άγιος Νικόλαος»). Αναφορικά με την ερευνητική της δραστηριότητα, στο πλαίσιο των μεταπτυχιακών της σπουδών στο Πανεπιστήμιο της Ουτρέχτης εξειδικεύτηκε στην αυτόνομη διεξαγωγή ηλεκτροεγκεφαλογραφημάτων (EEG/ERPs) για τη μελέτη γνωστικών μηχανισμών, ενώ στο Πανεπιστήμιο Μακεδονίας ερεύνησε την επίδραση της μουσικοθεραπείας στη διαχείριση των ψυχολογικών και συμπεριφορικών συμπτωμάτων σε ασθενείς με άνοια.",
+        "Με τη βαθιά πεποίθηση ότι η πραγματικότητά μας συνδιαμορφώνεται μέσα από τις σχέσεις και τα πλαίσια στα οποία ανήκουμε, προσεγγίζει κάθε άνθρωπο όχι αποκομμένο, αλλά ως αναπόσπαστο μέλος του δικού του μοναδικού συστήματος. Μέσα από τη δυναμική ψυχοθεραπευτική διαδικασία, στοχεύει στην καλλιέργεια και άνθιση νέων οπτικών και νοηματοδοτήσεων, προσφέροντας έναν ασφαλή χώρο για την προσωπική ενδυνάμωση και την εξέλιξη των ατόμων.",
       ],
       points: [
-        "Σταθερό πλαίσιο και σαφή θεραπευτικά όρια",
-        "Συστημική κατανόηση σχέσεων, οικογένειας και προσωπικών δυσκολιών",
-        "Τακτική αξιολόγηση προόδου",
+        "Άδεια ασκήσεως επαγγέλματος ψυχολόγου",
+        "MSc στη Μουσική και Κοινωνία με ειδίκευση στη Μουσικοθεραπεία",
+        "ΜΑ στην Εφαρμοσμένη Γνωστική Ψυχολογία",
+        "Εκπαίδευση στη Συστημική Ψυχοθεραπεία και Συμβουλευτική",
       ],
     },
     quote: {
@@ -83,12 +85,13 @@ export const content = {
     profile: {
       kicker: "Προφίλ",
       name: "Ζωή Πάντου",
-      role: "Ψυχολόγος - Ψυχοθεραπεύτρια",
-      bio: "Ως ψυχολόγος και ψυχοθεραπεύτρια με σύγχρονη κλινική εκπαίδευση και έμφαση στη συστημική ψυχοθεραπεία, προσφέρω online συνεδρίες στα ελληνικά για ανθρώπους που αναζητούν ένα σταθερό και ανθρώπινο πλαίσιο προσωπικής αλλαγής.",
+      role: "Ψυχολόγος ΑΠΘ, MSc, ΜΑ",
+      bio: "Ψυχολόγος με άδεια ασκήσεως επαγγέλματος, μεταπτυχιακές σπουδές στη μουσικοθεραπεία και την εφαρμοσμένη γνωστική ψυχολογία, και εκπαίδευση στη συστημική ψυχοθεραπεία και συμβουλευτική.",
       credentials: [
         "Άδεια άσκησης επαγγέλματος ψυχολόγου",
-        "Εξειδίκευση στη συστημική ψυχοθεραπεία",
-        "Συνεχής εποπτεία και επαγγελματική επιμόρφωση",
+        "MSc Μουσική και Κοινωνία με ειδίκευση στη Μουσικοθεραπεία",
+        "ΜΑ Εφαρμοσμένη Γνωστική Ψυχολογία",
+        "Εκπαίδευση στη Συστημική Ψυχοθεραπεία και Συμβουλευτική",
       ],
     },
     servicesHeading: {
@@ -207,15 +210,17 @@ export const content = {
         "Zoi Pantou, psychologist and psychotherapist for online systemic psychotherapy in Greek",
     },
     approach: {
-      title: "Online systemic psychotherapy",
+      title: "Zoi Pantou, Psychologist AUTH, MSc, MA",
       body: [
-        "Online systemic psychotherapy is based on trust, acceptance and stability. In each session we make room for lived experience, organize the request and look at the person within relationships, family patterns and the contexts that shape everyday life.",
-        "The process adapts to each person’s pace. The aim is meaningful understanding of difficulties, stronger self-awareness and new ways of relating to yourself and others within a safe online therapeutic framework.",
+        "Zoi Pantou is a psychologist with undergraduate studies in the Department of Psychology at Aristotle University of Thessaloniki (AUTH) and holds a license to practice as a psychologist (Protocol No. ΔΔΥΚΜ/Μ.Ε.Θ. 537827/17822). She holds the postgraduate degree “Music and Society with specialization in Music Therapy” from the University of Macedonia (UoM) and the postgraduate degree “Applied Cognitive Psychology” from Utrecht University. She is also in the final year of her four-year training in Systemic Psychotherapy and Counseling at the Center for Systemic Study and Therapy (certified by E.F.T.A. – European Family Therapy Association and the National Society of Psychotherapy of Greece – N.S.P.G., representative of the European Association for Psychotherapy – EAP).",
+        "She has worked with children, adolescents and adults in recognized special therapy centers and rehabilitation settings in Thessaloniki (Speechbox, ELEPAP Thessaloniki), with clinical experience in individual psychotherapy, early intervention and parent counseling. At the same time, under supervision, she has designed and implemented group and individual music therapy sessions for the support of vulnerable groups and older adults (Saint Nicholas Nursing Home). Regarding her research activity, during her postgraduate studies at Utrecht University she specialized in the independent conduction of electroencephalography recordings (EEG/ERPs) for the study of cognitive mechanisms, while at the University of Macedonia she researched the effect of music therapy on the management of psychological and behavioral symptoms in patients with dementia.",
+        "With the deep belief that our reality is co-shaped through the relationships and contexts to which we belong, she approaches each person not as isolated, but as an integral member of their own unique system. Through the dynamic psychotherapeutic process, she aims to cultivate and allow new perspectives and meanings to flourish, offering a safe space for personal empowerment and individual development.",
       ],
       points: [
-        "Stable framework and clear therapeutic boundaries",
-        "Systemic understanding of relationships, family and personal difficulties",
-        "Regular progress review",
+        "Licensed psychologist",
+        "MSc in Music and Society with specialization in Music Therapy",
+        "MA in Applied Cognitive Psychology",
+        "Training in Systemic Psychotherapy and Counseling",
       ],
     },
     quote: {
@@ -225,12 +230,13 @@ export const content = {
     profile: {
       kicker: "Profile",
       name: "Zoi Pantou",
-      role: "Psychologist - Psychotherapist",
-      bio: "As a psychologist and psychotherapist with modern clinical training and emphasis on systemic psychotherapy, I offer online sessions in Greek for people looking for a steady and human framework for personal change.",
+      role: "Psychologist AUTH, MSc, MA",
+      bio: "Licensed psychologist with postgraduate studies in music therapy and applied cognitive psychology, and training in systemic psychotherapy and counseling.",
       credentials: [
         "Licensed psychologist",
-        "Specialization in systemic psychotherapy",
-        "Ongoing supervision and professional training",
+        "MSc Music and Society with specialization in Music Therapy",
+        "MA Applied Cognitive Psychology",
+        "Training in Systemic Psychotherapy and Counseling",
       ],
     },
     servicesHeading: {

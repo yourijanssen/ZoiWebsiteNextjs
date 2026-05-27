@@ -1243,6 +1243,64 @@ a:focus {
   margin-bottom: 0.5rem;
 }
 
+.about-page {
+  padding-top: clamp(3rem, 6vw, 5rem);
+}
+
+.about-article {
+  width: min(920px, calc(100% - 2.4rem));
+  margin-inline: auto;
+}
+
+.about-article h1 {
+  max-width: 14ch;
+  font-size: clamp(2.1rem, 5vw, 4.15rem);
+}
+
+.about-copy {
+  display: grid;
+  gap: 1.35rem;
+  margin-top: clamp(1.7rem, 3vw, 2.4rem);
+}
+
+.about-copy p {
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(1.02rem, 1.2vw, 1.13rem);
+  line-height: 1.9;
+}
+
+.about-credentials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 1rem;
+  margin: clamp(1.35rem, 2.2vw, 1.8rem) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-credentials li {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  max-width: 100%;
+  padding: 0.2rem 0;
+  color: #45615c;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  font-size: clamp(0.84rem, 0.9vw, 0.91rem);
+  font-weight: 650;
+  line-height: 1.35;
+}
+
+.about-credentials li::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 0.38rem;
+  height: 0.38rem;
+  border-radius: 999px;
+  background: rgba(45, 127, 115, 0.36);
+}
+
 .entry-meta {
   color: var(--muted);
   font-size: 0.9rem;
@@ -1831,6 +1889,28 @@ body::after,
   .approach-copy,
   .content-card {
     padding: 1.45rem;
+  }
+
+  .about-article {
+    width: min(var(--container), calc(100% - 1.3rem));
+  }
+
+  .about-article h1 {
+    max-width: none;
+  }
+
+  .about-copy p {
+    line-height: 1.75;
+  }
+
+  .about-credentials {
+    gap: 0.45rem 0.85rem;
+  }
+
+  .about-credentials li,
+  .about-credentials li:nth-child(odd),
+  .about-credentials li:nth-child(even) {
+    padding: 0.18rem 0;
   }
 
   .office-gallery,

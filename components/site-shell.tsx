@@ -12,7 +12,7 @@ type SiteShellProps = {
 
 const homeAnchors = {
   home: "/",
-  about: "/#sxetika",
+  about: "/sxetika",
   therapies: "/#ypiresies",
   faq: "/#syxnes-erotiseis",
   articles: "/",
@@ -46,6 +46,8 @@ export function SiteShell({ language, children }: SiteShellProps) {
   };
 
   const closeMenu = () => setIsMenuOpen(false);
+  const navItemClass = (isCurrent: boolean) =>
+    `menu-item${isCurrent ? " current-menu-item" : ""}`;
 
   return (
     <>
@@ -72,7 +74,7 @@ export function SiteShell({ language, children }: SiteShellProps) {
           <div className="header-panel" id="site-header-panel">
             <nav className="site-nav" aria-label={t.nav.mainLabel}>
               <ul className="menu">
-                <li className="menu-item current-menu-item">
+                <li className={navItemClass(pathname === "/")}>
                   <Link
                     href={withLanguage(homeAnchors.home, currentLang)}
                     onClick={closeMenu}
@@ -80,7 +82,7 @@ export function SiteShell({ language, children }: SiteShellProps) {
                     {t.nav.home}
                   </Link>
                 </li>
-                <li className="menu-item">
+                <li className={navItemClass(pathname === "/sxetika")}>
                   <Link
                     href={withLanguage(homeAnchors.about, currentLang)}
                     onClick={closeMenu}
@@ -88,7 +90,11 @@ export function SiteShell({ language, children }: SiteShellProps) {
                     {t.nav.about}
                   </Link>
                 </li>
-                <li className="menu-item menu-item-has-children">
+                <li
+                  className={`${navItemClass(
+                    pathname.startsWith("/ypiresies"),
+                  )} menu-item-has-children`}
+                >
                   <Link
                     href={withLanguage(homeAnchors.therapies, currentLang)}
                     onClick={closeMenu}

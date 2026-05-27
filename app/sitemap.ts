@@ -11,6 +11,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: language === "el" ? 1 : 0.9,
   }));
 
+  const aboutPages = languages.map((language) => ({
+    url: `${siteUrl}/sxetika?lang=${language}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.85,
+  }));
+
   const servicePages = languages.flatMap((language) =>
     services[language].map((service) => ({
       url: `${siteUrl}/ypiresies/${service.slug}?lang=${language}`,
@@ -20,5 +27,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   );
 
-  return [...homePages, ...servicePages];
+  return [...homePages, ...aboutPages, ...servicePages];
 }
