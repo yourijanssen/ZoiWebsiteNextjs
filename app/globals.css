@@ -39,7 +39,7 @@
   --radius-md: 16px;
   --radius-sm: 12px;
   --container: 1160px;
-  --header-offset: 85px;
+  --header-offset: 0px;
 }
 
 html {
@@ -60,7 +60,7 @@ body {
   position: relative;
   isolation: isolate;
   overflow-x: clip;
-  padding-top: var(--header-offset);
+  padding-top: 0;
   background:
     radial-gradient(circle at 8% 12%, #f9e8d2 0%, transparent 28%),
     radial-gradient(circle at 92% 10%, #d8ece9 0%, transparent 24%),
@@ -1673,6 +1673,416 @@ body::after,
   margin-bottom: 0.95rem;
 }
 
+/* Canva-inspired homepage layout with local photo assets. */
+.editorial-home {
+  gap: 0;
+  padding: 0;
+  background: #f4f7c9;
+  color: #101a13;
+}
+
+.editorial-home .therapist-hero,
+.home-intro-grid,
+.home-feature-grid,
+.home-about-band,
+.life-lately-section,
+.editorial-home .services,
+.editorial-home .faq-section,
+.editorial-home .contact-band {
+  width: min(100%, 1180px);
+  margin-inline: auto;
+}
+
+.editorial-home .therapist-hero {
+  min-height: clamp(420px, 58vh, 620px);
+  padding: clamp(4.2rem, 8vw, 7.4rem) clamp(1.2rem, 5vw, 4rem);
+  background:
+    linear-gradient(180deg, rgba(5, 10, 6, 0.2), rgba(5, 10, 6, 0.52)),
+    url("/images/sunlit-leaves.jpg") center 42% / cover;
+}
+
+.hero-language-switcher {
+  position: absolute;
+  top: clamp(1rem, 2vw, 1.6rem);
+  right: clamp(1rem, 2.4vw, 2rem);
+  z-index: 2;
+  display: inline-flex;
+  gap: 0.22rem;
+  padding: 0.18rem;
+  border: 1px solid rgba(255, 253, 232, 0.45);
+  border-radius: 999px;
+  background: rgba(3, 5, 3, 0.28);
+  backdrop-filter: blur(8px);
+}
+
+.hero-language-option {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.1rem;
+  min-height: 2.1rem;
+  border-radius: 999px;
+  color: rgba(255, 253, 232, 0.76);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.hero-language-option:hover,
+.hero-language-option:focus {
+  color: #fffde8;
+}
+
+.hero-language-option.is-active {
+  background: #f4f7c9;
+  color: #071008;
+}
+
+.editorial-home .hero-copy {
+  max-width: 740px;
+}
+
+.editorial-home .hero-kicker,
+.editorial-home .profile-kicker {
+  color: currentColor;
+  font-size: 0.74rem;
+  letter-spacing: 0.04em;
+  opacity: 0.78;
+  text-transform: none;
+}
+
+.editorial-home .therapist-hero h1 {
+  max-width: 11ch;
+  margin-inline: auto;
+  font-size: clamp(2.75rem, 8vw, 6.35rem);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 0.95;
+}
+
+.editorial-home .hero-lead {
+  max-width: 58ch;
+  font-size: 0.98rem;
+}
+
+.editorial-home .button {
+  min-height: 2.35rem;
+  border-radius: 999px;
+  padding: 0.55rem 1.35rem;
+  background: #f4f7c9;
+  color: #071008;
+  font-size: 0.82rem;
+}
+
+.editorial-home .button:hover,
+.editorial-home .button:focus {
+  background: #fffde2;
+  color: #071008;
+}
+
+.editorial-home .button-outline {
+  border-color: rgba(244, 247, 201, 0.75);
+  background: transparent;
+  color: #fffde2;
+}
+
+.editorial-home .button-outline:hover,
+.editorial-home .button-outline:focus {
+  background: rgba(244, 247, 201, 0.16);
+  color: #fffde2;
+}
+
+.button-light {
+  background: #f4f7c9;
+  color: #071008;
+}
+
+.home-intro-grid,
+.home-feature-grid,
+.life-lately-section {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+}
+
+.intro-panel {
+  min-height: 520px;
+  padding: clamp(2rem, 5vw, 4rem);
+}
+
+.intro-panel h2,
+.signup-card h2,
+.home-about-band h2,
+.life-lately-section h2,
+.editorial-home .contact-band h2 {
+  font-size: clamp(2rem, 4.4vw, 4.6rem);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.intro-panel-dark {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #030503;
+  color: #fffde8;
+}
+
+.intro-panel-dark p {
+  max-width: 48ch;
+  color: rgba(255, 253, 232, 0.78);
+}
+
+.intro-portrait {
+  width: min(100%, 440px);
+  min-height: 230px;
+  margin: 1.45rem 0 1.3rem;
+}
+
+.intro-panel-light {
+  background: #f4f7c9;
+  color: #071008;
+}
+
+.mini-list {
+  display: grid;
+  gap: 1.4rem;
+  margin-top: 1.8rem;
+}
+
+.mini-list-item {
+  display: grid;
+  grid-template-columns: minmax(100px, 170px) minmax(0, 1fr);
+  gap: 1.1rem;
+  align-items: center;
+  color: #071008;
+  font-size: clamp(0.88rem, 1vw, 1rem);
+  font-weight: 600;
+}
+
+.mini-list-image {
+  display: block;
+  min-height: 88px;
+  background-size: cover;
+  background-position: center;
+}
+
+.photo-surface {
+  position: relative;
+  overflow: hidden;
+  background-color: #172416;
+  background-position: center;
+  background-size: cover;
+}
+
+.photo-surface::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(2, 6, 3, 0.04), rgba(2, 6, 3, 0.18));
+}
+
+.photo-portrait {
+  background-image: url("/images/calm-field-tree.jpg");
+  background-position: center 48%;
+}
+
+.photo-walk {
+  min-height: 620px;
+  background-image: url("/images/quiet-field.jpg");
+  background-position: center 52%;
+}
+
+.photo-soft,
+.photo-leaves {
+  background-image: url("/images/sunlit-leaves.jpg");
+}
+
+.photo-soft {
+  min-height: 620px;
+  display: grid;
+  place-items: center;
+  padding: clamp(1.4rem, 4vw, 3rem);
+}
+
+.photo-leaves {
+  min-height: clamp(420px, 52vw, 560px);
+  display: grid;
+  place-items: center;
+  padding: clamp(2rem, 6vw, 4rem);
+  background-position: center 48%;
+}
+
+.photo-session {
+  min-height: 560px;
+  background-image: url("/images/wildflowers-motion.jpg");
+  background-position: center 48%;
+}
+
+.signup-card {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 430px);
+  padding: clamp(1.4rem, 4vw, 2.3rem);
+  background: #f4f7c9;
+  color: #071008;
+  text-align: center;
+}
+
+.signup-card p {
+  color: rgba(7, 16, 8, 0.72);
+}
+
+.home-about-band > div {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  color: #fffde8;
+  text-align: center;
+}
+
+.home-about-band p {
+  color: rgba(255, 253, 232, 0.84);
+}
+
+.life-lately-section {
+  background: #030503;
+  color: #fffde8;
+}
+
+.life-lately-section article {
+  padding: clamp(2rem, 6vw, 5rem);
+}
+
+.life-lately-section p,
+.life-lately-section li {
+  color: rgba(255, 253, 232, 0.78);
+}
+
+.life-lately-section .steps-list {
+  margin: 1.2rem 0 1.8rem;
+}
+
+.editorial-home .services,
+.editorial-home .faq-section {
+  width: min(100% - 2.4rem, 1080px);
+}
+
+.editorial-home .services {
+  padding: clamp(1rem, 2vw, 1.5rem) 0;
+}
+
+.editorial-home .section-heading {
+  max-width: 720px;
+}
+
+.editorial-home .services-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: #dbe3ba;
+}
+
+.editorial-home .service-card {
+  border: 0;
+  border-radius: 0;
+  background: #f4f7c9;
+}
+
+.editorial-home .service-media {
+  min-height: 210px;
+  border-radius: 0;
+  margin: 0 0 1rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.editorial-home .service-media-online,
+.mini-list-image.service-media-online {
+  background-image: url("/images/sunlit-leaves.jpg");
+}
+
+.editorial-home .service-media-individual,
+.mini-list-image.service-media-individual {
+  background-image: url("/images/quiet-field.jpg");
+}
+
+.editorial-home .service-media-couples,
+.editorial-home .service-media-family,
+.mini-list-image.service-media-couples,
+.mini-list-image.service-media-family {
+  background-image: url("/images/wildflowers-motion.jpg");
+}
+
+.editorial-home .faq-section {
+  border: 0;
+  background: #fffde8;
+}
+
+.editorial-home .contact-band {
+  min-height: 560px;
+  border: 0;
+  border-radius: 0;
+  padding: clamp(2rem, 6vw, 4.4rem) clamp(2rem, 6vw, 4.4rem) clamp(4.5rem, 7vw, 5.8rem);
+  background:
+    linear-gradient(180deg, rgba(20, 24, 8, 0.18), rgba(20, 24, 8, 0.44)),
+    url("/images/wildflowers-motion.jpg") center / cover;
+  color: #fffde8;
+  text-align: center;
+}
+
+.editorial-home .contact-band .section-heading {
+  margin-inline: auto;
+}
+
+.editorial-home .contact-band p {
+  margin-inline: auto;
+  color: rgba(255, 253, 232, 0.86);
+}
+
+.contact-layout-single {
+  display: block;
+  width: min(100%, 620px);
+  margin-inline: auto;
+}
+
+.editorial-home .contact-form {
+  padding: clamp(1.2rem, 3vw, 2rem);
+  background: #f4f7c9;
+  color: #071008;
+}
+
+.editorial-home .contact-form label span {
+  color: #071008;
+  font-size: 0.78rem;
+}
+
+.editorial-home .contact-form input,
+.editorial-home .contact-form textarea {
+  border-radius: 0;
+  background: rgba(255, 253, 232, 0.72);
+}
+
+.editorial-home .contact-form .button {
+  width: 100%;
+  background: #030503;
+  color: #fffde8;
+}
+
+.funnel-credit {
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: clamp(0.9rem, 2vw, 1.35rem);
+  z-index: 1;
+  margin: 0 auto;
+  color: rgba(255, 253, 232, 0.66);
+  font-size: 0.72rem;
+  line-height: 1.45;
+  text-align: center;
+}
+
 @keyframes ambient-shift {
   from {
     transform: translate3d(-1.2%, -1.2%, 0) scale(1);
@@ -1720,6 +2130,29 @@ body::after,
 
   .site-main.container {
     gap: clamp(52px, 8vw, 72px);
+  }
+
+  .home-intro-grid,
+  .home-feature-grid,
+  .life-lately-section,
+  .editorial-home .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-panel,
+  .photo-walk,
+  .photo-soft,
+  .photo-session {
+    min-height: auto;
+  }
+
+  .photo-walk,
+  .photo-session {
+    min-height: 430px;
+  }
+
+  .life-lately-section .photo-session {
+    order: -1;
   }
 }
 
@@ -1837,7 +2270,7 @@ body::after,
 
 @media (max-width: 575px) {
   :root {
-    --header-offset: 78px;
+    --header-offset: 0px;
   }
 
   .header-inner {
@@ -1937,6 +2370,46 @@ body::after,
   .search-submit {
     width: auto;
     padding-inline: 0.75rem;
+  }
+
+  .editorial-home .therapist-hero {
+    min-height: 520px;
+    padding: 4rem 1.1rem;
+  }
+
+  .editorial-home .therapist-hero h1 {
+    max-width: 9ch;
+    font-size: clamp(2.6rem, 15vw, 4.2rem);
+  }
+
+  .intro-panel,
+  .life-lately-section article,
+  .editorial-home .contact-band {
+    padding: 1.45rem;
+  }
+
+  .mini-list-item {
+    grid-template-columns: 104px minmax(0, 1fr);
+    gap: 0.8rem;
+  }
+
+  .mini-list-image {
+    min-height: 74px;
+  }
+
+  .photo-walk,
+  .photo-session,
+  .photo-leaves {
+    min-height: 360px;
+  }
+
+  .signup-card {
+    padding: 1.2rem;
+  }
+
+  .editorial-home .services,
+  .editorial-home .faq-section {
+    width: min(100% - 1.3rem, 1080px);
   }
 }
 
