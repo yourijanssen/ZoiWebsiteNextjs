@@ -33,7 +33,7 @@ export const content = {
     metaTitle:
       "Ζωή Πάντου | ψυχολόγος και ψυχοθεραπεύτρια online",
     metaDescription:
-      "Ψυχολόγος και ψυχοθεραπεύτρια για online συστημική ψυχοθεραπεία στα ελληνικά. Σταθερές, εμπιστευτικές συνεδρίες με ανθρώπινη προσέγγιση.",
+      "Ψυχολόγος και ψυχοθεραπεύτρια για online συστημική ψυχοθεραπεία στα ελληνικά. Συνεδρίες μίας ώρας με κόστος 40 ευρώ.",
     nav: {
       mainLabel: "Κεντρικό μενού",
       footerLabel: "Μενού υποσέλιδου",
@@ -51,7 +51,7 @@ export const content = {
     hero: {
       kicker: "Online ψυχοθεραπεία",
       title: "Ψυχολόγος και ψυχοθεραπεύτρια για online συστημική ψυχοθεραπεία",
-      lead: "Η Ζωή Πάντου είναι ψυχολόγος και ψυχοθεραπεύτρια που προσφέρει online συνεδρίες συστημικής ψυχοθεραπείας στα ελληνικά. Κάθε συνάντηση πραγματοποιείται σε σταθερό, εμπιστευτικό και ανθρώπινο πλαίσιο.",
+      lead: "Η Ζωή Πάντου είναι ψυχολόγος και ψυχοθεραπεύτρια που προσφέρει online συνεδρίες συστημικής ψυχοθεραπείας στα ελληνικά. Κάθε συνεδρία διαρκεί μία ώρα, πραγματοποιείται σε σταθερό και εμπιστευτικό πλαίσιο και κοστίζει 40 ευρώ.",
       servicesCta: "Δείτε τις online συνεδρίες",
       contactCta: "Κλείστε online ραντεβού",
       imagePlaceholder:
@@ -96,7 +96,7 @@ export const content = {
     },
     servicesHeading: {
       title: "Online συνεδρίες",
-      text: "Προς το παρόν είναι διαθέσιμες μόνο online συνεδρίες συστημικής ψυχοθεραπείας με ψυχολόγο / ψυχοθεραπεύτρια, σε σταθερό και εμπιστευτικό πλαίσιο.",
+      text: "Προς το παρόν είναι διαθέσιμες μόνο online συνεδρίες συστημικής ψυχοθεραπείας με ψυχολόγο / ψυχοθεραπεύτρια, διάρκειας μίας ώρας και κόστους 40 ευρώ.",
       link: "Δείτε αναλυτικά",
       includes: "Τι περιλαμβάνει",
       back: "Επιστροφή στις θεραπείες",
@@ -106,7 +106,7 @@ export const content = {
       items: [
         "Σύντομη επικοινωνία για διαθεσιμότητα και πρώτο αίτημα.",
         "Πρώτη online συνεδρία αξιολόγησης και συμφωνία θεραπευτικού πλαισίου.",
-        "Σταθερές online συνεδρίες με ρυθμό που συμφωνείται από κοινού.",
+        "Σταθερές online συνεδρίες διάρκειας μίας ώρας με κόστος 40 ευρώ.",
       ],
     },
     faq: {
@@ -115,7 +115,7 @@ export const content = {
         {
           question: "Πόσο διαρκεί μια συνεδρία;",
           answer:
-            "Η διάρκεια και το πλαίσιο της συνεδρίας συζητούνται στην πρώτη επικοινωνία, ώστε να ταιριάζουν στις ανάγκες σας.",
+            "Η διάρκεια είναι μία ώρα και το κόστος είναι 40 ευρώ ανά συνεδρία.",
         },
         {
           question: "Οι συνεδρίες γίνονται μόνο online;",
@@ -146,7 +146,7 @@ export const content = {
     },
     contact: {
       title: "Επικοινωνία και ραντεβού",
-      text: "Συμπληρώστε τη φόρμα και θα επικοινωνήσουμε μαζί σας για το πρώτο online ραντεβού.",
+      text: "Συμπληρώστε τη φόρμα και θα επικοινωνήσουμε μαζί σας για το πρώτο online ραντεβού. Οι συνεδρίες κοστίζουν 40 ευρώ ανά ώρα.",
       phoneLabel: "Σταθερό:",
       mobileLabel: "Κινητό:",
       emailLabel: "Email:",
@@ -178,7 +178,7 @@ export const content = {
     brandMark: "ZP",
     metaTitle: "Zoi Pantou | psychologist and psychotherapist online",
     metaDescription:
-      "Psychologist and psychotherapist for online systemic psychotherapy in Greek. Steady, confidential sessions with a human approach.",
+      "Psychologist and psychotherapist for online systemic psychotherapy in Greek. Confidential one-hour sessions for 40 euros per session.",
     nav: {
       mainLabel: "Main menu",
       footerLabel: "Footer menu",
@@ -196,7 +196,7 @@ export const content = {
     hero: {
       kicker: "Online psychotherapy",
       title: "Psychologist and psychotherapist for online systemic psychotherapy",
-      lead: "Zoi Pantou is a psychologist and psychotherapist offering online systemic psychotherapy sessions in Greek. Each meeting takes place within a steady, confidential and human framework.",
+      lead: "Zoi Pantou is a psychologist and psychotherapist offering online systemic psychotherapy sessions in Greek. Each session lasts one hour, takes place in a steady and confidential framework, and costs 40 euros.",
       servicesCta: "View online sessions",
       contactCta: "Book an online appointment",
       imagePlaceholder:
@@ -241,7 +241,7 @@ export const content = {
     },
     servicesHeading: {
       title: "Online sessions",
-      text: "For now, only online systemic psychotherapy sessions with a psychologist / psychotherapist are available, within a steady and confidential framework.",
+      text: "For now, only online systemic psychotherapy sessions with a psychologist / psychotherapist are available. Each session lasts one hour and costs 40 euros.",
       link: "View details",
       includes: "What it includes",
       back: "Back to therapies",
@@ -251,7 +251,7 @@ export const content = {
       items: [
         "Brief contact about availability and your initial request.",
         "First online assessment session and agreement on the therapeutic framework.",
-        "Steady online sessions at a pace agreed together.",
+        "Steady one-hour online sessions at 40 euros per session.",
       ],
     },
     faq: {
@@ -260,7 +260,7 @@ export const content = {
         {
           question: "How long is a session?",
           answer:
-            "Session length and practical details are discussed during the first contact, so the framework can fit your needs.",
+            "Sessions last one hour and cost 40 euros per session.",
         },
         {
           question: "Are sessions online only?",
@@ -291,7 +291,7 @@ export const content = {
     },
     contact: {
       title: "Contact and appointments",
-      text: "Fill in the form and we will contact you about the first online appointment.",
+      text: "Fill in the form and we will contact you about the first online appointment. Sessions cost 40 euros per hour.",
       phoneLabel: "Landline:",
       mobileLabel: "Mobile:",
       emailLabel: "Email:",
@@ -326,10 +326,10 @@ export const services = {
       slug: "online-synedries",
       title: "Online Συνεδρίες",
       summary:
-        "Online συνεδρίες συστημικής ψυχοθεραπείας στα ελληνικά με ψυχολόγο και ψυχοθεραπεύτρια, σε σταθερό πλαίσιο εμπιστευτικότητας και φροντίδας.",
+        "Online συνεδρίες συστημικής ψυχοθεραπείας στα ελληνικά με ψυχολόγο και ψυχοθεραπεύτρια, διάρκειας μίας ώρας, με σταθερό πλαίσιο, εμπιστευτικότητα και κόστος 40 ευρώ.",
       points: [
-        "Σταθερό online θεραπευτικό πλαίσιο",
-        "Πρακτικές λεπτομέρειες στην πρώτη επικοινωνία",
+        "Σταθερό online ραντεβού διάρκειας μίας ώρας",
+        "Κόστος 40 ευρώ ανά συνεδρία",
         "Συστημική ψυχοθεραπεία για σχέσεις, άγχος, όρια και αυτογνωσία",
         "Ασφαλής πλατφόρμα επικοινωνίας",
       ],
@@ -341,10 +341,10 @@ export const services = {
       slug: "online-synedries",
       title: "Online Sessions",
       summary:
-        "Online systemic psychotherapy sessions in Greek with a psychologist and psychotherapist, within a steady framework of confidentiality and care.",
+        "One-hour online systemic psychotherapy sessions in Greek with a psychologist and psychotherapist, a steady framework, confidentiality and a rate of 40 euros.",
       points: [
-        "Stable online therapeutic framework",
-        "Practical details discussed during first contact",
+        "Stable one-hour online appointment",
+        "40 euros per session",
         "Systemic psychotherapy for relationships, anxiety, boundaries and self-awareness",
         "Secure communication platform",
       ],

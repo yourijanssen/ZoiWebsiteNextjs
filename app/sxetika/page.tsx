@@ -47,15 +47,11 @@ export default async function AboutPage({ searchParams }: AboutPageProps) {
 
   return (
     <SiteShell language={language}>
-      <main className="site-main about-page">
-        <article className="about-article">
-          <header className="about-hero photo-surface photo-leaves">
-            <div className="about-hero-copy">
-              <p className="profile-kicker">{t.profile.kicker}</p>
-              <h1>{t.approach.title}</h1>
-              <p className="profile-role">{t.profile.role}</p>
-            </div>
-          </header>
+      <main className="site-main container about-page">
+        <article className="about-article content-card">
+          <p className="profile-kicker">{t.profile.kicker}</p>
+          <h1>{t.approach.title}</h1>
+          <p className="profile-role">{t.profile.role}</p>
 
           <div className="about-copy">
             {t.approach.body.map((paragraph) => (
