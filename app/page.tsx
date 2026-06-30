@@ -60,7 +60,7 @@ export default async function Home({ searchParams }: HomePageProps) {
           journalTitle: "Online, σταθερά και με φροντίδα",
           latestTitle: "Με τι μπορούμε να δουλέψουμε",
           newsletterLead:
-            "Οι συνεδρίες πραγματοποιούνται online, διαρκούν μία ώρα και κοστίζουν 40 ευρώ.",
+            "Οι συνεδρίες πραγματοποιούνται online, με σταθερότητα, εμπιστευτικότητα και πρακτικές λεπτομέρειες που συζητούνται στην πρώτη επικοινωνία.",
           newsletterTitle: "Κλείστε την πρώτη online συνεδρία",
           readMore: "Δείτε αναλυτικά",
           serviceKicker: "Online ψυχοθεραπεία",
@@ -73,7 +73,7 @@ export default async function Home({ searchParams }: HomePageProps) {
           journalTitle: "Online, steady and thoughtful",
           latestTitle: "What we can work with",
           newsletterLead:
-            "Sessions take place online, last one hour and cost 40 euros.",
+            "Sessions take place online, with steadiness, confidentiality and practical details discussed during the first contact.",
           newsletterTitle: "Book the first online session",
           readMore: "View details",
           serviceKicker: "Online psychotherapy",

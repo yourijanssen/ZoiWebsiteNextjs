@@ -82,33 +82,39 @@ export default async function ServicePage({
 
   return (
     <SiteShell language={language}>
-      <main className="site-main container service-single">
+      <main className="site-main service-single">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
-        <article className="content-card service-single-card">
-          <p className="hero-kicker">{t.servicesHeading.title}</p>
-          <h1>{service.title}</h1>
-          <p className="hero-lead">{service.summary}</p>
+        <article className="service-single-card">
+          <header className="service-single-hero photo-surface photo-soft">
+            <div className="service-single-hero-copy">
+              <p className="hero-kicker">{t.servicesHeading.title}</p>
+              <h1>{service.title}</h1>
+              <p className="hero-lead">{service.summary}</p>
+            </div>
+          </header>
 
-          <h2>{t.servicesHeading.includes}</h2>
-          <ul className="service-points">
-            {service.points.map((point) => (
-              <li key={point}>{point}</li>
-            ))}
-          </ul>
+          <div className="service-single-body">
+            <h2>{t.servicesHeading.includes}</h2>
+            <ul className="service-points">
+              {service.points.map((point) => (
+                <li key={point}>{point}</li>
+              ))}
+            </ul>
 
-          <div className="service-single-actions">
-            <Link className="button" href={`/${langQuery}#epikoinonia`}>
-              {t.hero.contactCta}
-            </Link>
-            <Link
-              className="button button-outline"
-              href={`/${langQuery}#ypiresies`}
-            >
-              {t.servicesHeading.back}
-            </Link>
+            <div className="service-single-actions">
+              <Link className="button" href={`/${langQuery}#epikoinonia`}>
+                {t.hero.contactCta}
+              </Link>
+              <Link
+                className="button button-outline"
+                href={`/${langQuery}#ypiresies`}
+              >
+                {t.servicesHeading.back}
+              </Link>
+            </div>
           </div>
         </article>
       </main>
