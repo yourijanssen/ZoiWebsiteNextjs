@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ContactForm } from "@/components/contact-form";
 import { SiteShell } from "@/components/site-shell";
-import { content, languages, resolveLanguage, services } from "@/lib/site-content";
+import { content, resolveLanguage, services } from "@/lib/site-content";
 import { buildHomeStructuredData, languageUrls } from "@/lib/seo";
 
 type HomePageProps = {
@@ -49,60 +49,15 @@ export default async function Home({ searchParams }: HomePageProps) {
   const localizedServices = services[language];
   const langQuery = `?lang=${language}`;
   const structuredData = buildHomeStructuredData(language);
-  const year = new Date().getFullYear();
-  const homeCopy =
-    language === "el"
-      ? {
-          aboutCta: "Διαβάστε περισσότερα",
-          contactKicker: "Online ραντεβού",
-          introTitle: "Ένας ήρεμος χώρος για συστημική ψυχοθεραπεία",
-          journalKicker: "Συνεδρίες",
-          journalTitle: "Online, σταθερά και με φροντίδα",
-          latestTitle: "Με τι μπορούμε να δουλέψουμε",
-          newsletterLead:
-            "Οι συνεδρίες πραγματοποιούνται online, διαρκούν μία ώρα και κοστίζουν 40 ευρώ.",
-          newsletterTitle: "Κλείστε την πρώτη online συνεδρία",
-          readMore: "Δείτε αναλυτικά",
-          serviceKicker: "Online ψυχοθεραπεία",
-        }
-      : {
-          aboutCta: "Read more",
-          contactKicker: "Online appointment",
-          introTitle: "A calm space for systemic psychotherapy",
-          journalKicker: "Sessions",
-          journalTitle: "Online, steady and thoughtful",
-          latestTitle: "What we can work with",
-          newsletterLead:
-            "Sessions take place online, last one hour and cost 40 euros.",
-          newsletterTitle: "Book the first online session",
-          readMore: "View details",
-          serviceKicker: "Online psychotherapy",
-        };
 
   return (
     <SiteShell language={language}>
-      <main className="site-main editorial-home">
+      <main className="site-main container">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
         <section className="therapist-hero">
-          <div className="hero-language-switcher" aria-label={t.nav.languageLabel}>
-            {languages.map((lang) => (
-              <Link
-                className={`hero-language-option${
-                  lang === language ? " is-active" : ""
-                }`}
-                href={`/?lang=${lang}`}
-                hrefLang={lang}
-                lang={lang}
-                title={lang === "el" ? t.nav.greek : t.nav.english}
-                key={lang}
-              >
-                {lang}
-              </Link>
-            ))}
-          </div>
           <div className="hero-copy">
             <p className="hero-kicker">{t.hero.kicker}</p>
             <h1>{t.hero.title}</h1>
@@ -116,82 +71,54 @@ export default async function Home({ searchParams }: HomePageProps) {
               </a>
             </div>
           </div>
-        </section>
-
-        <section className="home-intro-grid">
-          <article className="intro-panel intro-panel-dark">
-            <p className="profile-kicker">{t.profile.kicker}</p>
-            <h2>{homeCopy.introTitle}</h2>
-            <p>{t.profile.bio}</p>
-            <div className="intro-portrait photo-surface photo-portrait" />
-            <Link className="button button-light" href={`/sxetika${langQuery}`}>
-              {homeCopy.aboutCta}
-            </Link>
-          </article>
-          <article className="intro-panel intro-panel-light">
-            <h2>{homeCopy.latestTitle}</h2>
-            <div className="mini-list">
-              {localizedServices.slice(0, 3).map((service) => (
-                <Link
-                  className="mini-list-item"
-                  href={`/ypiresies/${service.slug}${langQuery}`}
-                  key={service.slug}
-                >
-                  <span
-                    className={`mini-list-image service-media-${service.key}`}
-                    aria-hidden="true"
-                  />
-                  <span>{service.title}</span>
-                </Link>
-              ))}
+          <div className="hero-media" aria-hidden="true">
+            <div className="image-placeholder">
+              <p>{t.hero.imagePlaceholder}</p>
             </div>
-          </article>
-        </section>
-
-        <section className="home-feature-grid">
-          <div className="photo-surface photo-walk" aria-hidden="true" />
-          <article className="signup-panel photo-surface photo-soft">
-            <div className="signup-card">
-              <p className="profile-kicker">{homeCopy.contactKicker}</p>
-              <h2>{homeCopy.newsletterTitle}</h2>
-              <p>{homeCopy.newsletterLead}</p>
-              <a className="button" href="#epikoinonia">
-                {t.hero.contactCta}
-              </a>
-            </div>
-          </article>
-        </section>
-
-        <section className="home-about-band photo-surface photo-leaves">
-          <div>
-            <h2>{t.profile.name}</h2>
-            <p>{t.frontPageContent}</p>
-            <Link className="button button-light" href={`/sxetika${langQuery}`}>
-              {homeCopy.aboutCta}
-            </Link>
           </div>
         </section>
 
-        <section className="life-lately-section">
-          <div className="photo-surface photo-session" aria-hidden="true" />
-          <article>
-            <p className="profile-kicker">{homeCopy.journalKicker}</p>
-            <h2>{homeCopy.journalTitle}</h2>
-            <p>{t.servicesHeading.text}</p>
-            <ol className="steps-list">
-              {t.steps.items.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ol>
-            <a className="button button-light" href="#epikoinonia">
-              {t.hero.contactCta}
-            </a>
+        <section className="office-gallery">
+          <article className="gallery-card">
+            <div className="image-placeholder">
+              <p>{t.gallery.one}</p>
+            </div>
           </article>
+          <article className="gallery-card">
+            <div className="image-placeholder">
+              <p>{t.gallery.two}</p>
+            </div>
+          </article>
+        </section>
+
+        <section className="quote-highlight">
+          <blockquote>
+            <p>{t.quote.text}</p>
+            <cite>{t.quote.author}</cite>
+          </blockquote>
+        </section>
+
+        <section className="therapist-profile">
+          <div className="profile-media">
+            <div className="image-placeholder">
+              <p>{t.gallery.profileImage}</p>
+            </div>
+          </div>
+          <div className="profile-copy content-card">
+            <p className="profile-kicker">{t.profile.kicker}</p>
+            <h2>{t.profile.name}</h2>
+            <p className="profile-role">{t.profile.role}</p>
+            <p>{t.profile.bio}</p>
+            <ul className="profile-credentials">
+              {t.profile.credentials.map((credential) => (
+                <li key={credential}>{credential}</li>
+              ))}
+            </ul>
+          </div>
         </section>
 
         <section className="services" id="ypiresies">
           <header className="section-heading">
-            <p className="profile-kicker">{homeCopy.serviceKicker}</p>
             <h2>{t.servicesHeading.title}</h2>
             <p>{t.servicesHeading.text}</p>
           </header>
@@ -215,6 +142,15 @@ export default async function Home({ searchParams }: HomePageProps) {
           </div>
         </section>
 
+        <section className="session-steps content-card">
+          <h2>{t.steps.title}</h2>
+          <ol className="steps-list">
+            {t.steps.items.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ol>
+        </section>
+
         <section className="faq-section content-card" id="syxnes-erotiseis">
           <h2>{t.faq.title}</h2>
           <div className="faq-list">
@@ -232,14 +168,27 @@ export default async function Home({ searchParams }: HomePageProps) {
             <h2>{t.contact.title}</h2>
             <p>{t.contact.text}</p>
           </header>
-          <div className="contact-layout contact-layout-single">
+          <div className="contact-layout">
+            <div className="contact-details">
+              <p>
+                <strong>{t.contact.phoneLabel}</strong>{" "}
+                <a href="tel:+302100000000">{t.contact.phone}</a>
+              </p>
+              <p>
+                <strong>{t.contact.mobileLabel}</strong>{" "}
+                <a href="tel:+306900000000">{t.contact.mobile}</a>
+              </p>
+              <p>
+                <strong>{t.contact.emailLabel}</strong>{" "}
+                <a href={`mailto:${t.contact.email}`}>{t.contact.email}</a>
+              </p>
+            </div>
             <ContactForm language={language} labels={t.contact} />
           </div>
-          <p className="funnel-credit">
-            {year} {t.brand}
-            <br />
-            {t.footerCredit}
-          </p>
+        </section>
+
+        <section className="front-page-content content-card">
+          <p>{t.frontPageContent}</p>
         </section>
       </main>
     </SiteShell>
