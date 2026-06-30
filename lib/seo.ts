@@ -49,6 +49,13 @@ export function buildHomeStructuredData(language: Language) {
           language === "el"
             ? "Online συστημική ψυχοθεραπεία στα ελληνικά με ψυχολόγο και ψυχοθεραπεύτρια"
             : "Online systemic psychotherapy in Greek with a psychologist and psychotherapist",
+        offers: {
+          "@type": "Offer",
+          price: "40",
+          priceCurrency: "EUR",
+          availability: "https://schema.org/InStock",
+          url: currentUrl,
+        },
       },
       {
         "@type": "FAQPage",
@@ -88,6 +95,13 @@ export function buildServiceStructuredData(language: Language) {
         : "Online systemic psychotherapy in Greek with a psychologist and psychotherapist",
     areaServed: {
       "@type": "VirtualLocation",
+      url: currentUrl,
+    },
+    offers: {
+      "@type": "Offer",
+      price: "40",
+      priceCurrency: "EUR",
+      availability: "https://schema.org/InStock",
       url: currentUrl,
     },
   };
