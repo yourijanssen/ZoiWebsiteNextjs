@@ -492,6 +492,14 @@ a:focus {
   overflow: hidden;
 }
 
+.hero-logo-mark {
+  display: block;
+  width: clamp(4.2rem, 10vw, 7.25rem);
+  height: auto;
+  margin: 0 auto 1rem;
+  filter: drop-shadow(0 10px 24px rgba(11, 47, 63, 0.12));
+}
+
 .hero-copy::after {
   content: "";
   position: absolute;
@@ -1247,9 +1255,15 @@ a:focus {
   padding-top: clamp(3rem, 6vw, 5rem);
 }
 
+.site-main.container.about-page {
+  padding-top: clamp(2.25rem, 4.5vw, 4rem);
+}
+
 .about-article {
-  width: min(920px, calc(100% - 2.4rem));
+  width: min(1120px, calc(100% - 2.4rem));
   margin-inline: auto;
+  padding-top: clamp(2.4rem, 4vw, 3.5rem);
+  padding-inline: clamp(1.8rem, 3.2vw, 2.8rem);
 }
 
 .about-article h1 {
@@ -1257,14 +1271,34 @@ a:focus {
   font-size: clamp(2.1rem, 5vw, 4.15rem);
 }
 
+.about-heading {
+  display: flow-root;
+}
+
+.about-photo {
+  float: left;
+  width: min(47%, 500px);
+  margin: 0.25rem clamp(1.5rem, 3.4vw, 2.5rem) 1.2rem 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface-muted);
+  box-shadow: 0 12px 28px rgba(23, 54, 53, 0.1);
+}
+
+.about-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .about-copy {
-  display: grid;
-  gap: 1.35rem;
+  display: contents;
   margin-top: clamp(1.7rem, 3vw, 2.4rem);
 }
 
 .about-copy p {
-  margin: 0;
+  margin: clamp(1.15rem, 2vw, 1.5rem) 0 0;
   color: var(--text);
   font-size: clamp(1.02rem, 1.2vw, 1.13rem);
   line-height: 1.9;
@@ -1897,6 +1931,13 @@ body::after,
 
   .about-article h1 {
     max-width: none;
+  }
+
+  .about-photo {
+    float: none;
+    width: 100%;
+    max-width: 420px;
+    margin: 1.25rem auto 1.5rem;
   }
 
   .about-copy p {

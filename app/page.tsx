@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ContactForm } from "@/components/contact-form";
+import { LogoMark } from "@/components/logo-mark";
 import { SiteShell } from "@/components/site-shell";
 import { content, resolveLanguage, services } from "@/lib/site-content";
 import { buildHomeStructuredData, languageUrls } from "@/lib/seo";
@@ -59,6 +60,7 @@ export default async function Home({ searchParams }: HomePageProps) {
         />
         <section className="therapist-hero">
           <div className="hero-copy">
+            <LogoMark className="hero-logo-mark" priority />
             <p className="hero-kicker">{t.hero.kicker}</p>
             <h1>{t.hero.title}</h1>
             <p className="hero-lead">{t.hero.lead}</p>

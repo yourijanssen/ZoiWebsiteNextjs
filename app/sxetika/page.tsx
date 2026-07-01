@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { SiteShell } from "@/components/site-shell";
 import { content, resolveLanguage } from "@/lib/site-content";
 import { siteUrl } from "@/lib/seo";
@@ -49,9 +50,22 @@ export default async function AboutPage({ searchParams }: AboutPageProps) {
     <SiteShell language={language}>
       <main className="site-main container about-page">
         <article className="about-article content-card">
-          <p className="profile-kicker">{t.profile.kicker}</p>
-          <h1>{t.approach.title}</h1>
-          <p className="profile-role">{t.profile.role}</p>
+          <figure className="about-photo">
+            <Image
+              src="/images/zoi-pantou-about.webp"
+              alt={t.profile.name}
+              width={768}
+              height={1024}
+              priority
+              sizes="(max-width: 760px) 100vw, 500px"
+            />
+          </figure>
+
+          <div className="about-heading">
+            <p className="profile-kicker">{t.profile.kicker}</p>
+            <h1>{t.profile.name}</h1>
+            <p className="profile-role">{t.profile.role}</p>
+          </div>
 
           <div className="about-copy">
             {t.approach.body.map((paragraph) => (
