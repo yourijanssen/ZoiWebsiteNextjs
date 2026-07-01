@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useState } from "react";
@@ -54,9 +55,15 @@ export function SiteShell({ language, children }: SiteShellProps) {
       <header className={`site-header${isMenuOpen ? " is-menu-open" : ""}`}>
         <div className="container header-inner">
           <Link className="site-branding" href={withLanguage("/", currentLang)}>
-            <span className="brand-mark" aria-hidden="true">
-              {t.brandMark}
-            </span>
+            <Image
+              className="brand-mark"
+              src="/images/zoi-pantou-logo.png"
+              alt=""
+              width={64}
+              height={63}
+              aria-hidden="true"
+              unoptimized
+            />
             {t.brand}
           </Link>
           <button
