@@ -1466,6 +1466,7 @@ body::after,
 
 .therapist-hero {
   display: grid;
+  grid-template-columns: 1fr;
   min-height: clamp(520px, 72vh, 760px);
   place-items: center;
   padding: clamp(4rem, 9vw, 7rem) 1.2rem;
@@ -1477,7 +1478,10 @@ body::after,
 }
 
 .hero-copy {
-  max-width: 760px;
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: min(100%, 860px);
+  max-width: 860px;
   padding: 0;
   text-align: center;
   overflow: visible;
