@@ -15,7 +15,7 @@ const homeAnchors = {
   home: "/",
   about: "/sxetika",
   therapies: "/#ypiresies",
-  faq: "/#syxnes-erotiseis",
+  faq: "/#systimiki-proseggisi",
   articles: "/",
   contact: "/#epikoinonia",
 };
@@ -32,6 +32,8 @@ function withLanguage(href: string, language: Language) {
 export function SiteShell({ language, children }: SiteShellProps) {
   const t = content[language];
   const localizedServices = services[language];
+  const primaryService = localizedServices[0];
+  const nestedServices = localizedServices.slice(1);
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -59,12 +61,15 @@ export function SiteShell({ language, children }: SiteShellProps) {
               className="brand-mark"
               src="/images/zoi-pantou-logo.png"
               alt=""
-              width={64}
-              height={63}
+              width={84}
+              height={82}
               aria-hidden="true"
               unoptimized
             />
-            {t.brand}
+            <span className="brand-copy">
+              <span className="brand-name">{t.brand}</span>
+              <span className="brand-title">{t.profile.role}</span>
+            </span>
           </Link>
           <button
             className="menu-toggle"
@@ -109,19 +114,39 @@ export function SiteShell({ language, children }: SiteShellProps) {
                     {t.nav.therapies}
                   </Link>
                   <ul className="sub-menu">
-                    {localizedServices.map((service) => (
-                      <li className="menu-item" key={service.slug}>
+                    {primaryService ? (
+                      <li
+                        className="menu-item menu-item-has-children"
+                        key={primaryService.slug}
+                      >
                         <Link
                           href={withLanguage(
-                            `/ypiresies/${service.slug}`,
+                            `/ypiresies/${primaryService.slug}`,
                             currentLang,
                           )}
                           onClick={closeMenu}
                         >
-                          {service.title}
+                          {primaryService.title}
                         </Link>
+                        {nestedServices.length > 0 ? (
+                          <ul className="sub-menu sub-menu-nested">
+                            {nestedServices.map((service) => (
+                              <li className="menu-item" key={service.slug}>
+                                <Link
+                                  href={withLanguage(
+                                    `/ypiresies/${service.slug}`,
+                                    currentLang,
+                                  )}
+                                  onClick={closeMenu}
+                                >
+                                  {service.title}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        ) : null}
                       </li>
-                    ))}
+                    ) : null}
                   </ul>
                 </li>
                 <li className="menu-item">

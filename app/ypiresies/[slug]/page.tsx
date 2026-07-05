@@ -35,10 +35,7 @@ export async function generateMetadata({
 
   return {
     title: {
-      absolute:
-        language === "el"
-          ? `Online συνεδρίες ψυχοθεραπείας | ${content[language].brand}`
-          : `Online psychotherapy sessions | ${content[language].brand}`,
+      absolute: `${service.title} | ${content[language].brand}`,
     },
     description: service.summary,
     alternates: {
@@ -78,7 +75,7 @@ export default async function ServicePage({
 
   const t = content[language];
   const langQuery = `?lang=${language}`;
-  const structuredData = buildServiceStructuredData(language);
+  const structuredData = buildServiceStructuredData(language, service);
 
   return (
     <SiteShell language={language}>

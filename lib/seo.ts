@@ -1,4 +1,4 @@
-import { content, type Language } from "@/lib/site-content";
+import { content, type Language, type Service } from "@/lib/site-content";
 
 export const siteUrl = "https://zoi-website-nextjs.vercel.app";
 
@@ -73,17 +73,17 @@ export function buildHomeStructuredData(language: Language) {
   };
 }
 
-// Builds JSON-LD for the individual online sessions detail page.
-export function buildServiceStructuredData(language: Language) {
+// Builds JSON-LD for an individual service detail page.
+export function buildServiceStructuredData(language: Language, service: Service) {
   const t = content[language];
-  const currentUrl = `${siteUrl}/ypiresies/online-synedries?lang=${language}`;
+  const currentUrl = `${siteUrl}/ypiresies/${service.slug}?lang=${language}`;
 
   return {
     "@context": "https://schema.org",
     "@type": "Service",
-    "@id": `${siteUrl}/ypiresies/online-synedries#service`,
-    name: t.servicesHeading.title,
-    description: t.servicesHeading.text,
+    "@id": `${siteUrl}/ypiresies/${service.slug}#service`,
+    name: service.title,
+    description: service.summary,
     provider: {
       "@type": "Person",
       name: t.profile.name,

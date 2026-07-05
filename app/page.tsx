@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ContactForm } from "@/components/contact-form";
 import { LogoMark } from "@/components/logo-mark";
 import { SiteShell } from "@/components/site-shell";
+import { TextCarousel } from "@/components/text-carousel";
 import { content, resolveLanguage, services } from "@/lib/site-content";
 import { buildHomeStructuredData, languageUrls } from "@/lib/seo";
 
@@ -80,18 +81,12 @@ export default async function Home({ searchParams }: HomePageProps) {
           </div>
         </section>
 
-        <section className="office-gallery">
-          <article className="gallery-card">
-            <div className="image-placeholder">
-              <p>{t.gallery.one}</p>
-            </div>
-          </article>
-          <article className="gallery-card">
-            <div className="image-placeholder">
-              <p>{t.gallery.two}</p>
-            </div>
-          </article>
-        </section>
+        <TextCarousel
+          id="systimiki-proseggisi"
+          items={t.highlights.items}
+          previousLabel={t.highlights.previous}
+          nextLabel={t.highlights.next}
+        />
 
         <section className="quote-highlight">
           <blockquote>
@@ -100,23 +95,12 @@ export default async function Home({ searchParams }: HomePageProps) {
           </blockquote>
         </section>
 
-        <section className="therapist-profile">
-          <div className="profile-media">
-            <div className="image-placeholder">
-              <p>{t.gallery.profileImage}</p>
-            </div>
-          </div>
-          <div className="profile-copy content-card">
-            <p className="profile-kicker">{t.profile.kicker}</p>
-            <h2>{t.profile.name}</h2>
-            <p className="profile-role">{t.profile.role}</p>
-            <p>{t.profile.bio}</p>
-            <ul className="profile-credentials">
-              {t.profile.credentials.map((credential) => (
-                <li key={credential}>{credential}</li>
-              ))}
-            </ul>
-          </div>
+        <section className="about-link-band content-card">
+          <h2>{t.profile.name}</h2>
+          <p>{t.profile.bio}</p>
+          <Link className="text-link" href={`/sxetika${langQuery}`}>
+            {t.nav.about}
+          </Link>
         </section>
 
         <section className="services" id="ypiresies">
@@ -142,15 +126,6 @@ export default async function Home({ searchParams }: HomePageProps) {
               </article>
             ))}
           </div>
-        </section>
-
-        <section className="session-steps content-card">
-          <h2>{t.steps.title}</h2>
-          <ol className="steps-list">
-            {t.steps.items.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ol>
         </section>
 
         <section className="faq-section content-card" id="syxnes-erotiseis">

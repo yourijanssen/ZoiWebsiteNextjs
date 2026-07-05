@@ -52,17 +52,17 @@ export default async function AboutPage({ searchParams }: AboutPageProps) {
         <article className="about-article content-card">
           <figure className="about-photo">
             <Image
-              src="/images/zoi-pantou-about.webp"
+              src="/images/zoi-pantou-about-enhanced.jpeg"
               alt={t.profile.name}
-              width={768}
-              height={1024}
-              priority
+              width={1536}
+              height={2048}
+              preload
+              quality={92}
               sizes="(max-width: 760px) 100vw, 500px"
             />
           </figure>
 
           <div className="about-heading">
-            <p className="profile-kicker">{t.profile.kicker}</p>
             <h1>{t.profile.name}</h1>
             <p className="profile-role">{t.profile.role}</p>
           </div>

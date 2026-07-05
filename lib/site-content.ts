@@ -1,6 +1,6 @@
 export type Language = "el" | "en";
 
-export type ServiceKey = "individual" | "couples" | "family" | "online";
+export type ServiceKey = "individual" | "parentCounseling" | "online";
 
 export type Service = {
   key: ServiceKey;
@@ -40,8 +40,8 @@ export const content = {
       languageLabel: "Αλλαγή γλώσσας",
       home: "Αρχική",
       about: "Σχετικά",
-      therapies: "Θεραπείες",
-      faq: "Συχνές ερωτήσεις",
+      therapies: "Υπηρεσίες",
+      faq: "Συστημική Προσέγγιση",
       articles: "Άρθρα",
       contact: "Επικοινωνία",
       greek: "Ελληνικά",
@@ -63,6 +63,27 @@ export const content = {
       approachImage: "Ζεστός, ήσυχος χώρος για online συστημική ψυχοθεραπεία",
       profileImage:
         "Ζωή Πάντου, ψυχολόγος και ψυχοθεραπεύτρια για online συστημική ψυχοθεραπεία",
+    },
+    highlights: {
+      previous: "Προηγούμενο στοιχείο",
+      next: "Επόμενο στοιχείο",
+      items: [
+        {
+          eyebrow: "01",
+          title: "Ήρεμο θεραπευτικό πλαίσιο",
+          text: "Ένας σταθερός online χώρος όπου μπορείτε να μιλήσετε με ασφάλεια, συνέπεια και σεβασμό στον δικό σας ρυθμό.",
+        },
+        {
+          eyebrow: "02",
+          title: "Συστημική ματιά",
+          text: "Η θεραπευτική διαδικασία λαμβάνει υπόψη τις σχέσεις, τα πλαίσια και τους τρόπους επικοινωνίας που διαμορφώνουν την εμπειρία σας.",
+        },
+        {
+          eyebrow: "03",
+          title: "Σύνδεση από τον χώρο σας",
+          text: "Οι συνεδρίες πραγματοποιούνται online, ώστε να μπορείτε να ξεκινήσετε από έναν οικείο και προστατευμένο χώρο.",
+        },
+      ],
     },
     approach: {
       title: "Ζωή Πάντου, Ψυχολόγος ΑΠΘ, MSc, ΜΑ",
@@ -186,7 +207,7 @@ export const content = {
       home: "Home",
       about: "About",
       therapies: "Therapies",
-      faq: "FAQ",
+      faq: "Systemic Approach",
       articles: "Articles",
       contact: "Contact",
       greek: "Greek",
@@ -208,6 +229,27 @@ export const content = {
       approachImage: "Warm, quiet space for online systemic psychotherapy",
       profileImage:
         "Zoi Pantou, psychologist and psychotherapist for online systemic psychotherapy in Greek",
+    },
+    highlights: {
+      previous: "Previous item",
+      next: "Next item",
+      items: [
+        {
+          eyebrow: "01",
+          title: "A calm therapeutic frame",
+          text: "A steady online space where you can speak with safety, consistency and respect for your own pace.",
+        },
+        {
+          eyebrow: "02",
+          title: "A systemic perspective",
+          text: "The therapeutic process considers the relationships, contexts and communication patterns that shape your experience.",
+        },
+        {
+          eyebrow: "03",
+          title: "Sessions from your own space",
+          text: "Sessions take place online, so you can begin from a familiar and protected environment.",
+        },
+      ],
     },
     approach: {
       title: "Zoi Pantou, Psychologist AUTH, MSc, MA",
@@ -324,14 +366,40 @@ export const services = {
     {
       key: "online",
       slug: "online-synedries",
-      title: "Online Συνεδρίες",
+      title: "Διαδικτυακές Συνεδρίες",
       summary:
-        "Online συνεδρίες συστημικής ψυχοθεραπείας στα ελληνικά με ψυχολόγο και ψυχοθεραπεύτρια, διάρκειας μίας ώρας, με σταθερό πλαίσιο, εμπιστευτικότητα και κόστος 40 ευρώ.",
+        "Διαδικτυακές συνεδρίες συστημικής ψυχοθεραπείας στα ελληνικά με ψυχολόγο και ψυχοθεραπεύτρια, διάρκειας μίας ώρας, με σταθερό πλαίσιο, εμπιστευτικότητα και κόστος 40 ευρώ.",
       points: [
-        "Σταθερό online ραντεβού διάρκειας μίας ώρας",
+        "Σταθερό διαδικτυακό ραντεβού διάρκειας μίας ώρας",
         "Κόστος 40 ευρώ ανά συνεδρία",
         "Συστημική ψυχοθεραπεία για σχέσεις, άγχος, όρια και αυτογνωσία",
         "Ασφαλής πλατφόρμα επικοινωνίας",
+      ],
+    },
+    {
+      key: "individual",
+      slug: "atomiki-psychotherapeia",
+      title: "Ατομική Ψυχοθεραπεία",
+      summary:
+        "Ατομική συστημική ψυχοθεραπεία για ενήλικες που επιθυμούν να επεξεργαστούν προσωπικές δυσκολίες, σχέσεις, άγχος, όρια και ζητήματα αυτογνωσίας.",
+      points: [
+        "Προσωπικό θεραπευτικό πλαίσιο με σταθερότητα και εμπιστευτικότητα",
+        "Διερεύνηση συναισθημάτων, σχέσεων και επαναλαμβανόμενων μοτίβων",
+        "Υποστήριξη σε θέματα άγχους, ορίων, αυτογνωσίας και αλλαγών ζωής",
+        "Συστημική ματιά στον άνθρωπο και στα πλαίσια στα οποία ανήκει",
+      ],
+    },
+    {
+      key: "parentCounseling",
+      slug: "symvouleftiki-goneon",
+      title: "Συμβουλευτική Γονέων",
+      summary:
+        "Συμβουλευτική γονέων για την κατανόηση των αναγκών του παιδιού, την ενίσχυση της επικοινωνίας και τη διαμόρφωση πιο λειτουργικών οικογενειακών σχέσεων.",
+      points: [
+        "Υποστήριξη γονέων σε δυσκολίες επικοινωνίας και οριοθέτησης",
+        "Κατανόηση της συμπεριφοράς του παιδιού μέσα στο οικογενειακό πλαίσιο",
+        "Ενίσχυση της γονεϊκής στάσης με συνέπεια και φροντίδα",
+        "Συστημική προσέγγιση στις σχέσεις και στις ανάγκες της οικογένειας",
       ],
     },
   ],
@@ -347,6 +415,32 @@ export const services = {
         "40 euros per session",
         "Systemic psychotherapy for relationships, anxiety, boundaries and self-awareness",
         "Secure communication platform",
+      ],
+    },
+    {
+      key: "individual",
+      slug: "atomiki-psychotherapeia",
+      title: "Individual Psychotherapy",
+      summary:
+        "Individual systemic psychotherapy for adults who want to explore personal difficulties, relationships, anxiety, boundaries and self-awareness.",
+      points: [
+        "A personal therapeutic framework with stability and confidentiality",
+        "Exploration of emotions, relationships and recurring patterns",
+        "Support with anxiety, boundaries, self-awareness and life transitions",
+        "A systemic perspective on the person and the contexts they belong to",
+      ],
+    },
+    {
+      key: "parentCounseling",
+      slug: "symvouleftiki-goneon",
+      title: "Parent Counseling",
+      summary:
+        "Parent counseling for understanding a child's needs, strengthening communication and shaping more functional family relationships.",
+      points: [
+        "Support for parents around communication and boundaries",
+        "Understanding a child's behavior within the family context",
+        "Strengthening the parental stance with consistency and care",
+        "A systemic approach to relationships and family needs",
       ],
     },
   ],
