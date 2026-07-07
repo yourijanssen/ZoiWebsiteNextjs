@@ -73,11 +73,6 @@ export default async function AboutPage({ searchParams }: AboutPageProps) {
             ))}
           </div>
 
-          <ul className="about-credentials">
-            {t.approach.points.map((point) => (
-              <li key={point}>{point}</li>
-            ))}
-          </ul>
         </article>
       </main>
     </SiteShell>

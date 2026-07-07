@@ -4,9 +4,9 @@ import { notFound } from "next/navigation";
 import { SiteShell } from "@/components/site-shell";
 import {
   content,
+  getDetailServices,
   getServiceBySlug,
   resolveLanguage,
-  services,
 } from "@/lib/site-content";
 import {
   buildServiceStructuredData,
@@ -19,7 +19,7 @@ type ServicePageProps = {
 };
 
 export function generateStaticParams() {
-  return services.el.map((service) => ({ slug: service.slug }));
+  return getDetailServices("el").map((service) => ({ slug: service.slug }));
 }
 
 export async function generateMetadata({

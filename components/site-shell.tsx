@@ -4,7 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useState } from "react";
-import { content, languages, services, type Language } from "@/lib/site-content";
+import {
+  content,
+  getDetailServices,
+  languages,
+  type Language,
+  type Service,
+} from "@/lib/site-content";
 
 type SiteShellProps = {
   language: Language;
@@ -16,7 +22,6 @@ const homeAnchors = {
   about: "/sxetika",
   therapies: "/#ypiresies",
   faq: "/#systimiki-proseggisi",
-  articles: "/",
   contact: "/#epikoinonia",
 };
 
@@ -29,11 +34,18 @@ function withLanguage(href: string, language: Language) {
   return hash ? `${nextPath}#${hash}` : nextPath;
 }
 
+// Keeps the navigation label concise while preserving the full page title.
+function serviceNavLabel(service: Service, language: Language) {
+  if (language === "el" && service.key === "parentCounseling") {
+    return "Συμβουλευτική";
+  }
+
+  return service.title;
+}
+
 export function SiteShell({ language, children }: SiteShellProps) {
   const t = content[language];
-  const localizedServices = services[language];
-  const primaryService = localizedServices[0];
-  const nestedServices = localizedServices.slice(1);
+  const navigationServices = getDetailServices(language);
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -114,39 +126,19 @@ export function SiteShell({ language, children }: SiteShellProps) {
                     {t.nav.therapies}
                   </Link>
                   <ul className="sub-menu">
-                    {primaryService ? (
-                      <li
-                        className="menu-item menu-item-has-children"
-                        key={primaryService.slug}
-                      >
+                    {navigationServices.map((service) => (
+                      <li className="menu-item" key={service.slug}>
                         <Link
                           href={withLanguage(
-                            `/ypiresies/${primaryService.slug}`,
+                            `/ypiresies/${service.slug}`,
                             currentLang,
                           )}
                           onClick={closeMenu}
                         >
-                          {primaryService.title}
+                          {serviceNavLabel(service, currentLang)}
                         </Link>
-                        {nestedServices.length > 0 ? (
-                          <ul className="sub-menu sub-menu-nested">
-                            {nestedServices.map((service) => (
-                              <li className="menu-item" key={service.slug}>
-                                <Link
-                                  href={withLanguage(
-                                    `/ypiresies/${service.slug}`,
-                                    currentLang,
-                                  )}
-                                  onClick={closeMenu}
-                                >
-                                  {service.title}
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        ) : null}
                       </li>
-                    ) : null}
+                    ))}
                   </ul>
                 </li>
                 <li className="menu-item">
@@ -155,14 +147,6 @@ export function SiteShell({ language, children }: SiteShellProps) {
                     onClick={closeMenu}
                   >
                     {t.nav.faq}
-                  </Link>
-                </li>
-                <li className="menu-item">
-                  <Link
-                    href={withLanguage(homeAnchors.articles, currentLang)}
-                    onClick={closeMenu}
-                  >
-                    {t.nav.articles}
                   </Link>
                 </li>
                 <li className="menu-item">
@@ -192,7 +176,7 @@ export function SiteShell({ language, children }: SiteShellProps) {
                     onClick={closeMenu}
                     key={lang}
                   >
-                    {lang}
+                    {lang === "el" ? "ελ" : lang}
                   </Link>
                 ))}
               </div>
@@ -214,11 +198,6 @@ export function SiteShell({ language, children }: SiteShellProps) {
               <li className="menu-item">
                 <Link href={withLanguage(homeAnchors.home, currentLang)}>
                   {t.nav.home}
-                </Link>
-              </li>
-              <li className="menu-item">
-                <Link href={withLanguage(homeAnchors.articles, currentLang)}>
-                  {t.nav.articles}
                 </Link>
               </li>
               <li className="menu-item">

@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { languages, services } from "@/lib/site-content";
+import { getDetailServices, languages } from "@/lib/site-content";
 import { languageUrls, siteUrl } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -19,7 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const servicePages = languages.flatMap((language) =>
-    services[language].map((service) => ({
+    getDetailServices(language).map((service) => ({
       url: `${siteUrl}/ypiresies/${service.slug}?lang=${language}`,
       lastModified: now,
       changeFrequency: "monthly" as const,

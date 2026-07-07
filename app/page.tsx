@@ -117,12 +117,14 @@ export default async function Home({ searchParams }: HomePageProps) {
                 />
                 <h3>{service.title}</h3>
                 <p>{service.summary}</p>
-                <Link
-                  className="text-link"
-                  href={`/ypiresies/${service.slug}${langQuery}`}
-                >
-                  {t.servicesHeading.link}
-                </Link>
+                {service.hasDetailPage !== false ? (
+                  <Link
+                    className="text-link"
+                    href={`/ypiresies/${service.slug}${langQuery}`}
+                  >
+                    {t.servicesHeading.link}
+                  </Link>
+                ) : null}
               </article>
             ))}
           </div>

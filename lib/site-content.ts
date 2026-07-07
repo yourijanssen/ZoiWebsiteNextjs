@@ -8,6 +8,7 @@ export type Service = {
   title: string;
   summary: string;
   points: string[];
+  hasDetailPage?: boolean;
 };
 
 const supportedLanguages: Language[] = ["el", "en"];
@@ -367,6 +368,7 @@ export const services = {
       key: "online",
       slug: "online-synedries",
       title: "Διαδικτυακές Συνεδρίες",
+      hasDetailPage: false,
       summary:
         "Διαδικτυακές συνεδρίες συστημικής ψυχοθεραπείας στα ελληνικά με ψυχολόγο και ψυχοθεραπεύτρια, διάρκειας μίας ώρας, με σταθερό πλαίσιο, εμπιστευτικότητα και κόστος 40 ευρώ.",
       points: [
@@ -408,6 +410,7 @@ export const services = {
       key: "online",
       slug: "online-synedries",
       title: "Online Sessions",
+      hasDetailPage: false,
       summary:
         "One-hour online systemic psychotherapy sessions in Greek with a psychologist and psychotherapist, a steady framework, confidentiality and a rate of 40 euros.",
       points: [
@@ -446,7 +449,12 @@ export const services = {
   ],
 } satisfies Record<Language, Service[]>;
 
+// Returns only services that have a public detail page.
+export function getDetailServices(language: Language) {
+  return services[language].filter((service) => service.hasDetailPage !== false);
+}
+
 // Finds a service by its public slug for dynamic Next.js routes.
 export function getServiceBySlug(language: Language, slug: string) {
-  return services[language].find((service) => service.slug === slug);
+  return getDetailServices(language).find((service) => service.slug === slug);
 }

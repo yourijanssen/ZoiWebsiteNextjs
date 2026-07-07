@@ -548,26 +548,6 @@ a:focus {
     linear-gradient(150deg, rgba(255, 255, 255, 0.45), rgba(217, 238, 234, 0.34) 55%, rgba(249, 232, 210, 0.42));
 }
 
-.therapist-hero::after {
-  content: "";
-  position: absolute;
-  width: clamp(220px, 34vw, 420px);
-  height: clamp(220px, 34vw, 420px);
-  top: -90px;
-  right: -110px;
-  z-index: -1;
-  border-radius: 50%;
-  background:
-    repeating-conic-gradient(
-      from 0deg,
-      rgba(148, 165, 179, 0.18) 0deg 10deg,
-      rgba(255, 255, 255, 0) 10deg 20deg
-    );
-  opacity: 0.42;
-  transform: rotate(10deg);
-  animation: halo-spin 44s linear infinite;
-}
-
 .hero-copy {
   padding: 0.3rem 0;
   position: relative;
@@ -1047,7 +1027,7 @@ a:focus {
   width: 100%;
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
-  background: var(--surface);
+  background: rgba(250, 248, 242, 0.92);
   color: var(--text);
   padding: 0.62rem 0.7rem;
   font: inherit;
@@ -1238,7 +1218,7 @@ a:focus {
 
 .contact-band {
   text-align: center;
-  background: linear-gradient(145deg, #e2dcd0 0%, #d5dde3 100%);
+  background: linear-gradient(145deg, #f4efe4 0%, #e6dccb 100%);
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   padding: 2.4rem 1.6rem;
@@ -1264,7 +1244,7 @@ a:focus {
   right: -120px;
   bottom: -128px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(148, 165, 179, 0.32), transparent 68%);
+  background: radial-gradient(circle, rgba(113, 113, 59, 0.16), transparent 68%);
   pointer-events: none;
 }
 
@@ -1442,6 +1422,10 @@ a:focus {
   width: 100%;
 }
 
+.about-heading .profile-role {
+  font-size: clamp(1.08rem, 1.35vw, 1.22rem);
+}
+
 .about-photo {
   float: left;
   width: min(47%, 500px);
@@ -1535,6 +1519,7 @@ a:focus {
   margin: 0;
   color: var(--muted);
   font-size: 0.95rem;
+  white-space: nowrap;
 }
 
 .footer-meta {
@@ -1673,9 +1658,7 @@ body::after,
   position: absolute;
   inset: 0;
   z-index: 0;
-  background:
-    radial-gradient(circle at 50% 22%, rgba(226, 220, 208, 0.28), transparent 32%),
-    linear-gradient(180deg, rgba(226, 220, 208, 0.12), rgba(113, 113, 59, 0.2));
+  background: linear-gradient(180deg, rgba(226, 220, 208, 0.12), rgba(113, 113, 59, 0.2));
   pointer-events: none;
 }
 
@@ -1846,15 +1829,55 @@ body::after,
 
 .contact-band {
   text-align: left;
-  background: #d5dde3;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.54), rgba(255, 255, 255, 0)),
+    #f8f4ec;
+  border-color: #d8cfbf;
+  box-shadow: 0 16px 38px rgba(47, 48, 28, 0.08);
 }
 
 .contact-band .section-heading {
   margin-inline: 0;
 }
 
+.contact-band h2,
+.contact-band label span {
+  color: var(--text);
+}
+
 .contact-band p {
   margin-inline: 0;
+  color: var(--text);
+}
+
+.contact-band a,
+.contact-details p {
+  color: var(--text);
+}
+
+.contact-band .button {
+  background: #355f7a;
+  border-color: #355f7a;
+  color: #fbf8f2;
+}
+
+.contact-band .button:hover,
+.contact-band .button:focus {
+  background: #27475a;
+  border-color: #27475a;
+}
+
+.contact-band input,
+.contact-band textarea {
+  border-color: #cfc5b5;
+  background: rgba(255, 253, 248, 0.9);
+}
+
+.contact-band input:focus,
+.contact-band textarea:focus {
+  border-color: #5d8196;
+  box-shadow: 0 0 0 3px rgba(93, 129, 150, 0.16);
+  outline: none;
 }
 
 /* Adds more breathing room between homepage sections and dense content blocks. */
@@ -1919,16 +1942,6 @@ body::after,
 
   to {
     transform: translate3d(1.2%, 1.2%, 0) scale(1.06);
-  }
-}
-
-@keyframes halo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
   }
 }
 
