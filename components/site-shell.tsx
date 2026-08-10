@@ -22,7 +22,7 @@ const homeAnchors = {
   about: "/sxetika",
   therapies: "/#ypiresies",
   faq: "/#systimiki-proseggisi",
-  contact: "/#epikoinonia",
+  contact: "/epikoinonia",
 };
 
 // Adds the current language as a query string without losing hash navigation.
@@ -148,7 +148,7 @@ export function SiteShell({ language, children }: SiteShellProps) {
                     {t.nav.faq}
                   </Link>
                 </li>
-                <li className="menu-item">
+                <li className={navItemClass(pathname === "/epikoinonia")}>
                   <Link
                     href={withLanguage(homeAnchors.contact, currentLang)}
                     onClick={closeMenu}

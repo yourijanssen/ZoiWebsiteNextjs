@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-// import { ContactForm } from "@/components/contact-form";
+import { ContactSection } from "@/components/contact-section";
 import { LogoMark } from "@/components/logo-mark";
 import { SiteShell } from "@/components/site-shell";
 import { TextCarousel } from "@/components/text-carousel";
@@ -99,14 +99,6 @@ export default async function Home({ searchParams }: HomePageProps) {
           </blockquote>
         </section>
 
-        <section className="about-link-band content-card">
-          <h2>{t.profile.name}</h2>
-          <p>{t.profile.bio}</p>
-          <Link className="text-link" href={`/sxetika${langQuery}`}>
-            {t.nav.about}
-          </Link>
-        </section>
-
         <section className="services" id="ypiresies">
           <header className="section-heading">
             <h2>{t.servicesHeading.title}</h2>
@@ -149,57 +141,7 @@ export default async function Home({ searchParams }: HomePageProps) {
           </section>
         */}
 
-        <section className="contact-band" id="epikoinonia">
-          <header className="section-heading">
-            <h2>{t.contact.title}</h2>
-            {t.contact.text.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-          </header>
-          <div className="contact-layout contact-layout-info-only">
-            <div className="contact-details">
-              <section className="contact-info-group">
-                <h3>{t.contact.detailsTitle}</h3>
-                <p className="contact-info-row">
-                  <span className="contact-info-icon" aria-hidden="true">
-                    ☎
-                  </span>
-                  <span>
-                    <strong>{t.contact.phoneViberLabel}</strong>{" "}
-                    <a href={`tel:${t.contact.mobile.replaceAll(" ", "")}`}>
-                      {t.contact.mobile}
-                    </a>
-                  </span>
-                </p>
-                <p className="contact-info-row">
-                  <span className="contact-info-icon" aria-hidden="true">
-                    ✉
-                  </span>
-                  <span>
-                    <strong>{t.contact.emailLabel}</strong>{" "}
-                    <a href={`mailto:${t.contact.email}`}>{t.contact.email}</a>
-                  </span>
-                </p>
-              </section>
-
-              <section className="contact-info-group">
-                <h3>{t.contact.hoursTitle}</h3>
-                <p className="contact-info-row">
-                  <span className="contact-info-icon" aria-hidden="true">
-                    ◷
-                  </span>
-                  <span>
-                    <strong>{t.contact.weekdays}</strong>
-                    <span className="contact-appointment">
-                      {t.contact.appointmentOnly}
-                    </span>
-                  </span>
-                </p>
-              </section>
-            </div>
-            {/* <ContactForm language={language} labels={t.contact} /> */}
-          </div>
-        </section>
+        <ContactSection labels={t.contact} id="epikoinonia" />
       </main>
     </SiteShell>
   );

@@ -18,6 +18,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
+  const contactPages = languages.map((language) => ({
+    url: `${siteUrl}/epikoinonia?lang=${language}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.85,
+  }));
+
   const servicePages = languages.flatMap((language) =>
     getDetailServices(language).map((service) => ({
       url: `${siteUrl}/ypiresies/${service.slug}?lang=${language}`,
@@ -27,5 +34,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   );
 
-  return [...homePages, ...aboutPages, ...servicePages];
+  return [...homePages, ...aboutPages, ...contactPages, ...servicePages];
 }
