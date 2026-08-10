@@ -9,6 +9,9 @@ type ContactFormProps = {
     nameInput: string;
     emailInput: string;
     messageInput: string;
+    privacyNotice: string;
+    privacyConsent: string;
+    privacyError: string;
     submit: string;
     sending: string;
     success: string;
@@ -49,6 +52,7 @@ export function ContactForm({ language, labels }: ContactFormProps) {
           name: formData.get("name"),
           email: formData.get("email"),
           message: formData.get("message"),
+          privacyConsent: formData.get("privacyConsent") === "on",
           website: formData.get("website"),
           language,
         }),
@@ -91,6 +95,24 @@ export function ContactForm({ language, labels }: ContactFormProps) {
         </span>
         <textarea name="message" rows={5} required disabled={isSending} />
       </label>
+      <div className="contact-privacy">
+        <p>{labels.privacyNotice}</p>
+        <label className="contact-consent">
+          <input
+            type="checkbox"
+            name="privacyConsent"
+            required
+            disabled={isSending}
+            onInvalid={(event) =>
+              event.currentTarget.setCustomValidity(labels.privacyError)
+            }
+            onChange={(event) => event.currentTarget.setCustomValidity("")}
+          />
+          <span>
+            {labels.privacyConsent} <span className="required-marker">*</span>
+          </span>
+        </label>
+      </div>
       <label className="contact-honeypot">
         <span>Website</span>
         <input

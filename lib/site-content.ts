@@ -50,11 +50,12 @@ export const content = {
       menu: "Μενού",
     },
     hero: {
-      kicker: "Online ψυχοθεραπεία",
-      title: "Ψυχολόγος και ψυχοθεραπεύτρια για online συστημική ψυχοθεραπεία",
-      lead: "Η Ζωή Πάντου είναι ψυχολόγος και ψυχοθεραπεύτρια που προσφέρει online συνεδρίες συστημικής ψυχοθεραπείας στα ελληνικά. Κάθε συνεδρία διαρκεί μία ώρα, πραγματοποιείται σε σταθερό και εμπιστευτικό πλαίσιο και κοστίζει 40 ευρώ.",
-      servicesCta: "Δείτε τις online συνεδρίες",
-      contactCta: "Κλείστε online ραντεβού",
+      kicker: "ΣΥΣΤΗΜΙΚΗ ΨΥΧΟΘΕΡΑΠΕΙΑ & ΣΥΜΒΟΥΛΕΥΤΙΚΗ",
+      title: "«Η βάση όλων των ανθρώπινων σχέσεων είναι η επικοινωνία· όμως η επικοινωνία δεν είναι απλώς η ικανότητα να μιλάς ή να κατανοείς λέξεις, αλλά η ικανότητα να συνδέεσαι συναισθηματικά με τον άλλον.»",
+      attribution: "—Virginia Satir",
+      lead: "Στον ασφαλή χώρο της ψυχοθεραπείας, στόχος μας είναι να χτίσουμε μαζί αυτή την ουσιαστική σύνδεση. Μέσα από τη συστημική ματιά, αναγνωρίζουμε τα μοτίβα που σας δυσκολεύουν και διερευνούμε νέες οπτικές και νοηματοδοτήσεις, δημιουργώντας χώρο για πιο αυθεντικές συνδέσεις στη ζωή σας.",
+      servicesCta: "Ας επικοινωνήσουμε",
+      contactCta: "Ας γνωριστούμε",
       imagePlaceholder:
         "Online συστημική ψυχοθεραπεία στα ελληνικά με ψυχολόγο και ψυχοθεραπεύτρια.",
     },
@@ -72,17 +73,17 @@ export const content = {
         {
           eyebrow: "01",
           title: "Ήρεμο θεραπευτικό πλαίσιο",
-          text: "Ένας σταθερός online χώρος όπου μπορείτε να μιλήσετε με ασφάλεια, συνέπεια και σεβασμό στον δικό σας ρυθμό.",
+          text: "Το θεραπευτικό πλαίσιο δεν αποτελεί μια στατική συνθήκη, αλλά μια δυναμική και συνεργατική διαδικασία που διαμορφώνεται αμφίδρομα μέσα από τη θεραπευτική σχέση. Δημιουργούμε έναν χώρο ασφάλειας, συνέπειας και σεβασμού, όπου μπορείτε να εκφράζεστε ελεύθερα με τον δικό σας ρυθμό.",
         },
         {
           eyebrow: "02",
           title: "Συστημική ματιά",
-          text: "Η θεραπευτική διαδικασία λαμβάνει υπόψη τις σχέσεις, τα πλαίσια και τους τρόπους επικοινωνίας που διαμορφώνουν την εμπειρία σας.",
+          text: "Η δυσκολία ή το σύμπτωμα εξετάζεται πάντα σε συνάρτηση με το περιβάλλον, τις σχέσεις και τους ρόλους στους οποίους το άτομο αλληλεπιδρά. Η συστημική προσέγγιση επιτρέπει τη βαθύτερη κατανόηση αυτών των δυναμικών, αναδεικνύοντας νέες οπτικές και ισορροπίες.",
         },
         {
           eyebrow: "03",
           title: "Σύνδεση από τον χώρο σας",
-          text: "Οι συνεδρίες πραγματοποιούνται online, ώστε να μπορείτε να ξεκινήσετε από έναν οικείο και προστατευμένο χώρο.",
+          text: "Η θεραπευτική σχέση αναπτύσσεται με ασφάλεια και συνέπεια, επιτρέποντάς σας να συμμετέχετε στις συνεδρίες από το οικείο σας περιβάλλον. Οι διαδικτυακές συνεδρίες πραγματοποιούνται μέσω πλατφορμών (Google Meet, Viber, MS Teams), εξασφαλίζοντας εύκολη πρόσβαση και ιδιωτικότητα.",
         },
       ],
     },
@@ -101,8 +102,8 @@ export const content = {
       ],
     },
     quote: {
-      text: "Η ψυχοθεραπεία είναι ένας ασφαλής τόπος όπου η φωνή μας ακούγεται χωρίς φόβο και η αλλαγή χτίζεται με συνέπεια.",
-      author: "Ζωή Πάντου",
+      text: "«Η πεποίθηση ότι η προσωπική άποψη κάποιου για την πραγματικότητα είναι η μόνη πραγματικότητα αποτελεί την πιο επικίνδυνη από όλες τις αυταπάτες.»",
+      author: "—Paul Watzlawick",
     },
     profile: {
       kicker: "Προφίλ",
@@ -167,17 +168,31 @@ export const content = {
       ],
     },
     contact: {
-      title: "Επικοινωνία και ραντεβού",
-      text: "Συμπληρώστε τη φόρμα και θα επικοινωνήσουμε μαζί σας για το πρώτο online ραντεβού. Οι συνεδρίες κοστίζουν 40 ευρώ ανά ώρα.",
+      title: "Επικοινωνία και Ραντεβού",
+      text: [
+        "Το πρώτο βήμα για τη φροντίδα της ψυχικής σας υγείας ξεκινά με μια απλή επικοινωνία.",
+        "Θα χαρώ να επικοινωνήσουμε μέσω τηλεφωνικής κλήσης, μηνύματος ή email, προκειμένου να προγραμματίσουμε ένα διαδικτυακό ραντεβού ή να συζητήσουμε οποιαδήποτε απορία έχετε για τη διαδικασία των συνεδριών.",
+      ],
+      detailsTitle: "Στοιχεία Επικοινωνίας",
+      hoursTitle: "Ωράριο Λειτουργίας",
       phoneLabel: "Σταθερό:",
       mobileLabel: "Κινητό:",
+      phoneViberLabel: "Τηλέφωνο / Viber:",
       emailLabel: "Email:",
+      weekdays: "Δευτέρα - Παρασκευή",
+      appointmentOnly: "Κατόπιν ραντεβού",
       phone: "+30 210 0000000",
       mobile: "+30 69 00000000",
       email: "zipalife@gmail.com",
       nameInput: "Ονοματεπώνυμο",
       emailInput: "Email",
       messageInput: "Μήνυμα",
+      privacyNotice:
+        "Τα στοιχεία που στέλνετε χρησιμοποιούνται μόνο για να απαντήσουμε στο μήνυμά σας και να οργανώσουμε πιθανό ραντεβού. Δεν χρησιμοποιούνται για διαφημιστικούς σκοπούς και δεν κοινοποιούνται σε τρίτους, εκτός αν απαιτείται για την παροχή της υπηρεσίας ή από τον νόμο.",
+      privacyConsent:
+        "Κατανοώ και συμφωνώ με την επεξεργασία των στοιχείων μου για την απάντηση στο αίτημά μου.",
+      privacyError:
+        "Παρακαλώ αποδεχθείτε την πολιτική απορρήτου πριν στείλετε το μήνυμα.",
       submit: "Αποστολή μηνύματος",
       sending: "Αποστολή...",
       success:
@@ -185,9 +200,9 @@ export const content = {
       error:
         "Δεν ήταν δυνατή η αποστολή του μηνύματος. Δοκιμάστε ξανά ή στείλτε μας email.",
     },
-    frontPageContent:
-      "Οι online συνεδρίες συστημικής ψυχοθεραπείας με ψυχολόγο και ψυχοθεραπεύτρια μπορούν να υποστηρίξουν θέματα άγχους, αυτογνωσίας, σχέσεων, ορίων και συναισθηματικής δυσκολίας. Η πρώτη επικοινωνία βοηθά να δούμε αν το πλαίσιο ταιριάζει στις ανάγκες σας.",
-    footerCredit: "© Youri Janssen",
+    footerCopyright:
+      "© 2026 Ζωή Πάντου. Όλα τα δικαιώματα κατοχυρωμένα.",
+    footerCredit: "Designed by Youri Janssen",
     notFound: {
       title: "Η σελίδα δεν βρέθηκε",
       text: "Η σελίδα που αναζητάτε δεν υπάρχει.",
@@ -216,11 +231,12 @@ export const content = {
       menu: "Menu",
     },
     hero: {
-      kicker: "Online psychotherapy",
-      title: "Psychologist and psychotherapist for online systemic psychotherapy",
-      lead: "Zoi Pantou is a psychologist and psychotherapist offering online systemic psychotherapy sessions in Greek. Each session lasts one hour, takes place in a steady and confidential framework, and costs 40 euros.",
-      servicesCta: "View online sessions",
-      contactCta: "Book an online appointment",
+      kicker: "Systemic psychotherapy & counseling",
+      title: "“The foundation of all human relationships is communication; however, communication is not simply the ability to speak or understand words, but the ability to connect emotionally with another person.”",
+      attribution: "—Virginia Satir",
+      lead: "Within the safe space of psychotherapy, our goal is to build this meaningful connection together. Through a systemic perspective, we recognize the patterns that create difficulty and explore new viewpoints and meanings, creating space for more authentic connections in your life.",
+      servicesCta: "Let's connect",
+      contactCta: "Let's get acquainted",
       imagePlaceholder:
         "Online systemic psychotherapy in Greek with a psychologist and psychotherapist.",
     },
@@ -238,17 +254,17 @@ export const content = {
         {
           eyebrow: "01",
           title: "A calm therapeutic frame",
-          text: "A steady online space where you can speak with safety, consistency and respect for your own pace.",
+          text: "The therapeutic frame is not a static condition, but a dynamic and collaborative process shaped mutually through the therapeutic relationship. We create a space of safety, consistency and respect, where you can express yourself freely at your own pace.",
         },
         {
           eyebrow: "02",
           title: "A systemic perspective",
-          text: "The therapeutic process considers the relationships, contexts and communication patterns that shape your experience.",
+          text: "The difficulty or symptom is always explored in relation to the environment, relationships and roles in which the person interacts. The systemic approach allows a deeper understanding of these dynamics, bringing forward new perspectives and balances.",
         },
         {
           eyebrow: "03",
           title: "Sessions from your own space",
-          text: "Sessions take place online, so you can begin from a familiar and protected environment.",
+          text: "The therapeutic relationship develops with safety and consistency, allowing you to attend sessions from your familiar environment. Online sessions take place through platforms (Google Meet, Viber, MS Teams), ensuring easy access and privacy.",
         },
       ],
     },
@@ -267,8 +283,8 @@ export const content = {
       ],
     },
     quote: {
-      text: "Psychotherapy is a safe place where our voice can be heard without fear and change is built with consistency.",
-      author: "Zoi Pantou",
+      text: "“The belief that one's own view of reality is the only reality is the most dangerous of all delusions.”",
+      author: "—Paul Watzlawick",
     },
     profile: {
       kicker: "Profile",
@@ -333,17 +349,31 @@ export const content = {
       ],
     },
     contact: {
-      title: "Contact and appointments",
-      text: "Fill in the form and we will contact you about the first online appointment. Sessions cost 40 euros per hour.",
+      title: "Contact and Appointments",
+      text: [
+        "The first step in caring for your mental health begins with simple contact.",
+        "I will be glad to connect by phone call, message or email, so we can schedule an online appointment or discuss any questions you may have about the session process.",
+      ],
+      detailsTitle: "Contact Details",
+      hoursTitle: "Opening Hours",
       phoneLabel: "Landline:",
       mobileLabel: "Mobile:",
+      phoneViberLabel: "Telephone / Viber:",
       emailLabel: "Email:",
+      weekdays: "Monday - Friday",
+      appointmentOnly: "By appointment",
       phone: "+30 210 0000000",
       mobile: "+30 69 00000000",
       email: "zipalife@gmail.com",
       nameInput: "Full name",
       emailInput: "Email",
       messageInput: "Message",
+      privacyNotice:
+        "The details you send are used only to respond to your message and arrange a possible appointment. They are not used for marketing and are not shared with third parties, except where needed to provide the service or required by law.",
+      privacyConsent:
+        "I understand and agree that my details may be processed to respond to my request.",
+      privacyError:
+        "Please accept the privacy policy before sending your message.",
       submit: "Send message",
       sending: "Sending...",
       success:
@@ -351,9 +381,8 @@ export const content = {
       error:
         "The message could not be sent. Please try again or email us directly.",
     },
-    frontPageContent:
-      "Online systemic psychotherapy sessions with a psychologist and psychotherapist can support anxiety, self-awareness, relationships, boundaries and emotional difficulty. The first contact helps us see whether the framework fits your needs.",
-    footerCredit: "© Youri Janssen",
+    footerCopyright: "© 2026 Zoi Pantou. All rights reserved.",
+    footerCredit: "Designed by Youri Janssen",
     notFound: {
       title: "Page not found",
       text: "The page you are looking for does not exist.",

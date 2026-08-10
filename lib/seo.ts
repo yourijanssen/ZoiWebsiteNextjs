@@ -57,18 +57,21 @@ export function buildHomeStructuredData(language: Language) {
           url: currentUrl,
         },
       },
-      {
-        "@type": "FAQPage",
-        "@id": `${siteUrl}/#faq`,
-        mainEntity: t.faq.items.map((item) => ({
-          "@type": "Question",
-          name: item.question,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: item.answer,
-          },
-        })),
-      },
+      // The FAQ structured data is intentionally hidden for the first release.
+      /*
+        {
+          "@type": "FAQPage",
+          "@id": `${siteUrl}/#faq`,
+          mainEntity: t.faq.items.map((item) => ({
+            "@type": "Question",
+            name: item.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: item.answer,
+            },
+          })),
+        },
+      */
     ],
   };
 }

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ContactForm } from "@/components/contact-form";
+// import { ContactForm } from "@/components/contact-form";
 import { LogoMark } from "@/components/logo-mark";
 import { SiteShell } from "@/components/site-shell";
 import { TextCarousel } from "@/components/text-carousel";
@@ -64,14 +64,18 @@ export default async function Home({ searchParams }: HomePageProps) {
             <LogoMark className="hero-logo-mark" priority />
             <p className="hero-kicker">{t.hero.kicker}</p>
             <h1>{t.hero.title}</h1>
+            <p className="hero-quote-author">{t.hero.attribution}</p>
             <p className="hero-lead">{t.hero.lead}</p>
             <div className="hero-actions">
-              <a className="button" href="#ypiresies">
+              <a className="button" href="#epikoinonia">
                 {t.hero.servicesCta}
               </a>
-              <a className="button button-outline" href="#epikoinonia">
+              <Link
+                className="button button-outline"
+                href={`/sxetika${langQuery}`}
+              >
                 {t.hero.contactCta}
-              </a>
+              </Link>
             </div>
           </div>
           <div className="hero-media" aria-hidden="true">
@@ -130,44 +134,71 @@ export default async function Home({ searchParams }: HomePageProps) {
           </div>
         </section>
 
-        <section className="faq-section content-card" id="syxnes-erotiseis">
-          <h2>{t.faq.title}</h2>
-          <div className="faq-list">
-            {t.faq.items.map((item) => (
-              <details key={item.question}>
-                <summary>{item.question}</summary>
-                <p>{item.answer}</p>
-              </details>
-            ))}
-          </div>
-        </section>
+        {/* The FAQ is intentionally hidden for the first release. */}
+        {/*
+          <section className="faq-section content-card" id="syxnes-erotiseis">
+            <h2>{t.faq.title}</h2>
+            <div className="faq-list">
+              {t.faq.items.map((item) => (
+                <details key={item.question}>
+                  <summary>{item.question}</summary>
+                  <p>{item.answer}</p>
+                </details>
+              ))}
+            </div>
+          </section>
+        */}
 
         <section className="contact-band" id="epikoinonia">
           <header className="section-heading">
             <h2>{t.contact.title}</h2>
-            <p>{t.contact.text}</p>
+            {t.contact.text.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
           </header>
-          <div className="contact-layout">
+          <div className="contact-layout contact-layout-info-only">
             <div className="contact-details">
-              <p>
-                <strong>{t.contact.phoneLabel}</strong>{" "}
-                <a href="tel:+302100000000">{t.contact.phone}</a>
-              </p>
-              <p>
-                <strong>{t.contact.mobileLabel}</strong>{" "}
-                <a href="tel:+306900000000">{t.contact.mobile}</a>
-              </p>
-              <p>
-                <strong>{t.contact.emailLabel}</strong>{" "}
-                <a href={`mailto:${t.contact.email}`}>{t.contact.email}</a>
-              </p>
-            </div>
-            <ContactForm language={language} labels={t.contact} />
-          </div>
-        </section>
+              <section className="contact-info-group">
+                <h3>{t.contact.detailsTitle}</h3>
+                <p className="contact-info-row">
+                  <span className="contact-info-icon" aria-hidden="true">
+                    ☎
+                  </span>
+                  <span>
+                    <strong>{t.contact.phoneViberLabel}</strong>{" "}
+                    <a href={`tel:${t.contact.mobile.replaceAll(" ", "")}`}>
+                      {t.contact.mobile}
+                    </a>
+                  </span>
+                </p>
+                <p className="contact-info-row">
+                  <span className="contact-info-icon" aria-hidden="true">
+                    ✉
+                  </span>
+                  <span>
+                    <strong>{t.contact.emailLabel}</strong>{" "}
+                    <a href={`mailto:${t.contact.email}`}>{t.contact.email}</a>
+                  </span>
+                </p>
+              </section>
 
-        <section className="front-page-content content-card">
-          <p>{t.frontPageContent}</p>
+              <section className="contact-info-group">
+                <h3>{t.contact.hoursTitle}</h3>
+                <p className="contact-info-row">
+                  <span className="contact-info-icon" aria-hidden="true">
+                    ◷
+                  </span>
+                  <span>
+                    <strong>{t.contact.weekdays}</strong>
+                    <span className="contact-appointment">
+                      {t.contact.appointmentOnly}
+                    </span>
+                  </span>
+                </p>
+              </section>
+            </div>
+            {/* <ContactForm language={language} labels={t.contact} /> */}
+          </div>
         </section>
       </main>
     </SiteShell>

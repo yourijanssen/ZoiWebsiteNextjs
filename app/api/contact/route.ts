@@ -19,6 +19,7 @@ type ContactPayload = {
   name?: unknown;
   email?: unknown;
   message?: unknown;
+  privacyConsent?: unknown;
   language?: unknown;
   website?: unknown;
 };
@@ -175,10 +176,23 @@ export async function POST(request: Request) {
   const email = normalizeField(payload.email, 160).toLowerCase();
   const message = normalizeField(payload.message, 4000);
   const language = normalizeField(payload.language, 2) === "el" ? "el" : "en";
+  const hasPrivacyConsent = payload.privacyConsent === true;
 
   if (!name || !emailPattern.test(email) || !message) {
     return Response.json(
       { error: "Please fill in all required fields correctly." },
+      { status: 400 },
+    );
+  }
+
+  if (!hasPrivacyConsent) {
+    return Response.json(
+      {
+        error:
+          language === "el"
+            ? "Παρακαλώ αποδεχθείτε την πολιτική απορρήτου πριν στείλετε το μήνυμα."
+            : "Please accept the privacy policy before sending your message.",
+      },
       { status: 400 },
     );
   }

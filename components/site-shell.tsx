@@ -51,7 +51,6 @@ export function SiteShell({ language, children }: SiteShellProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const currentLang = language;
-  const year = new Date().getFullYear();
 
   const switchHref = (targetLanguage: Language) => {
     const params = new URLSearchParams(searchParams.toString());
@@ -188,25 +187,9 @@ export function SiteShell({ language, children }: SiteShellProps) {
       <footer className="site-footer">
         <div className="container footer-inner">
           <div className="footer-meta">
-            <p className="footer-copy">
-              {year} {t.brand}
-            </p>
+            <p className="footer-copy">{t.footerCopyright}</p>
             <p className="footer-credit">{t.footerCredit}</p>
           </div>
-          <nav className="footer-nav" aria-label={t.nav.footerLabel}>
-            <ul className="menu footer-menu">
-              <li className="menu-item">
-                <Link href={withLanguage(homeAnchors.home, currentLang)}>
-                  {t.nav.home}
-                </Link>
-              </li>
-              <li className="menu-item">
-                <Link href={withLanguage(homeAnchors.contact, currentLang)}>
-                  {t.nav.contact}
-                </Link>
-              </li>
-            </ul>
-          </nav>
         </div>
       </footer>
     </>
