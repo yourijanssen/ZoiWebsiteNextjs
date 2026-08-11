@@ -4,7 +4,7 @@ import { ContactSection } from "@/components/contact-section";
 import { LogoMark } from "@/components/logo-mark";
 import { SiteShell } from "@/components/site-shell";
 import { TextCarousel } from "@/components/text-carousel";
-import { content, resolveLanguage, services } from "@/lib/site-content";
+import { content, getDetailServices, resolveLanguage } from "@/lib/site-content";
 import { buildHomeStructuredData, languageUrls } from "@/lib/seo";
 
 type HomePageProps = {
@@ -48,7 +48,7 @@ export async function generateMetadata({
 export default async function Home({ searchParams }: HomePageProps) {
   const language = resolveLanguage((await searchParams).lang);
   const t = content[language];
-  const localizedServices = services[language];
+  const localizedServices = getDetailServices(language);
   const langQuery = `?lang=${language}`;
   const structuredData = buildHomeStructuredData(language);
 
@@ -94,15 +94,14 @@ export default async function Home({ searchParams }: HomePageProps) {
 
         <section className="quote-highlight">
           <blockquote>
-            <p>{t.quote.text}</p>
-            <cite>{t.quote.author}</cite>
+            <p>{t.homeQuote.text}</p>
+            <cite>{t.homeQuote.author}</cite>
           </blockquote>
         </section>
 
         <section className="services" id="ypiresies">
           <header className="section-heading">
             <h2>{t.servicesHeading.title}</h2>
-            <p>{t.servicesHeading.text}</p>
           </header>
           <div className="services-grid">
             {localizedServices.map((service) => (

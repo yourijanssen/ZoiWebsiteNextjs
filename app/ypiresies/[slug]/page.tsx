@@ -84,29 +84,54 @@ export default async function ServicePage({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
-        <article className="content-card service-single-card">
-          <p className="hero-kicker">{t.servicesHeading.title}</p>
-          <h1>{service.title}</h1>
-          <p className="hero-lead">{service.summary}</p>
+        <article
+          className={`service-detail${
+            service.points.length === 0 ? " service-detail-narrative" : ""
+          }`}
+        >
+          <header className="service-detail-intro">
+            {!service.detailBody && (
+              <p className="hero-kicker">{t.servicesHeading.title}</p>
+            )}
+            <h1>{service.title}</h1>
+            {service.detailBody ? (
+              service.detailBody.map((paragraph) => (
+                <p className="service-detail-paragraph" key={paragraph}>
+                  {paragraph}
+                </p>
+              ))
+            ) : (
+              <p className="hero-lead">{service.summary}</p>
+            )}
+          </header>
 
-          <h2>{t.servicesHeading.includes}</h2>
-          <ul className="service-points">
-            {service.points.map((point) => (
-              <li key={point}>{point}</li>
-            ))}
-          </ul>
+          <section className="service-detail-content">
+            {service.points.length > 0 && (
+              <>
+                <h2>{t.servicesHeading.includes}</h2>
+                <ul className="service-points">
+                  {service.points.map((point) => (
+                    <li key={point}>{point}</li>
+                  ))}
+                </ul>
+              </>
+            )}
 
-          <div className="service-single-actions">
-            <Link className="button" href={`/${langQuery}#epikoinonia`}>
-              {t.hero.contactCta}
-            </Link>
-            <Link
-              className="button button-outline"
-              href={`/${langQuery}#ypiresies`}
-            >
-              {t.servicesHeading.back}
-            </Link>
-          </div>
+            <div className="service-single-actions">
+              <Link
+                className="button"
+                href={`/epikoinonia${langQuery}`}
+              >
+                {t.hero.servicesCta}
+              </Link>
+              <Link
+                className="button button-outline"
+                href={`/ypiresies${langQuery}`}
+              >
+                {t.servicesHeading.back}
+              </Link>
+            </div>
+          </section>
         </article>
       </main>
     </SiteShell>

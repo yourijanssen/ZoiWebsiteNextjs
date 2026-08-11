@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteShell } from "@/components/site-shell";
-import { content, resolveLanguage, services } from "@/lib/site-content";
+import { content, getDetailServices, resolveLanguage } from "@/lib/site-content";
 import { siteUrl } from "@/lib/seo";
 
 type ServicesPageProps = {
@@ -39,7 +39,7 @@ export async function generateMetadata({
 export default async function ServicesPage({ searchParams }: ServicesPageProps) {
   const language = resolveLanguage((await searchParams).lang);
   const t = content[language];
-  const localizedServices = services[language];
+  const localizedServices = getDetailServices(language);
   const langQuery = `?lang=${language}`;
 
   return (
@@ -48,7 +48,6 @@ export default async function ServicesPage({ searchParams }: ServicesPageProps) 
         <section className="services">
           <header className="section-heading">
             <h1>{t.servicesHeading.title}</h1>
-            <p>{t.servicesHeading.text}</p>
           </header>
           <div className="services-grid">
             {localizedServices.map((service) => (

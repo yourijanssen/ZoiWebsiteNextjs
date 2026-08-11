@@ -7,6 +7,7 @@ export type Service = {
   slug: string;
   title: string;
   summary: string;
+  detailBody?: string[];
   points: string[];
   hasDetailPage?: boolean;
 };
@@ -34,7 +35,7 @@ export const content = {
     metaTitle:
       "Ζωή Πάντου | ψυχολόγος και ψυχοθεραπεύτρια online",
     metaDescription:
-      "Ψυχολόγος και ψυχοθεραπεύτρια για online συστημική ψυχοθεραπεία στα ελληνικά. Συνεδρίες μίας ώρας με κόστος 40 ευρώ.",
+      "Ψυχολόγος και ψυχοθεραπεύτρια για online συστημική ψυχοθεραπεία στα ελληνικά σε σταθερό και εμπιστευτικό πλαίσιο.",
     nav: {
       mainLabel: "Κεντρικό μενού",
       footerLabel: "Μενού υποσέλιδου",
@@ -102,8 +103,12 @@ export const content = {
       ],
     },
     quote: {
+      text: "«Η σοφία είναι η νοημοσύνη του συστήματος στο σύνολό του.»",
+      author: "— Gregory Bateson",
+    },
+    homeQuote: {
       text: "«Η πεποίθηση ότι η προσωπική άποψη κάποιου για την πραγματικότητα είναι η μόνη πραγματικότητα αποτελεί την πιο επικίνδυνη από όλες τις αυταπάτες.»",
-      author: "—Paul Watzlawick",
+      author: "— Paul Watzlawick",
     },
     profile: {
       kicker: "Προφίλ",
@@ -118,8 +123,8 @@ export const content = {
       ],
     },
     servicesHeading: {
-      title: "Online συνεδρίες",
-      text: "Προς το παρόν είναι διαθέσιμες μόνο online συνεδρίες συστημικής ψυχοθεραπείας με ψυχολόγο / ψυχοθεραπεύτρια, διάρκειας μίας ώρας και κόστους 40 ευρώ.",
+      title: "Διαδικτυακές Συνεδρίες",
+      text: "Διαδικτυακές συνεδρίες συστημικής ψυχοθεραπείας και συμβουλευτικής σε σταθερό, εμπιστευτικό και συνεργατικό πλαίσιο.",
       link: "Δείτε αναλυτικά",
       includes: "Τι περιλαμβάνει",
       back: "Επιστροφή στις θεραπείες",
@@ -129,7 +134,7 @@ export const content = {
       items: [
         "Σύντομη επικοινωνία για διαθεσιμότητα και πρώτο αίτημα.",
         "Πρώτη online συνεδρία αξιολόγησης και συμφωνία θεραπευτικού πλαισίου.",
-        "Σταθερές online συνεδρίες διάρκειας μίας ώρας με κόστος 40 ευρώ.",
+        "Σταθερές online συνεδρίες με πρακτικές λεπτομέρειες που συζητούνται κατά την πρώτη επικοινωνία.",
       ],
     },
     faq: {
@@ -138,7 +143,7 @@ export const content = {
         {
           question: "Πόσο διαρκεί μια συνεδρία;",
           answer:
-            "Η διάρκεια είναι μία ώρα και το κόστος είναι 40 ευρώ ανά συνεδρία.",
+            "Η διάρκεια και οι πρακτικές λεπτομέρειες συζητούνται κατά την πρώτη επικοινωνία, ώστε να διαμορφωθεί ένα σαφές θεραπευτικό πλαίσιο.",
         },
         {
           question: "Οι συνεδρίες γίνονται μόνο online;",
@@ -215,7 +220,7 @@ export const content = {
     brandMark: "ZP",
     metaTitle: "Zoi Pantou | psychologist and psychotherapist online",
     metaDescription:
-      "Psychologist and psychotherapist for online systemic psychotherapy in Greek. Confidential one-hour sessions for 40 euros per session.",
+      "Psychologist and psychotherapist for online systemic psychotherapy in Greek within a steady and confidential framework.",
     nav: {
       mainLabel: "Main menu",
       footerLabel: "Footer menu",
@@ -283,8 +288,12 @@ export const content = {
       ],
     },
     quote: {
+      text: "“Wisdom is the intelligence of the system as a whole.”",
+      author: "— Gregory Bateson",
+    },
+    homeQuote: {
       text: "“The belief that one's own view of reality is the only reality is the most dangerous of all delusions.”",
-      author: "—Paul Watzlawick",
+      author: "— Paul Watzlawick",
     },
     profile: {
       kicker: "Profile",
@@ -300,7 +309,7 @@ export const content = {
     },
     servicesHeading: {
       title: "Online sessions",
-      text: "For now, only online systemic psychotherapy sessions with a psychologist / psychotherapist are available. Each session lasts one hour and costs 40 euros.",
+      text: "Online systemic psychotherapy and counseling sessions in a steady, confidential and collaborative framework.",
       link: "View details",
       includes: "What it includes",
       back: "Back to therapies",
@@ -310,7 +319,7 @@ export const content = {
       items: [
         "Brief contact about availability and your initial request.",
         "First online assessment session and agreement on the therapeutic framework.",
-        "Steady one-hour online sessions at 40 euros per session.",
+        "Steady online sessions with practical details discussed during the first contact.",
       ],
     },
     faq: {
@@ -319,7 +328,7 @@ export const content = {
         {
           question: "How long is a session?",
           answer:
-            "Sessions last one hour and cost 40 euros per session.",
+            "The duration and practical details are discussed during the first contact, so a clear therapeutic framework can be formed.",
         },
         {
           question: "Are sessions online only?",
@@ -399,10 +408,10 @@ export const services = {
       title: "Διαδικτυακές Συνεδρίες",
       hasDetailPage: false,
       summary:
-        "Διαδικτυακές συνεδρίες συστημικής ψυχοθεραπείας στα ελληνικά με ψυχολόγο και ψυχοθεραπεύτρια, διάρκειας μίας ώρας, με σταθερό πλαίσιο, εμπιστευτικότητα και κόστος 40 ευρώ.",
+        "Διαδικτυακές συνεδρίες συστημικής ψυχοθεραπείας στα ελληνικά με ψυχολόγο και ψυχοθεραπεύτρια, σε σταθερό πλαίσιο, με εμπιστευτικότητα και φροντίδα.",
       points: [
         "Σταθερό διαδικτυακό ραντεβού διάρκειας μίας ώρας",
-        "Κόστος 40 ευρώ ανά συνεδρία",
+        "Πρακτικές λεπτομέρειες που συζητούνται κατά την πρώτη επικοινωνία",
         "Συστημική ψυχοθεραπεία για σχέσεις, άγχος, όρια και αυτογνωσία",
         "Ασφαλής πλατφόρμα επικοινωνίας",
       ],
@@ -425,13 +434,13 @@ export const services = {
       slug: "symvouleftiki-goneon",
       title: "Συμβουλευτική Γονέων",
       summary:
-        "Συμβουλευτική γονέων για την κατανόηση των αναγκών του παιδιού, την ενίσχυση της επικοινωνίας και τη διαμόρφωση πιο λειτουργικών οικογενειακών σχέσεων.",
-      points: [
-        "Υποστήριξη γονέων σε δυσκολίες επικοινωνίας και οριοθέτησης",
-        "Κατανόηση της συμπεριφοράς του παιδιού μέσα στο οικογενειακό πλαίσιο",
-        "Ενίσχυση της γονεϊκής στάσης με συνέπεια και φροντίδα",
-        "Συστημική προσέγγιση στις σχέσεις και στις ανάγκες της οικογένειας",
+        "Η γονεϊκότητα αποτελεί μια δυναμική διαδικασία που φέρνει στο προσκήνιο ένα ευρύ φάσμα συναισθημάτων, από τη βαθιά χαρά και την αγάπη έως τον θυμό, την αγωνία και την αβεβαιότητα. Εξελίσσεται διαρκώς και συχνά συνοδεύεται από ερωτήματα και προκλήσεις, καθώς κάθε οικογένεια διαμορφώνει τη δική της μοναδική δυναμική. Η συμβουλευτική γονέων προσφέρει έναν χώρο όπου μπορείτε να σταθείτε σε αυτές τις δυσκολίες με περισσότερη κατανόηση και λιγότερη ενοχή.",
+      detailBody: [
+        "Η γονεϊκότητα αποτελεί μια δυναμική διαδικασία που φέρνει στο προσκήνιο ένα ευρύ φάσμα συναισθημάτων, από τη βαθιά χαρά και την αγάπη έως τον θυμό, την αγωνία και την αβεβαιότητα. Εξελίσσεται διαρκώς και συχνά συνοδεύεται από ερωτήματα και προκλήσεις, καθώς κάθε οικογένεια διαμορφώνει τη δική της μοναδική δυναμική. Η συμβουλευτική γονέων προσφέρει έναν χώρο όπου μπορείτε να σταθείτε σε αυτές τις δυσκολίες με περισσότερη κατανόηση και λιγότερη ενοχή.",
+        "Μέσα από τη συστημική προσέγγιση, εξετάζουμε τη σχέση γονέα-παιδιού μέσα στο ευρύτερο οικογενειακό και κοινωνικό πλαίσιο. Διερευνούμε τον τρόπο με τον οποίο επικοινωνείτε, τις ανάγκες που εκφράζονται μέσα από τη συμπεριφορά, τα μοτίβα αλληλεπίδρασης που μπορεί να έχουν διαμορφωθεί και τον τρόπο με τον οποίο οι αλλαγές σε ένα μέλος της οικογένειας μπορούν να επηρεάσουν ολόκληρο το σύστημα.",
+        "Στόχος είναι η ενίσχυση της σύνδεσης και της επικοινωνίας, η καλύτερη κατανόηση των αναγκών του παιδιού και του γονέα και η αναζήτηση πιο λειτουργικών τρόπων ανταπόκρισης στις καθημερινές προκλήσεις, αξιοποιώντας τα ήδη υπάρχοντα αποθέματα και τις δυνατότητες της οικογένειας.",
       ],
+      points: [],
     },
   ],
   en: [
@@ -441,10 +450,10 @@ export const services = {
       title: "Online Sessions",
       hasDetailPage: false,
       summary:
-        "One-hour online systemic psychotherapy sessions in Greek with a psychologist and psychotherapist, a steady framework, confidentiality and a rate of 40 euros.",
+        "Online systemic psychotherapy sessions in Greek with a psychologist and psychotherapist, a steady framework, confidentiality and care.",
       points: [
         "Stable one-hour online appointment",
-        "40 euros per session",
+        "Practical details discussed during the first contact",
         "Systemic psychotherapy for relationships, anxiety, boundaries and self-awareness",
         "Secure communication platform",
       ],
@@ -467,13 +476,13 @@ export const services = {
       slug: "symvouleftiki-goneon",
       title: "Parent Counseling",
       summary:
-        "Parent counseling for understanding a child's needs, strengthening communication and shaping more functional family relationships.",
-      points: [
-        "Support for parents around communication and boundaries",
-        "Understanding a child's behavior within the family context",
-        "Strengthening the parental stance with consistency and care",
-        "A systemic approach to relationships and family needs",
+        "Parenthood is a dynamic process that brings a wide range of emotions to the forefront, from deep joy and love to anger, anxiety and uncertainty. It evolves continuously and is often accompanied by questions and challenges, as every family shapes its own unique dynamics. Parent counseling offers a space in which you can approach these difficulties with greater understanding and less guilt.",
+      detailBody: [
+        "Parenthood is a dynamic process that brings a wide range of emotions to the forefront, from deep joy and love to anger, anxiety and uncertainty. It evolves continuously and is often accompanied by questions and challenges, as every family shapes its own unique dynamics. Parent counseling offers a space in which you can approach these difficulties with greater understanding and less guilt.",
+        "Through a systemic approach, we explore the parent-child relationship within the wider family and social context. We examine the way you communicate, the needs expressed through behavior, patterns of interaction that may have developed, and how changes in one family member can affect the whole system.",
+        "The aim is to strengthen connection and communication, deepen understanding of both the child's and the parent's needs, and find more functional ways of responding to everyday challenges, drawing on the family's existing resources and strengths.",
       ],
+      points: [],
     },
   ],
 } satisfies Record<Language, Service[]>;

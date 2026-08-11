@@ -1724,6 +1724,85 @@ a:focus {
   margin-top: 1.2rem;
 }
 
+.service-single {
+  padding-block: clamp(2.5rem, 6vw, 5rem);
+}
+
+.service-detail {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 1.1fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  width: calc(100% - var(--bs-gutter-x));
+  max-width: calc(var(--container) - var(--bs-gutter-x));
+  margin-inline: auto;
+  padding-block: clamp(2rem, 4vw, 3.5rem);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.service-detail-intro h1 {
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+.service-detail-intro .hero-lead {
+  max-width: 34ch;
+  margin: 0;
+  text-align: left;
+}
+
+.service-detail-narrative {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: min(100% - var(--bs-gutter-x), 68rem);
+}
+
+.service-detail-narrative .service-detail-intro {
+  max-width: 68ch;
+}
+
+.service-detail-narrative .service-detail-content {
+  padding: clamp(1.5rem, 3vw, 2.25rem) 0 0;
+  border-top: 1px solid var(--line);
+  border-left: 0;
+}
+
+.service-detail-paragraph {
+  max-width: 64ch;
+  margin: 0 0 1.2rem;
+  color: var(--text);
+  font-size: clamp(1rem, 1.15vw, 1.1rem);
+  line-height: 1.75;
+}
+
+.service-detail-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.service-detail-content {
+  padding-left: clamp(1.5rem, 4vw, 4rem);
+  border-left: 1px solid var(--line);
+}
+
+.service-detail-content h2 {
+  margin-bottom: 1rem;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+.service-points {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.service-points li::marker {
+  color: var(--accent);
+}
+
+.service-single-actions {
+  margin-top: clamp(1.75rem, 3vw, 2.5rem);
+}
+
 /* Reference-inspired editorial restyle for the public website. */
 body {
   background: #fff;
@@ -1791,7 +1870,7 @@ body::after,
 .menu .page_item a {
   font-size: 0.94rem;
   font-weight: 700;
-  color: #000;
+  color: #536B61;
   border-radius: 0;
   padding: 0.34rem 0.25rem;
 }
@@ -1805,16 +1884,22 @@ body::after,
 .menu-item.current_page_item > a,
 .menu .current_page_item > a {
   background: transparent;
-  color: #000;
-  border-bottom-color: #000;
+  color: #536B61;
+  border-bottom-color: #536B61;
 }
 
 .site-header .menu-item a:hover,
 .site-header .menu-item a:focus,
 .site-header .menu .page_item a:hover,
 .site-header .menu .page_item a:focus {
-  color: #000;
-  border-bottom-color: #000;
+  color: #536B61;
+  border-bottom-color: #536B61;
+}
+
+.site-header .menu-item.current-menu-item > a,
+.site-header .menu-item.current_page_item > a,
+.site-header .menu .current_page_item > a {
+  border-bottom-color: #536B61;
 }
 
 .site-header .sub-menu {
@@ -1822,13 +1907,13 @@ body::after,
 }
 
 .site-header .sub-menu .menu-item a {
-  color: #000;
+  color: #536B61;
 }
 
 .site-header .sub-menu .menu-item a:hover,
 .site-header .sub-menu .menu-item a:focus {
   background: #f2f2f2;
-  color: #000;
+  color: #536B61;
 }
 
 .site-header .language-switcher {
@@ -2075,6 +2160,7 @@ body::after,
 
 .quote-highlight p {
   font-size: clamp(1.25rem, 2.4vw, 1.8rem);
+  font-style: italic;
 }
 
 .quote-highlight cite {
@@ -2134,6 +2220,10 @@ body::after,
 .contact-band h2,
 .contact-band label span {
   color: var(--text);
+}
+
+.contact-band h2 {
+  font-weight: 700;
 }
 
 .contact-band p {
@@ -2428,8 +2518,8 @@ body::after,
   .menu .current_page_item > a {
     width: fit-content;
     background: transparent;
-    color: #000;
-    border-bottom: 1px solid #000;
+    color: #536B61;
+    border-bottom: 1px solid #536B61;
   }
 
   .sub-menu .menu-item a {
@@ -2437,7 +2527,7 @@ body::after,
     padding: 0.4rem 0;
     background: #fff;
     border-radius: 0;
-    color: #000;
+    color: #536B61;
     font-size: 0.94rem;
     font-weight: 700;
   }
@@ -2482,6 +2572,26 @@ body::after,
 
 /* Show a single slide before the three columns become too narrow to read. */
 @media (max-width: 767px) {
+  .service-single {
+    padding-block: 1.75rem;
+  }
+
+  .service-detail {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    padding-block: 1.75rem;
+  }
+
+  .service-detail-content {
+    padding: 1.75rem 0 0;
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+
+  .service-detail-intro .hero-lead {
+    max-width: none;
+  }
+
   .text-carousel {
     grid-template-columns: auto minmax(0, 1fr) auto;
     gap: 0.65rem;

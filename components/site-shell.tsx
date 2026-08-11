@@ -9,7 +9,6 @@ import {
   getDetailServices,
   languages,
   type Language,
-  type Service,
 } from "@/lib/site-content";
 
 type SiteShellProps = {
@@ -32,15 +31,6 @@ function withLanguage(href: string, language: Language) {
   const nextPath = `${path}${separator}lang=${language}`;
 
   return hash ? `${nextPath}#${hash}` : nextPath;
-}
-
-// Keeps the navigation label concise while preserving the full page title.
-function serviceNavLabel(service: Service, language: Language) {
-  if (language === "el" && service.key === "parentCounseling") {
-    return "Συμβουλευτική";
-  }
-
-  return service.title;
 }
 
 export function SiteShell({ language, children }: SiteShellProps) {
@@ -134,7 +124,7 @@ export function SiteShell({ language, children }: SiteShellProps) {
                           )}
                           onClick={closeMenu}
                         >
-                          {serviceNavLabel(service, currentLang)}
+                          {service.title}
                         </Link>
                       </li>
                     ))}
