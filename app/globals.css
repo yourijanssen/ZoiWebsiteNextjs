@@ -1856,8 +1856,8 @@ body::after,
   justify-self: center;
   position: relative;
   z-index: 1;
-  width: min(calc(100% - var(--bs-gutter-x)), 980px);
-  max-width: 980px;
+  width: min(calc(100% - var(--bs-gutter-x)), 1120px);
+  max-width: 1120px;
   padding: clamp(1.8rem, 3.5vw, 2.8rem) clamp(1.45rem, 4vw, 3.5rem);
   text-align: center;
   overflow: visible;
@@ -1885,10 +1885,10 @@ body::after,
 }
 
 .therapist-hero h1 {
-  max-width: 24em;
+  max-width: 34em;
   margin: 0 auto 0.9rem;
   color: #243843;
-  font-size: clamp(1.28rem, 1.82vw, 1.76rem);
+  font-size: clamp(1.28rem, 1.72vw, 1.68rem);
   font-style: italic;
   font-weight: 400;
   line-height: 1.36;
@@ -1904,11 +1904,11 @@ body::after,
 }
 
 .hero-lead {
-  max-width: 68ch;
+  max-width: 92ch;
   margin: 0 auto 1.45rem;
   color: #4f8498;
-  font-size: clamp(1rem, 1.12vw, 1.08rem);
-  line-height: 1.7;
+  font-size: clamp(0.98rem, 1.04vw, 1.04rem);
+  line-height: 1.62;
 }
 
 .hero-actions {
