@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type ContactLabels = {
   title: string;
   text: string[];
@@ -32,7 +34,14 @@ export function ContactSection({ labels, id }: ContactSectionProps) {
             <h3>{labels.detailsTitle}</h3>
             <p className="contact-info-row">
               <span className="contact-info-icon" aria-hidden="true">
-                ☎
+                <Image
+                  className="contact-info-icon-image contact-info-icon-phone"
+                  src="/images/mobile-icon.svg"
+                  alt=""
+                  width={24}
+                  height={24}
+                  unoptimized
+                />
               </span>
               <span>
                 <strong>{labels.phoneViberLabel}</strong>{" "}
@@ -43,7 +52,14 @@ export function ContactSection({ labels, id }: ContactSectionProps) {
             </p>
             <p className="contact-info-row">
               <span className="contact-info-icon" aria-hidden="true">
-                ✉
+                <Image
+                  className="contact-info-icon-image contact-info-icon-mail"
+                  src="/images/mail-icon.svg"
+                  alt=""
+                  width={24}
+                  height={24}
+                  unoptimized
+                />
               </span>
               <span>
                 <strong>{labels.emailLabel}</strong>{" "}
@@ -56,7 +72,14 @@ export function ContactSection({ labels, id }: ContactSectionProps) {
             <h3>{labels.hoursTitle}</h3>
             <p className="contact-info-row">
               <span className="contact-info-icon" aria-hidden="true">
-                ◷
+                <Image
+                  className="contact-info-icon-image contact-info-icon-clock"
+                  src="/images/clock-icon.svg"
+                  alt=""
+                  width={24}
+                  height={24}
+                  unoptimized
+                />
               </span>
               <span>
                 <strong>{labels.weekdays}</strong>
