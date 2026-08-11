@@ -2271,6 +2271,20 @@ body::after,
 }
 
 @media (max-width: 992px) {
+  :root {
+    --header-offset: 78px;
+  }
+
+  /* Keep the compact header out of Safari's sticky-scroll compositor. */
+  .site-header {
+    position: fixed;
+  }
+
+  body,
+  body:has(.site-main > .therapist-hero:first-child) {
+    padding-top: var(--header-offset);
+  }
+
   .footer-inner {
     align-items: flex-start;
   }
