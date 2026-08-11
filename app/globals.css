@@ -85,7 +85,7 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-offset) + 1rem);
   overflow-x: clip;
-  background: #faf8f2;
+  background: #fff;
 }
 
 *,
@@ -1729,7 +1729,7 @@ a:focus {
 
 /* Reference-inspired editorial restyle for the public website. */
 body {
-  background: #faf8f2;
+  background: #fff;
 }
 
 body:has(.site-main > .therapist-hero:first-child) {
@@ -1754,7 +1754,7 @@ body::after,
 
 .site-header,
 .site-footer {
-  background: #faf8f2;
+  background: #fff;
   backdrop-filter: none;
 }
 
