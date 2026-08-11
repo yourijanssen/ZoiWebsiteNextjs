@@ -1065,6 +1065,7 @@ a:focus {
 .contact-info-group h3 {
   margin: 0;
   font-size: clamp(1.15rem, 1.6vw, 1.35rem);
+  font-weight: 700;
 }
 
 .contact-info-row {
@@ -1315,9 +1316,7 @@ a:focus {
 }
 
 .service-media-parentCounseling {
-  background:
-    radial-gradient(circle at 28% 22%, rgba(255, 255, 255, 0.56), transparent 34%),
-    linear-gradient(145deg, #ecdfcf, #f6ede2);
+  background: #f7f4ee url("/images/family-shadows-textured-surface.webp") center / cover no-repeat;
 }
 
 .service-card h3 {
@@ -1728,6 +1727,15 @@ a:focus {
   padding-block: clamp(2.5rem, 6vw, 5rem);
 }
 
+.site-main.container.service-single {
+  padding-top: clamp(2.5rem, 6vw, 5rem);
+  background: #fff;
+}
+
+.site-main.container.service-single::before {
+  display: none;
+}
+
 .service-detail {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(280px, 1.1fr);
@@ -1753,11 +1761,10 @@ a:focus {
 
 .service-detail-narrative {
   grid-template-columns: minmax(0, 1fr);
-  max-width: min(100% - var(--bs-gutter-x), 68rem);
 }
 
 .service-detail-narrative .service-detail-intro {
-  max-width: 68ch;
+  max-width: none;
 }
 
 .service-detail-narrative .service-detail-content {
@@ -1767,7 +1774,7 @@ a:focus {
 }
 
 .service-detail-paragraph {
-  max-width: 64ch;
+  max-width: none;
   margin: 0 0 1.2rem;
   color: var(--text);
   font-size: clamp(1rem, 1.15vw, 1.1rem);
@@ -2082,14 +2089,14 @@ body::after,
 .therapist-hero .button-outline {
   border-color: rgba(79, 155, 184, 0.58);
   background: transparent;
-  color: #000;
+  color: #536B61;
 }
 
 .therapist-hero .button-outline:hover,
 .therapist-hero .button-outline:focus {
   border-color: #94a5b3;
   background: rgba(148, 165, 179, 0.22);
-  color: #000;
+  color: #536B61;
 }
 
 .hero-media {
@@ -2574,6 +2581,10 @@ body::after,
 @media (max-width: 767px) {
   .service-single {
     padding-block: 1.75rem;
+  }
+
+  .site-main.container.service-single {
+    padding-top: 1.75rem;
   }
 
   .service-detail {

@@ -434,7 +434,7 @@ export const services = {
       slug: "symvouleftiki-goneon",
       title: "Συμβουλευτική Γονέων",
       summary:
-        "Η γονεϊκότητα αποτελεί μια δυναμική διαδικασία που φέρνει στο προσκήνιο ένα ευρύ φάσμα συναισθημάτων, από τη βαθιά χαρά και την αγάπη έως τον θυμό, την αγωνία και την αβεβαιότητα. Εξελίσσεται διαρκώς και συχνά συνοδεύεται από ερωτήματα και προκλήσεις, καθώς κάθε οικογένεια διαμορφώνει τη δική της μοναδική δυναμική. Η συμβουλευτική γονέων προσφέρει έναν χώρο όπου μπορείτε να σταθείτε σε αυτές τις δυσκολίες με περισσότερη κατανόηση και λιγότερη ενοχή.",
+        "Η γονεϊκότητα αποτελεί μια δυναμική διαδικασία που φέρνει στο προσκήνιο ένα ευρύ φάσμα συναισθημάτων, από τη βαθιά χαρά και την αγάπη έως τον θυμό, την αγωνία και την αβεβαιότητα. Εξελίσσεται διαρκώς και συχνά συνοδεύεται από ερωτήματα και προκλήσεις, καθώς κάθε οικογένεια διαμορφώνει τη δική της μοναδική δυναμική.",
       detailBody: [
         "Η γονεϊκότητα αποτελεί μια δυναμική διαδικασία που φέρνει στο προσκήνιο ένα ευρύ φάσμα συναισθημάτων, από τη βαθιά χαρά και την αγάπη έως τον θυμό, την αγωνία και την αβεβαιότητα. Εξελίσσεται διαρκώς και συχνά συνοδεύεται από ερωτήματα και προκλήσεις, καθώς κάθε οικογένεια διαμορφώνει τη δική της μοναδική δυναμική. Η συμβουλευτική γονέων προσφέρει έναν χώρο όπου μπορείτε να σταθείτε σε αυτές τις δυσκολίες με περισσότερη κατανόηση και λιγότερη ενοχή.",
         "Μέσα από τη συστημική προσέγγιση, εξετάζουμε τη σχέση γονέα-παιδιού μέσα στο ευρύτερο οικογενειακό και κοινωνικό πλαίσιο. Διερευνούμε τον τρόπο με τον οποίο επικοινωνείτε, τις ανάγκες που εκφράζονται μέσα από τη συμπεριφορά, τα μοτίβα αλληλεπίδρασης που μπορεί να έχουν διαμορφωθεί και τον τρόπο με τον οποίο οι αλλαγές σε ένα μέλος της οικογένειας μπορούν να επηρεάσουν ολόκληρο το σύστημα.",
@@ -476,7 +476,7 @@ export const services = {
       slug: "symvouleftiki-goneon",
       title: "Parent Counseling",
       summary:
-        "Parenthood is a dynamic process that brings a wide range of emotions to the forefront, from deep joy and love to anger, anxiety and uncertainty. It evolves continuously and is often accompanied by questions and challenges, as every family shapes its own unique dynamics. Parent counseling offers a space in which you can approach these difficulties with greater understanding and less guilt.",
+        "Parenthood is a dynamic process that brings a wide range of emotions to the forefront, from deep joy and love to anger, anxiety and uncertainty. It evolves continuously and is often accompanied by questions and challenges, as every family shapes its own unique dynamics.",
       detailBody: [
         "Parenthood is a dynamic process that brings a wide range of emotions to the forefront, from deep joy and love to anger, anxiety and uncertainty. It evolves continuously and is often accompanied by questions and challenges, as every family shapes its own unique dynamics. Parent counseling offers a space in which you can approach these difficulties with greater understanding and less guilt.",
         "Through a systemic approach, we explore the parent-child relationship within the wider family and social context. We examine the way you communicate, the needs expressed through behavior, patterns of interaction that may have developed, and how changes in one family member can affect the whole system.",
