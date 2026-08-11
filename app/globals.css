@@ -2519,6 +2519,14 @@ body::after,
     padding-block: 0;
   }
 
+  .site-header.is-menu-open {
+    position: fixed;
+    inset: 0;
+    height: 100svh;
+    overflow: hidden;
+    overscroll-behavior: none;
+  }
+
   /* Keep the open navigation on its own screen before the page content. */
   .site-header.is-menu-open .header-panel {
     min-height: calc(100svh - var(--header-offset));
