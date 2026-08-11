@@ -1,10 +1,13 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { content } from "@/lib/site-content";
 import { languageUrls, siteUrl } from "@/lib/seo";
 import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  appleWebApp: {
+    statusBarStyle: "default",
+  },
   title: {
     default: content.el.metaTitle,
     template: `%s | ${content.el.brand}`,
@@ -30,6 +33,10 @@ export const metadata: Metadata = {
     title: content.el.metaTitle,
     description: content.el.metaDescription,
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#faf8f2",
 };
 
 export default function RootLayout({
