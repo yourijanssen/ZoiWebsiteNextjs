@@ -25,6 +25,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
+  const overviewPages = languages.flatMap((language) => [
+    {
+      url: `${siteUrl}/ypiresies?lang=${language}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    },
+    {
+      url: `${siteUrl}/systimiki-proseggisi?lang=${language}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
+    },
+  ]);
+
   const servicePages = languages.flatMap((language) =>
     getDetailServices(language).map((service) => ({
       url: `${siteUrl}/ypiresies/${service.slug}?lang=${language}`,
@@ -34,5 +49,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   );
 
-  return [...homePages, ...aboutPages, ...contactPages, ...servicePages];
+  return [
+    ...homePages,
+    ...aboutPages,
+    ...contactPages,
+    ...overviewPages,
+    ...servicePages,
+  ];
 }

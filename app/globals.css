@@ -1938,6 +1938,7 @@ body::after,
   padding: 0;
   background: transparent;
   color: #536B61;
+  font-family: "Manrope", Arial, sans-serif;
   font-size: clamp(0.92rem, 1.1vw, 1.06rem);
   font-weight: 800;
   letter-spacing: 0.13em;
@@ -2411,15 +2412,26 @@ body::after,
   .menu-item.current-menu-item > a,
   .menu-item.current_page_item > a,
   .menu .current_page_item > a {
+    width: fit-content;
     background: transparent;
-    color: var(--text);
-    border-bottom: 1px solid currentColor;
+    color: #000;
+    border-bottom: 1px solid #000;
   }
 
   .sub-menu .menu-item a {
-    min-height: 2.2rem;
-    padding: 0.35rem 0;
-    font-size: 0.9rem;
+    min-height: 2.3rem;
+    padding: 0.4rem 0;
+    background: #fff;
+    border-radius: 0;
+    color: #000;
+    font-size: 0.94rem;
+    font-weight: 700;
+  }
+
+  .site-header .sub-menu .menu-item a:hover,
+  .site-header .sub-menu .menu-item a:focus {
+    background: #fff;
+    border-radius: 0;
   }
 
   .language-switcher {
@@ -2505,6 +2517,45 @@ body::after,
   .header-inner {
     min-height: var(--header-offset);
     padding-block: 0;
+  }
+
+  /* Keep the open navigation on its own screen before the page content. */
+  .site-header.is-menu-open .header-panel {
+    min-height: calc(100svh - var(--header-offset));
+    justify-content: flex-start;
+    padding-top: 1.5rem;
+  }
+
+  .site-header.is-menu-open .menu,
+  .site-header.is-menu-open .header-tools,
+  .site-header.is-menu-open .sub-menu {
+    align-items: center;
+    text-align: center;
+  }
+
+  .site-header.is-menu-open .site-nav {
+    flex: 0 0 auto;
+  }
+
+  .site-header.is-menu-open .menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .site-header.is-menu-open .menu-item a,
+  .site-header.is-menu-open .sub-menu .menu-item a {
+    justify-content: center;
+  }
+
+  .site-header.is-menu-open .sub-menu {
+    display: flex;
+    flex-direction: column;
+    margin-inline: 0;
+  }
+
+  .site-header.is-menu-open .language-switcher {
+    align-self: center;
   }
 
   .container {

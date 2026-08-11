@@ -20,8 +20,8 @@ type SiteShellProps = {
 const homeAnchors = {
   home: "/",
   about: "/sxetika",
-  therapies: "/#ypiresies",
-  faq: "/#systimiki-proseggisi",
+  therapies: "/ypiresies",
+  faq: "/systimiki-proseggisi",
   contact: "/epikoinonia",
 };
 
@@ -140,7 +140,7 @@ export function SiteShell({ language, children }: SiteShellProps) {
                     ))}
                   </ul>
                 </li>
-                <li className="menu-item">
+                <li className={navItemClass(pathname === "/systimiki-proseggisi")}>
                   <Link
                     href={withLanguage(homeAnchors.faq, currentLang)}
                     onClick={closeMenu}

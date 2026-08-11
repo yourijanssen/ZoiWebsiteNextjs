@@ -1,0 +1,67 @@
+import type { Metadata } from "next";
+import { SiteShell } from "@/components/site-shell";
+import { TextCarousel } from "@/components/text-carousel";
+import { content, resolveLanguage } from "@/lib/site-content";
+import { siteUrl } from "@/lib/seo";
+
+type SystemicApproachPageProps = {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+};
+
+export async function generateMetadata({
+  searchParams,
+}: SystemicApproachPageProps): Promise<Metadata> {
+  const language = resolveLanguage((await searchParams).lang);
+  const t = content[language];
+  const title = `${t.nav.faq} | ${t.brand}`;
+
+  return {
+    title: { absolute: title },
+    description: t.hero.lead,
+    alternates: {
+      canonical: `${siteUrl}/systimiki-proseggisi?lang=${language}`,
+      languages: {
+        el: `${siteUrl}/systimiki-proseggisi?lang=el`,
+        en: `${siteUrl}/systimiki-proseggisi?lang=en`,
+      },
+    },
+    openGraph: {
+      title,
+      description: t.hero.lead,
+      url: `${siteUrl}/systimiki-proseggisi?lang=${language}`,
+      siteName: t.brand,
+      locale: language === "el" ? "el_GR" : "en_US",
+      type: "website",
+    },
+  };
+}
+
+export default async function SystemicApproachPage({
+  searchParams,
+}: SystemicApproachPageProps) {
+  const language = resolveLanguage((await searchParams).lang);
+  const t = content[language];
+
+  return (
+    <SiteShell language={language}>
+      <main className="site-main container">
+        <section className="content-card service-single-card">
+          <p className="hero-kicker">{t.hero.kicker}</p>
+          <h1>{t.nav.faq}</h1>
+          <p className="hero-lead">{t.hero.lead}</p>
+        </section>
+        <TextCarousel
+          items={t.highlights.items}
+          previousLabel={t.highlights.previous}
+          nextLabel={t.highlights.next}
+        />
+        <section className="quote-highlight">
+          <blockquote>
+            <p>{t.quote.text}</p>
+            <cite>{t.quote.author}</cite>
+          </blockquote>
+        </section>
+      </main>
+    </SiteShell>
+  );
+}
