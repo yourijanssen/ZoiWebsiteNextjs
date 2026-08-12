@@ -1303,6 +1303,12 @@ a:focus {
     linear-gradient(145deg, #d6ebe5, #f6e7d3);
 }
 
+.service-media-adolescent {
+  background:
+    radial-gradient(circle at 78% 24%, rgba(255, 255, 255, 0.58), transparent 36%),
+    linear-gradient(145deg, #e1ebf2, #f0e8d7);
+}
+
 .service-media-couple {
   background:
     radial-gradient(circle at 82% 22%, rgba(255, 255, 255, 0.56), transparent 34%),
@@ -1680,6 +1686,30 @@ a:focus {
   font-size: 0.95rem;
 }
 
+.footer-legal {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+}
+
+.footer-registration,
+.footer-privacy-link {
+  margin: 0;
+  color: #000;
+  font-size: 0.95rem;
+}
+
+.footer-privacy-link {
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
+.footer-privacy-link:hover,
+.footer-privacy-link:focus-visible {
+  color: var(--accent-hover);
+}
+
 .footer-meta {
   display: flex;
   width: 100%;
@@ -1694,6 +1724,30 @@ a:focus {
   font-size: 0.95rem;
   opacity: 1;
   text-align: right;
+}
+
+.footer-credit-link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
+.footer-credit-link:hover,
+.footer-credit-link:focus-visible {
+  color: var(--accent-hover);
+}
+
+.privacy-page {
+  padding-top: clamp(2.5rem, 6vw, 5rem);
+}
+
+.privacy-card {
+  max-width: 52rem;
+  margin-inline: auto;
+}
+
+.privacy-card p {
+  max-width: 70ch;
 }
 
 .footer-nav {

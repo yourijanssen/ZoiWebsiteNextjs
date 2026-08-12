@@ -1,6 +1,10 @@
 export type Language = "el" | "en";
 
-export type ServiceKey = "individual" | "parentCounseling" | "online";
+export type ServiceKey =
+  | "individual"
+  | "adolescent"
+  | "parentCounseling"
+  | "online";
 
 export type Service = {
   key: ServiceKey;
@@ -207,7 +211,17 @@ export const content = {
     },
     footerCopyright:
       "© 2026 Ζωή Πάντου. Όλα τα δικαιώματα κατοχυρωμένα.",
+    footerKvk: "Αριθμός KvK: 42031371",
+    footerPrivacy: "Πολιτική απορρήτου",
     footerCredit: "Designed by Youri Janssen",
+    privacy: {
+      title: "Πολιτική απορρήτου",
+      paragraphs: [
+        "Η Ζωή Πάντου επεξεργάζεται τα προσωπικά δεδομένα που παρέχετε όταν επικοινωνείτε άμεσα, αποκλειστικά για να απαντήσει στο αίτημά σας ή να οργανώσει ένα πιθανό ραντεβού.",
+        "Τα στοιχεία επικοινωνίας σας χρησιμοποιούνται μόνο για αυτόν τον σκοπό και δεν κοινοποιούνται σε τρίτους, εκτός αν αυτό απαιτείται από τον νόμο ή είναι αναγκαίο για την παροχή της υπηρεσίας.",
+        "Μπορείτε να ζητήσετε πρόσβαση, διόρθωση ή διαγραφή των προσωπικών σας δεδομένων στέλνοντας email στο zipalife@gmail.com.",
+      ],
+    },
     notFound: {
       title: "Η σελίδα δεν βρέθηκε",
       text: "Η σελίδα που αναζητάτε δεν υπάρχει.",
@@ -391,7 +405,17 @@ export const content = {
         "The message could not be sent. Please try again or email us directly.",
     },
     footerCopyright: "© 2026 Zoi Pantou. All rights reserved.",
+    footerKvk: "KvK number: 42031371",
+    footerPrivacy: "Privacy policy",
     footerCredit: "Designed by Youri Janssen",
+    privacy: {
+      title: "Privacy policy",
+      paragraphs: [
+        "Zoi Pantou processes the personal data you provide when contacting her directly, solely to respond to your request or arrange a possible appointment.",
+        "Your contact details are used only for this purpose and are not shared with third parties, except where required by law or necessary to provide the service.",
+        "You may request access to, correction of, or deletion of your personal data by emailing zipalife@gmail.com.",
+      ],
+    },
     notFound: {
       title: "Page not found",
       text: "The page you are looking for does not exist.",
@@ -419,15 +443,27 @@ export const services = {
     {
       key: "individual",
       slug: "atomiki-psychotherapeia",
-      title: "Ατομική Ψυχοθεραπεία",
+      title: "Ατομική Ψυχοθεραπεία Ενηλίκων",
       summary:
         "Ατομική συστημική ψυχοθεραπεία για ενήλικες που επιθυμούν να επεξεργαστούν προσωπικές δυσκολίες, σχέσεις, άγχος, όρια και ζητήματα αυτογνωσίας.",
-      points: [
-        "Προσωπικό θεραπευτικό πλαίσιο με σταθερότητα και εμπιστευτικότητα",
-        "Διερεύνηση συναισθημάτων, σχέσεων και επαναλαμβανόμενων μοτίβων",
-        "Υποστήριξη σε θέματα άγχους, ορίων, αυτογνωσίας και αλλαγών ζωής",
-        "Συστημική ματιά στον άνθρωπο και στα πλαίσια στα οποία ανήκει",
+      detailBody: [
+        "Η απόφαση για έναρξη ψυχοθεραπείας στην ενήλικη ζωή συμβαίνει συχνά σε περιόδους αλλαγών, συναισθηματικής πίεσης ή δυσκολιών στις σχέσεις. Στο ασφαλές θεραπευτικό πλαίσιο, η ίδια η συζήτηση γίνεται ο τόπος της αλλαγής, προσφέροντας τη δυνατότητα επαναδιήγησης και επανανοηματοδότησης της προσωπικής ιστορίας του ατόμου.",
+        "Μέσα από τη συστημική προσέγγιση, επιδιώκουμε να θέσουμε υπό αμφισβήτηση τις εσωτερικές κατασκευές, τους ρόλους και τα μοτίβα που συντηρούν το πρόβλημα. Διερευνούμε τον τρόπο με τον οποίο σχετίζεστε και επικοινωνείτε μέσα στα διάφορα συστήματα στα οποία ανήκετε (οικογενειακό, επαγγελματικό, κοινωνικό), καθώς και τον τρόπο με τον οποίο οι εσωτερικές σας αλλαγές επηρεάζουν το ευρύτερο πλαίσιο της ζωής σας.",
+        "Στόχος είναι η αμφισβήτηση των περιοριστικών πεποιθήσεων, η διεύρυνση της οπτικής και η ενδυνάμωση της προσωπικής ανθεκτικότητας, ώστε το άτομο να αναπτύσσει νέες στρατηγικές διαχείρισης και να κινείται με μεγαλύτερη ευελιξία απέναντι στις απαιτήσεις της ζωής.",
       ],
+      points: [],
+    },
+    {
+      key: "adolescent",
+      slug: "atomiki-psychotherapeia-efivon",
+      title: "Ατομική Ψυχοθεραπεία Εφήβων",
+      summary:
+        "Ατομική συστημική ψυχοθεραπεία για εφήβους σε ένα ασφαλές και εμπιστευτικό πλαίσιο.",
+      detailBody: [
+        "Η εφηβεία είναι μια περίοδος αλλαγών, αναζήτησης ταυτότητας και νέων σχέσεων με τον εαυτό και τους άλλους. Η ατομική ψυχοθεραπεία προσφέρει έναν ασφαλή χώρο όπου ο έφηβος μπορεί να εκφράσει σκέψεις, συναισθήματα και δυσκολίες με τον δικό του ρυθμό.",
+        "Μέσα από τη συστημική προσέγγιση, διερευνούμε μαζί τις σχέσεις και τα πλαίσια που επηρεάζουν την καθημερινότητα του εφήβου, όπως η οικογένεια, το σχολείο και οι φιλίες. Στόχος είναι η κατανόηση των αναγκών του, η ενίσχυση της αυτοπεποίθησης και η ανάπτυξη πιο λειτουργικών τρόπων διαχείρισης των προκλήσεων.",
+      ],
+      points: [],
     },
     {
       key: "parentCounseling",
@@ -461,15 +497,27 @@ export const services = {
     {
       key: "individual",
       slug: "atomiki-psychotherapeia",
-      title: "Individual Psychotherapy",
+      title: "Individual Psychotherapy for Adults",
       summary:
         "Individual systemic psychotherapy for adults who want to explore personal difficulties, relationships, anxiety, boundaries and self-awareness.",
-      points: [
-        "A personal therapeutic framework with stability and confidentiality",
-        "Exploration of emotions, relationships and recurring patterns",
-        "Support with anxiety, boundaries, self-awareness and life transitions",
-        "A systemic perspective on the person and the contexts they belong to",
+      detailBody: [
+        "The decision to begin psychotherapy in adult life often arises during periods of change, emotional pressure or difficulties in relationships. Within a safe therapeutic setting, the conversation itself becomes the place of change, offering an opportunity to retell and reframe a person’s personal story.",
+        "Through a systemic approach, we aim to question the inner constructions, roles and patterns that maintain the problem. We explore how you relate and communicate within the different systems you belong to — family, work and social — and how your inner changes affect the wider context of your life.",
+        "The aim is to question limiting beliefs, broaden perspective and strengthen personal resilience, so that you can develop new coping strategies and move with greater flexibility in response to life’s demands.",
       ],
+      points: [],
+    },
+    {
+      key: "adolescent",
+      slug: "atomiki-psychotherapeia-efivon",
+      title: "Individual Psychotherapy for Adolescents",
+      summary:
+        "Individual systemic psychotherapy for adolescents in a safe and confidential setting.",
+      detailBody: [
+        "Adolescence is a period of change, identity exploration and new relationships with oneself and others. Individual psychotherapy offers a safe space where an adolescent can express thoughts, feelings and difficulties at their own pace.",
+        "Through a systemic approach, we explore together the relationships and contexts that affect the adolescent’s everyday life, including family, school and friendships. The aim is to understand their needs, strengthen confidence and develop more helpful ways of responding to challenges.",
+      ],
+      points: [],
     },
     {
       key: "parentCounseling",

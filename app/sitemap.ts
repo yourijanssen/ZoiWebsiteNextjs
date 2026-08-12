@@ -25,6 +25,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
+  const privacyPages = languages.map((language) => ({
+    url: `${siteUrl}/privacy?lang=${language}`,
+    lastModified: now,
+    changeFrequency: "yearly" as const,
+    priority: 0.4,
+  }));
+
   const overviewPages = languages.flatMap((language) => [
     {
       url: `${siteUrl}/ypiresies?lang=${language}`,
@@ -53,6 +60,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...homePages,
     ...aboutPages,
     ...contactPages,
+    ...privacyPages,
     ...overviewPages,
     ...servicePages,
   ];
