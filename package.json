@@ -9,6 +9,7 @@
     "lint": "eslint app components lib next.config.ts postcss.config.mjs"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "next": "^16.2.6",
     "nodemailer": "^9.0.5",
     "react": "^19.2.6",
