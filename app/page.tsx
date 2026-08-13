@@ -99,7 +99,7 @@ export default async function Home({ searchParams }: HomePageProps) {
           </blockquote>
         </section>
 
-        <section className="services" id="ypiresies">
+        <section className="services services-directory" id="ypiresies">
           <header className="section-heading">
             <h2>{t.servicesHeading.title}</h2>
           </header>
@@ -110,16 +110,18 @@ export default async function Home({ searchParams }: HomePageProps) {
                   className={`service-media service-media-${service.key}`}
                   aria-hidden="true"
                 />
-                <h3>{service.title}</h3>
-                <p>{service.summary}</p>
-                {service.hasDetailPage !== false ? (
-                  <Link
-                    className="text-link"
-                    href={`/ypiresies/${service.slug}${langQuery}`}
-                  >
-                    {t.servicesHeading.link}
-                  </Link>
-                ) : null}
+                <div className="service-card-content">
+                  <h3>{service.title}</h3>
+                  <p>{service.summary}</p>
+                  {service.hasDetailPage !== false ? (
+                    <Link
+                      className="text-link"
+                      href={`/ypiresies/${service.slug}${langQuery}`}
+                    >
+                      {t.servicesHeading.link}
+                    </Link>
+                  ) : null}
+                </div>
               </article>
             ))}
           </div>

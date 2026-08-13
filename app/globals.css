@@ -2246,6 +2246,11 @@ body::after,
   padding-top: clamp(1.75rem, 4vw, 3.5rem);
 }
 
+/* Keeps homepage card styling aligned with the services directory without duplicating its page spacing. */
+#ypiresies.services-directory {
+  padding-top: 0;
+}
+
 .services-directory .service-card:hover {
   transform: translateY(-3px);
   border-color: #94a5b3;
@@ -2261,6 +2266,7 @@ body::after,
 }
 
 .services-directory .service-card h2,
+.services-directory .service-card h3,
 .services-directory .service-card p,
 .services-directory .service-card .text-link {
   margin-inline: 0;
@@ -2275,7 +2281,8 @@ body::after,
   border-bottom: 1px solid #d8d2c6;
 }
 
-.services-directory .service-card h2 {
+.services-directory .service-card h2,
+.services-directory .service-card h3 {
   margin: 0 0 0.85rem;
   color: var(--text);
   font-size: clamp(1.45rem, 2vw, 1.85rem);
