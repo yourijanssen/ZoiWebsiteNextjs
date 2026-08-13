@@ -45,7 +45,7 @@ export default async function ServicesPage({ searchParams }: ServicesPageProps) 
   return (
     <SiteShell language={language}>
       <main className="site-main container">
-        <section className="services">
+        <section className="services services-directory">
           <header className="section-heading">
             <h1>{t.servicesHeading.title}</h1>
           </header>
@@ -56,16 +56,18 @@ export default async function ServicesPage({ searchParams }: ServicesPageProps) 
                   className={`service-media service-media-${service.key}`}
                   aria-hidden="true"
                 />
-                <h2>{service.title}</h2>
-                <p>{service.summary}</p>
-                {service.hasDetailPage !== false ? (
-                  <Link
-                    className="text-link"
-                    href={`/ypiresies/${service.slug}${langQuery}`}
-                  >
-                    {t.servicesHeading.link}
-                  </Link>
-                ) : null}
+                <div className="service-card-content">
+                  <h2>{service.title}</h2>
+                  <p>{service.summary}</p>
+                  {service.hasDetailPage !== false ? (
+                    <Link
+                      className="text-link"
+                      href={`/ypiresies/${service.slug}${langQuery}`}
+                    >
+                      {t.servicesHeading.link}
+                    </Link>
+                  ) : null}
+                </div>
               </article>
             ))}
           </div>

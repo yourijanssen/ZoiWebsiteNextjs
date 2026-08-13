@@ -180,12 +180,6 @@ export function SiteShell({ language, children }: SiteShellProps) {
             <div className="footer-legal">
               <p className="footer-copy">{t.footerCopyright}</p>
               <p className="footer-registration">{t.footerKvk}</p>
-              <Link
-                className="footer-privacy-link"
-                href={withLanguage("/privacy", currentLang)}
-              >
-                {t.footerPrivacy}
-              </Link>
             </div>
             <p className="footer-credit">
               Designed by{" "}
