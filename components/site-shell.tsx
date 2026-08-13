@@ -39,6 +39,7 @@ export function SiteShell({ language, children }: SiteShellProps) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   const currentLang = language;
 
@@ -49,7 +50,10 @@ export function SiteShell({ language, children }: SiteShellProps) {
     return `${pathname}?${params.toString()}`;
   };
 
-  const closeMenu = () => setIsMenuOpen(false);
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    setIsServicesOpen(false);
+  };
   const navItemClass = (isCurrent: boolean) =>
     `menu-item${isCurrent ? " current-menu-item" : ""}`;
 
@@ -106,7 +110,9 @@ export function SiteShell({ language, children }: SiteShellProps) {
                 <li
                   className={`${navItemClass(
                     pathname.startsWith("/ypiresies"),
-                  )} menu-item-has-children`}
+                  )} menu-item-has-children${
+                    isServicesOpen ? " is-submenu-open" : ""
+                  }`}
                 >
                   <Link
                     href={withLanguage(homeAnchors.therapies, currentLang)}
@@ -114,7 +120,17 @@ export function SiteShell({ language, children }: SiteShellProps) {
                   >
                     {t.nav.therapies}
                   </Link>
-                  <ul className="sub-menu">
+                  <button
+                    className="submenu-toggle"
+                    type="button"
+                    aria-expanded={isServicesOpen}
+                    aria-controls="services-submenu"
+                    aria-label={`${t.nav.therapies} menu`}
+                    onClick={() => setIsServicesOpen((open) => !open)}
+                  >
+                    <span aria-hidden="true">▾</span>
+                  </button>
+                  <ul className="sub-menu" id="services-submenu">
                     {navigationServices.map((service) => (
                       <li className="menu-item" key={service.slug}>
                         <Link
