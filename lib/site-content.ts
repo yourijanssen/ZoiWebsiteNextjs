@@ -64,6 +64,14 @@ export const content = {
       imagePlaceholder:
         "Online συστημική ψυχοθεραπεία στα ελληνικά με ψυχολόγο και ψυχοθεραπεύτρια.",
     },
+    systemicApproach: {
+      body: [
+        "Η συστημική προσέγγιση βασίζεται στην παραδοχή ότι η ανθρώπινη εμπειρία αναπτύσσεται μέσα σε συστήματα, που αποτελούν ενότητες αλληλένδετων στοιχείων και σχέσεων που βρίσκονται σε διαρκή αλληλεπίδραση και εξέλιξη. Αυτά τα δίκτυα σχέσεων επηρεάζουν βαθιά τον τρόπο που σκεφτόμαστε, αισθανόμαστε και συμπεριφερόμαστε.",
+        "Κεντρικό ερώτημα στη συστημική προσέγγιση είναι ο τρόπος με τον οποίο κατασκευάζεται από κοινού η πραγματικότητα, καθώς και τα δεδομένα πάνω στα οποία στηρίζονται η σκέψη, τα βιώματα και οι συμπεριφορές. Όπως διατύπωσε ο Gregory Bateson, το πλαίσιο είναι αυτό που δίνει νόημα σε κάθε αφήγηση, δεδομένου ότι καμία εμπειρία δεν ερμηνεύεται απομονωμένη από το περιβάλλον της. Παράλληλα, όπως σημειώνει ο Humberto Maturana, η αισθητή πραγματικότητα δεν υφίσταται ανεξάρτητα από εκείνον που τη βιώνει, αφού κάθε σύστημα αναγνωρίζεται και νοηματοδοτείται από τον ίδιο τον παρατηρητή του.",
+        "Καθώς τα ανθρώπινα συστήματα εξελίσσονται ως μη γραμμικές και διαρκώς μεταβαλλόμενες διαδικασίες, ακόμη και οι πεποιθήσεις που μοιάζουν σταθερές και αμετάβλητες μπορούν να επανεξεταστούν, να αμφισβητηθούν και να αναδιαμορφωθούν. Στη θεραπευτική διαδικασία, επομένως, επιδιώκεται η διερεύνηση της λειτουργίας και της χρησιμότητας που μπορεί να έχει το αναφερόμενο ως «πρόβλημα» μέσα στο ευρύτερο σύστημα, καθώς και η κατανόηση του τρόπου με τον οποίο αυτό συνδέεται με τις σχέσεις, τις εμπειρίες και τις προσωπικές νοηματοδοτήσεις. Παράλληλα, μέσα από την αναδιαμόρφωση της προσωπικής αφήγησης, αναζητούνται νέοι τρόποι θέασης της εμπειρίας και εναλλακτικές δυνατότητες δράσης, που μπορούν να οδηγήσουν σε λύσεις λιγότερο επώδυνες και περισσότερο λειτουργικές από τη διατήρηση της υπάρχουσας κατάστασης.",
+        "Σε αυτή τη διαδρομή, ο/η ψυχοθεραπευτής/τρια δεν λειτουργεί ως αυθεντία που παρέχει έτοιμες απαντήσεις, αλλά ως συνοδοιπόρος στη θεραπευτική διαδικασία, διευκολύνοντας τον διάλογο και τη συγκατασκευή νέων οπτικών και νοημάτων. Μέσα από τη θεραπευτική σχέση δημιουργείται ένας ασφαλής χώρος για αναστοχασμό πάνω στις εμπειρίες, τις επιλογές και τις σχέσεις, ώστε να αναδύονται νέες δυνατότητες κατανόησης και νέοι τρόποι ανταπόκρισης στις προκλήσεις της ζωής.",
+      ],
+    },
     gallery: {
       one: "Ήρεμο online θεραπευτικό πλαίσιο",
       two: "Συνεδρίες από τον δικό σας ασφαλή χώρο",
@@ -258,6 +266,14 @@ export const content = {
       contactCta: "Let's get acquainted",
       imagePlaceholder:
         "Online systemic psychotherapy in Greek with a psychologist and psychotherapist.",
+    },
+    systemicApproach: {
+      body: [
+        "The systemic approach is based on the assumption that human experience develops within systems—units of interconnected elements and relationships that are in constant interaction and evolution. These networks of relationships profoundly influence the way we think, feel and behave.",
+        "A central question in the systemic approach is how reality is jointly constructed, along with the assumptions on which thought, experience and behaviour are based. As Gregory Bateson put it, context is what gives meaning to every narrative, since no experience can be interpreted in isolation from its environment. At the same time, as Humberto Maturana notes, perceived reality does not exist independently of the person who experiences it, since every system is recognised and given meaning by its own observer.",
+        "As human systems evolve as non-linear and continuously changing processes, even beliefs that seem stable and unchanging can be reconsidered, questioned and reshaped. In the therapeutic process, therefore, we explore the function and usefulness that the so-called “problem” may have within the wider system, as well as how it relates to relationships, experiences and personal meanings. At the same time, reshaping a personal narrative can open up new ways of seeing experience and alternative possibilities for action, leading to solutions that are less painful and more functional than maintaining the current situation.",
+        "Along this journey, the psychotherapist does not act as an authority who provides ready-made answers, but as a companion in the therapeutic process, facilitating dialogue and the co-construction of new perspectives and meanings. Through the therapeutic relationship, a safe space is created for reflecting on experiences, choices and relationships, so that new possibilities for understanding and new ways of responding to life’s challenges can emerge.",
+      ],
     },
     gallery: {
       one: "Calm online therapeutic framework",

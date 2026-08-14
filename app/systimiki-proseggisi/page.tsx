@@ -17,7 +17,7 @@ export async function generateMetadata({
 
   return {
     title: { absolute: title },
-    description: t.hero.lead,
+    description: t.systemicApproach.body[0],
     alternates: {
       canonical: `${siteUrl}/systimiki-proseggisi?lang=${language}`,
       languages: {
@@ -27,7 +27,7 @@ export async function generateMetadata({
     },
     openGraph: {
       title,
-      description: t.hero.lead,
+      description: t.systemicApproach.body[0],
       url: `${siteUrl}/systimiki-proseggisi?lang=${language}`,
       siteName: t.brand,
       locale: language === "el" ? "el_GR" : "en_US",
@@ -44,11 +44,17 @@ export default async function SystemicApproachPage({
 
   return (
     <SiteShell language={language}>
-      <main className="site-main container">
-        <section className="content-card service-single-card">
-          <p className="hero-kicker">{t.hero.kicker}</p>
+      <main className="site-main container systemic-page">
+        <section className="systemic-approach-intro">
+          {/* <p className="systemic-eyebrow">{t.hero.kicker}</p> */}
           <h1>{t.nav.faq}</h1>
-          <p className="hero-lead">{t.hero.lead}</p>
+          <div className="systemic-approach-body">
+            {t.systemicApproach.body.map((paragraph) => (
+              <p key={paragraph}>
+                {paragraph}
+              </p>
+            ))}
+          </div>
         </section>
         <TextCarousel
           items={t.highlights.items}
