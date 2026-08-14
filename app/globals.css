@@ -1303,14 +1303,12 @@ a:focus {
 
 .service-media-individual {
   background:
-    radial-gradient(circle at 18% 25%, rgba(255, 255, 255, 0.52), transparent 35%),
-    linear-gradient(145deg, #d6ebe5, #f6e7d3);
+    linear-gradient(180deg, rgba(250, 248, 239, 0.18), rgba(250, 248, 239, 0.08)),
+    url("/images/individual-therapy-abstract.jpg") center 52% / cover no-repeat;
 }
 
 .service-media-adolescent {
-  background:
-    radial-gradient(circle at 78% 24%, rgba(255, 255, 255, 0.58), transparent 36%),
-    linear-gradient(145deg, #e1ebf2, #f0e8d7);
+  background: #d9d4c8 url("/images/adolescent-therapy-painting.jpg") center / cover no-repeat;
 }
 
 .service-media-couple {
@@ -1332,6 +1330,7 @@ a:focus {
 .service-card h3 {
   margin-bottom: 0.5rem;
   font-size: 1.3rem;
+  font-weight: 700;
 }
 
 .service-card p {
