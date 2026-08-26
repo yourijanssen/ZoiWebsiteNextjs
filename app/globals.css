@@ -216,6 +216,7 @@ a:focus {
 .site-footer {
   flex-shrink: 0;
   margin-top: 4rem;
+  position: relative;
   background: #f0f0ed;
   border-top: 2px solid #111;
   border-bottom: 0;
@@ -1694,6 +1695,9 @@ a:focus {
   flex-direction: column;
   align-items: flex-start;
   gap: 0.2rem;
+  margin-inline-start: clamp(0.35rem, 1vw, 0.8rem);
+  border-inline-start: 1px solid rgba(17, 17, 17, 0.55);
+  padding-inline-start: clamp(0.55rem, 1.2vw, 0.9rem);
 }
 
 .footer-registration,
@@ -1723,6 +1727,9 @@ a:focus {
 
 .footer-credit {
   margin: 0;
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
   color: #000;
   font-size: 10px;
   opacity: 1;
@@ -2880,6 +2887,22 @@ body::after,
 @media (max-width: 575px) {
   :root {
     --header-offset: 78px;
+  }
+
+  .footer-inner {
+    padding-block: 0.8rem;
+  }
+
+  .footer-legal {
+    gap: 0.3rem;
+    margin-inline-start: 0.25rem;
+    padding-inline-start: 0.6rem;
+  }
+
+  .footer-copy,
+  .footer-registration {
+    font-size: clamp(0.8rem, 3.8vw, 0.88rem);
+    line-height: 1.45;
   }
 
   .header-inner {
