@@ -198,7 +198,7 @@ export function SiteShell({ language, children }: SiteShellProps) {
               <p className="footer-registration">{t.footerKvk}</p>
             </div>
             <p className="footer-credit">
-              Designed by{" "}
+              Developed by{" "}
               <a
                 className="footer-credit-link"
                 href="https://yourijanssen.nl"

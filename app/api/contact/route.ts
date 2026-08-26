@@ -4,7 +4,7 @@ export const runtime = "nodejs";
 
 const adminRecipients = (
   process.env.CONTACT_ADMIN_EMAILS ||
-  "zipalife@gmail.com,yourijanssen123@gmail.com"
+  "info@zoipantou.com,yourijanssen123@gmail.com"
 )
   .split(",")
   .map((email) => email.trim())

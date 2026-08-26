@@ -1716,7 +1716,7 @@ a:focus {
 .footer-meta {
   display: flex;
   width: 100%;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   gap: 1.5rem;
 }
@@ -1724,7 +1724,7 @@ a:focus {
 .footer-credit {
   margin: 0;
   color: #000;
-  font-size: 0.95rem;
+  font-size: 10px;
   opacity: 1;
   text-align: right;
 }

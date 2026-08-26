@@ -200,7 +200,7 @@ export const content = {
       appointmentOnly: "Κατόπιν ραντεβού",
       phone: "+30 210 0000000",
       mobile: "+30 69 00000000",
-      email: "zipalife@gmail.com",
+      email: "info@zoipantou.com",
       nameInput: "Ονοματεπώνυμο",
       emailInput: "Email",
       messageInput: "Μήνυμα",
@@ -221,13 +221,13 @@ export const content = {
       "© 2026 Ζωή Πάντου. Όλα τα δικαιώματα κατοχυρωμένα.",
     footerKvk: "Αριθμός KvK: 42031371",
     footerPrivacy: "Πολιτική απορρήτου",
-    footerCredit: "Designed by Youri Janssen",
+    footerCredit: "Developed by Youri Janssen",
     privacy: {
       title: "Πολιτική απορρήτου",
       paragraphs: [
         "Η Ζωή Πάντου επεξεργάζεται τα προσωπικά δεδομένα που παρέχετε όταν επικοινωνείτε άμεσα, αποκλειστικά για να απαντήσει στο αίτημά σας ή να οργανώσει ένα πιθανό ραντεβού.",
         "Τα στοιχεία επικοινωνίας σας χρησιμοποιούνται μόνο για αυτόν τον σκοπό και δεν κοινοποιούνται σε τρίτους, εκτός αν αυτό απαιτείται από τον νόμο ή είναι αναγκαίο για την παροχή της υπηρεσίας.",
-        "Μπορείτε να ζητήσετε πρόσβαση, διόρθωση ή διαγραφή των προσωπικών σας δεδομένων στέλνοντας email στο zipalife@gmail.com.",
+        "Μπορείτε να ζητήσετε πρόσβαση, διόρθωση ή διαγραφή των προσωπικών σας δεδομένων στέλνοντας email στο info@zoipantou.com.",
       ],
     },
     notFound: {
@@ -403,7 +403,7 @@ export const content = {
       appointmentOnly: "By appointment",
       phone: "+30 210 0000000",
       mobile: "+30 69 00000000",
-      email: "zipalife@gmail.com",
+      email: "info@zoipantou.com",
       nameInput: "Full name",
       emailInput: "Email",
       messageInput: "Message",
@@ -423,13 +423,13 @@ export const content = {
     footerCopyright: "© 2026 Zoi Pantou. All rights reserved.",
     footerKvk: "KvK number: 42031371",
     footerPrivacy: "Privacy policy",
-    footerCredit: "Designed by Youri Janssen",
+    footerCredit: "Developed by Youri Janssen",
     privacy: {
       title: "Privacy policy",
       paragraphs: [
         "Zoi Pantou processes the personal data you provide when contacting her directly, solely to respond to your request or arrange a possible appointment.",
         "Your contact details are used only for this purpose and are not shared with third parties, except where required by law or necessary to provide the service.",
-        "You may request access to, correction of, or deletion of your personal data by emailing zipalife@gmail.com.",
+        "You may request access to, correction of, or deletion of your personal data by emailing info@zoipantou.com.",
       ],
     },
     notFound: {
