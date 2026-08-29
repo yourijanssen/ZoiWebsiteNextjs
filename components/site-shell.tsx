@@ -54,6 +54,16 @@ export function SiteShell({ language, children }: SiteShellProps) {
     setIsMenuOpen(false);
     setIsServicesOpen(false);
   };
+
+  // Returns visitors to the top of the homepage when they activate the brand from the same route.
+  const handleBrandClick = () => {
+    closeMenu();
+
+    if (pathname === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   const navItemClass = (isCurrent: boolean) =>
     `menu-item${isCurrent ? " current-menu-item" : ""}`;
 
@@ -61,7 +71,11 @@ export function SiteShell({ language, children }: SiteShellProps) {
     <>
       <header className={`site-header${isMenuOpen ? " is-menu-open" : ""}`}>
         <div className="container header-inner">
-          <Link className="site-branding" href={withLanguage("/", currentLang)}>
+          <Link
+            className="site-branding"
+            href={withLanguage("/", currentLang)}
+            onClick={handleBrandClick}
+          >
             <Image
               className="brand-mark"
               src="/images/zoi-pantou-logo.png"

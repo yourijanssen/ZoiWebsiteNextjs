@@ -258,12 +258,12 @@ export const content = {
       menu: "Menu",
     },
     hero: {
-      kicker: "Systemic psychotherapy & counseling",
+      kicker: "Systemic therapy",
       title: "“The foundation of all human relationships is communication; however, communication is not simply the ability to speak or understand words, but the ability to connect emotionally with another person.”",
       attribution: "—Virginia Satir",
-      lead: "Within the safe space of psychotherapy, our goal is to build this meaningful connection together. Through a systemic perspective, we recognize the patterns that create difficulty and explore new viewpoints and meanings, creating space for more authentic connections in your life.",
+      lead: "Within the safe space of therapy, our goal is to build this meaningful connection together. Through a systemic perspective, we recognize the patterns that create difficulty and explore new viewpoints and meanings, creating space for more authentic connections in your life.",
       servicesCta: "Let's connect",
-      contactCta: "Let's get acquainted",
+      contactCta: "Let's communicate",
       imagePlaceholder:
         "Online systemic psychotherapy in Greek with a psychologist and psychotherapist.",
     },
@@ -288,18 +288,18 @@ export const content = {
       items: [
         {
           eyebrow: "01",
-          title: "A calm therapeutic frame",
-          text: "The therapeutic frame is not a static condition, but a dynamic and collaborative process shaped mutually through the therapeutic relationship. We create a space of safety, consistency and respect, where you can express yourself freely at your own pace.",
+          title: "A safe therapeutic framework",
+          text: "The therapeutic framework is not fixed; it is a dynamic, collaborative process that takes shape within the therapeutic relationship. Together, we create a safe, consistent and respectful space where you can express yourself freely, at your own pace.",
         },
         {
           eyebrow: "02",
           title: "A systemic perspective",
-          text: "The difficulty or symptom is always explored in relation to the environment, relationships and roles in which the person interacts. The systemic approach allows a deeper understanding of these dynamics, bringing forward new perspectives and balances.",
+          text: "Difficulties and symptoms are always explored in relation to the person's environment, relationships and roles. A systemic approach offers a deeper understanding of these dynamics, opening up new perspectives and possibilities for balance.",
         },
         {
           eyebrow: "03",
-          title: "Sessions from your own space",
-          text: "The therapeutic relationship develops with safety and consistency, allowing you to attend sessions from your familiar environment. Online sessions take place through platforms (Google Meet, Viber, MS Teams), ensuring easy access and privacy.",
+          title: "Sessions from the comfort of your own space",
+          text: "The therapeutic relationship can develop with safety and consistency, even when sessions take place in the comfort of your familiar environment. Online sessions are available via Google Meet, Viber and Microsoft Teams, offering convenient, private access.",
         },
       ],
     },
@@ -307,7 +307,7 @@ export const content = {
       title: "Zoi Pantou, Psychologist AUTH, MSc, MA",
       body: [
         "Zoi Pantou is a psychologist with undergraduate studies in the Department of Psychology at Aristotle University of Thessaloniki (AUTH) and holds a license to practice as a psychologist (Protocol No. ΔΔΥΚΜ/Μ.Ε.Θ. 537827/17822). She holds the postgraduate degree “Music and Society with specialization in Music Therapy” from the University of Macedonia (UoM) and the postgraduate degree “Applied Cognitive Psychology” from Utrecht University. She is also in the final year of her four-year training in Systemic Psychotherapy and Counseling at the Center for Systemic Study and Therapy (certified by E.F.T.A. – European Family Therapy Association and the National Society of Psychotherapy of Greece – N.S.P.G., representative of the European Association for Psychotherapy – EAP).",
-        "She has worked with children, adolescents and adults in recognized special therapy centers and rehabilitation settings in Thessaloniki (Speechbox, ELEPAP Thessaloniki), with clinical experience in individual psychotherapy, early intervention and parent counseling. At the same time, under supervision, she has designed and implemented group and individual music therapy sessions for the support of vulnerable groups and older adults (Saint Nicholas Nursing Home). Regarding her research activity, during her postgraduate studies at Utrecht University she specialized in the independent conduction of electroencephalography recordings (EEG/ERPs) for the study of cognitive mechanisms, while at the University of Macedonia she researched the effect of music therapy on the management of psychological and behavioral symptoms in patients with dementia.",
+        "She has worked with children, adolescents and adults in recognized special therapy centers and rehabilitation settings in Thessaloniki (Speechbox, ELEPAP Thessaloniki), with clinical experience in individual therapy, early intervention and parent counseling. At the same time, under supervision, she has designed and implemented group and individual music therapy sessions for the support of vulnerable groups and older adults (Saint Nicholas Nursing Home). Regarding her research activity, during her postgraduate studies at Utrecht University she specialized in the independent conduction of electroencephalography recordings (EEG/ERPs) for the study of cognitive mechanisms, while at the University of Macedonia she researched the effect of music therapy on the management of psychological and behavioral symptoms in patients with dementia.",
         "With the deep belief that our reality is co-shaped through the relationships and contexts to which we belong, she approaches each person not as isolated, but as an integral member of their own unique system. Through the dynamic psychotherapeutic process, she aims to cultivate and allow new perspectives and meanings to flourish, offering a safe space for personal empowerment and individual development.",
       ],
       points: [
@@ -516,9 +516,9 @@ export const services = {
       slug: "atomiki-psychotherapeia",
       title: "Individual Psychotherapy for Adults",
       summary:
-        "The decision to begin psychotherapy in adult life is often made during periods of change, emotional pressure or difficulties in relationships. In those moments, a need for a space of acceptance and inner care often emerges.",
+        "The decision to begin psychotherapy in adult life is often made during periods of change, emotional pressure or difficulties in relationships. In those moments, a need for a space of acceptance and inner care often arises.",
       detailBody: [
-        "The decision to begin psychotherapy in adult life is often made during periods of change, emotional pressure or difficulties in relationships. In those moments, a need for a space of acceptance and inner care often emerges. Within the safe therapeutic framework of psychotherapy, the conversation itself becomes the place of change, offering an opportunity to retell and reframe a person’s personal story.",
+        "The decision to begin psychotherapy in adult life is often made during periods of change, emotional pressure or difficulties in relationships. In those moments, a need for a space of acceptance and inner care often arises. Within the safe therapeutic framework of psychotherapy, the conversation itself becomes the place of change, offering an opportunity to retell and reframe a person’s personal story.",
         "Through systemic psychotherapy, we aim to question the inner constructions, roles and patterns that maintain the problem. We explore how you relate and communicate within the different systems you belong to — family, work and social — and how your inner changes affect the wider context of your life.",
         "The aim is to question limiting beliefs, broaden perspective and strengthen your personal resilience, so that you can develop new coping strategies and move with greater flexibility in response to life’s demands.",
       ],

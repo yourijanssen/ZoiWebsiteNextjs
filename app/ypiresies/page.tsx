@@ -52,22 +52,33 @@ export default async function ServicesPage({ searchParams }: ServicesPageProps) 
           <div className="services-grid">
             {localizedServices.map((service) => (
               <article className="service-card" key={service.slug}>
-                <div
-                  className={`service-media service-media-${service.key}`}
-                  aria-hidden="true"
-                />
-                <div className="service-card-content">
-                  <h2>{service.title}</h2>
-                  <p>{service.summary}</p>
-                  {service.hasDetailPage !== false ? (
-                    <Link
-                      className="text-link"
-                      href={`/ypiresies/${service.slug}${langQuery}`}
-                    >
-                      {t.servicesHeading.link}
-                    </Link>
-                  ) : null}
-                </div>
+                {service.hasDetailPage !== false ? (
+                  <Link
+                    className="service-card-link"
+                    href={`/ypiresies/${service.slug}${langQuery}`}
+                  >
+                    <div
+                      className={`service-media service-media-${service.key}`}
+                      aria-hidden="true"
+                    />
+                    <div className="service-card-content">
+                      <h2>{service.title}</h2>
+                      <p>{service.summary}</p>
+                      <span className="text-link">{t.servicesHeading.link}</span>
+                    </div>
+                  </Link>
+                ) : (
+                  <>
+                    <div
+                      className={`service-media service-media-${service.key}`}
+                      aria-hidden="true"
+                    />
+                    <div className="service-card-content">
+                      <h2>{service.title}</h2>
+                      <p>{service.summary}</p>
+                    </div>
+                  </>
+                )}
               </article>
             ))}
           </div>
