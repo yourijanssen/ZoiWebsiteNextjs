@@ -2401,7 +2401,7 @@ body::after,
 }
 
 .services-directory .service-media-individual {
-  background-size: auto, contain;
+  background-size: auto, cover;
 }
 
 .services-directory .service-media-adolescent {
