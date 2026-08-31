@@ -2389,10 +2389,10 @@ body::after,
   flex: 0 0 auto;
   min-height: 0;
   height: auto;
-  aspect-ratio: 3 / 2;
-  margin: 0;
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-  border-bottom: 1px solid #d8d2c6;
+  aspect-ratio: 16 / 9;
+  margin: clamp(0.7rem, 1.4vw, 1rem) clamp(0.7rem, 1.4vw, 1rem) 0;
+  border-radius: var(--radius-sm);
+  border: 1px solid #d8d2c6;
 }
 
 /* Preserve the original proportions and colours of each therapy image. */
@@ -2402,21 +2402,37 @@ body::after,
 
 .services-directory .service-media-individual {
   background-size: auto, cover;
+  background-position: center, center bottom;
+  margin: 0;
+  border: 0;
+  border-bottom: 1px solid #d8d2c6;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 }
 
 .services-directory .service-media-adolescent {
   background-size: cover;
+  background-position: center 85%;
 }
 
 .services-directory .service-media-parentCounseling {
-  background-size: contain;
+  background-size: cover;
+  background-position: center top;
+}
+
+.services-directory .service-media-adolescent,
+.services-directory .service-media-parentCounseling {
+  margin: 0;
+  border: 0;
+  border-bottom: 1px solid #d8d2c6;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 }
 
 .services-directory .service-card h2,
 .services-directory .service-card h3 {
   margin: 0 0 0.85rem;
   color: var(--text);
-  font-size: clamp(1.45rem, 2vw, 1.85rem);
+  font-size: clamp(1.55rem, 2.2vw, 2rem);
+  font-weight: 700;
   line-height: 1.2;
 }
 
