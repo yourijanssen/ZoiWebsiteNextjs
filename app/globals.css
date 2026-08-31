@@ -2389,6 +2389,7 @@ body::after,
   flex: 0 0 auto;
   min-height: 0;
   height: auto;
+  aspect-ratio: 3 / 2;
   margin: 0;
   border-radius: var(--radius-lg) var(--radius-lg) 0 0;
   border-bottom: 1px solid #d8d2c6;
@@ -2400,17 +2401,14 @@ body::after,
 }
 
 .services-directory .service-media-individual {
-  aspect-ratio: 1200 / 810;
   background-size: auto, contain;
 }
 
 .services-directory .service-media-adolescent {
-  aspect-ratio: 1;
-  background-size: contain;
+  background-size: cover;
 }
 
 .services-directory .service-media-parentCounseling {
-  aspect-ratio: 3 / 2;
   background-size: contain;
 }
 
