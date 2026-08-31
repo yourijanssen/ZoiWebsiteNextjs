@@ -2411,7 +2411,7 @@ body::after,
 
 .services-directory .service-media-adolescent {
   background-size: cover;
-  background-position: center 85%;
+  background-position: center top;
 }
 
 .services-directory .service-media-parentCounseling {
