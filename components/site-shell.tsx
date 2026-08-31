@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
-import { useState } from "react";
+import { type MouseEvent, useState } from "react";
 import {
   content,
   getDetailServices,
@@ -64,6 +64,11 @@ export function SiteShell({ language, children }: SiteShellProps) {
     }
   };
 
+  // Discourages casual saving of the brand image through the browser context menu.
+  const preventLogoContextMenu = (event: MouseEvent<HTMLImageElement>) => {
+    event.preventDefault();
+  };
+
   const navItemClass = (isCurrent: boolean) =>
     `menu-item${isCurrent ? " current-menu-item" : ""}`;
 
@@ -83,6 +88,8 @@ export function SiteShell({ language, children }: SiteShellProps) {
               width={84}
               height={82}
               aria-hidden="true"
+              draggable={false}
+              onContextMenu={preventLogoContextMenu}
               unoptimized
             />
             <span className="brand-copy">

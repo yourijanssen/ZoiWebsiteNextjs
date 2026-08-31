@@ -248,6 +248,8 @@ a:focus {
   height: auto;
   flex: 0 0 auto;
   object-fit: contain;
+  -webkit-user-drag: none;
+  user-select: none;
 }
 
 .brand-copy {
