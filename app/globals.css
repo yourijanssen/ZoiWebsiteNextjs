@@ -1320,11 +1320,19 @@ a:focus {
 .service-media-individual {
   background:
     linear-gradient(180deg, rgba(250, 248, 239, 0.18), rgba(250, 248, 239, 0.08)),
-    url("/images/individual-therapy-abstract.jpg") center 52% / cover no-repeat;
+    image-set(
+      url("/images/individual-therapy-abstract.webp") type("image/webp") 1x,
+      url("/images/individual-therapy-abstract.jpg") type("image/jpeg") 1x
+    ) center 52% / cover no-repeat;
 }
 
 .service-media-adolescent {
-  background: #d9d4c8 url("/images/adolescent-therapy-painting.jpg") center / cover no-repeat;
+  background:
+    #d9d4c8
+    image-set(
+      url("/images/adolescent-therapy-painting.webp") type("image/webp") 1x,
+      url("/images/adolescent-therapy-painting.jpg") type("image/jpeg") 1x
+    ) center / cover no-repeat;
 }
 
 .service-media-couple {
@@ -1341,6 +1349,11 @@ a:focus {
 
 .service-media-parentCounseling {
   background: #f7f4ee url("/images/family-shadows-textured-surface.webp") center / cover no-repeat;
+  background:
+    #f7f4ee
+    image-set(
+      url("/images/family-shadows-textured-surface-optimized.webp") type("image/webp") 1x
+    ) center / cover no-repeat;
 }
 
 .service-card h3 {
@@ -2120,7 +2133,10 @@ body::after,
   background:
     radial-gradient(circle at 50% 44%, rgba(255, 255, 255, 0.2), transparent 38%),
     linear-gradient(120deg, rgba(35, 56, 67, 0.34), rgba(35, 56, 67, 0.16) 48%, rgba(35, 56, 67, 0.38)),
-    url("/images/ocean-hero.jpg") center / cover no-repeat;
+    image-set(
+      url("/images/ocean-hero.webp") type("image/webp") 1x,
+      url("/images/ocean-hero.jpg") type("image/jpeg") 1x
+    ) center / cover no-repeat;
   filter: saturate(0.86) contrast(1.04);
   opacity: 0.92;
   transform: scale(1.025);
@@ -2372,10 +2388,30 @@ body::after,
 .services-directory .service-media {
   flex: 0 0 auto;
   min-height: 0;
-  height: clamp(10rem, 15vw, 12.5rem);
+  height: auto;
   margin: 0;
   border-radius: var(--radius-lg) var(--radius-lg) 0 0;
   border-bottom: 1px solid #d8d2c6;
+}
+
+/* Preserve the original proportions and colours of each therapy image. */
+.services-directory .service-media::after {
+  display: none;
+}
+
+.services-directory .service-media-individual {
+  aspect-ratio: 1200 / 810;
+  background-size: auto, contain;
+}
+
+.services-directory .service-media-adolescent {
+  aspect-ratio: 1;
+  background-size: contain;
+}
+
+.services-directory .service-media-parentCounseling {
+  aspect-ratio: 3 / 2;
+  background-size: contain;
 }
 
 .services-directory .service-card h2,

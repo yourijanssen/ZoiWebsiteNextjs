@@ -83,7 +83,7 @@ export function SiteShell({ language, children }: SiteShellProps) {
           >
             <Image
               className="brand-mark"
-              src="/images/zoi-pantou-logo.png"
+              src="/images/zoi-pantou-logo@256.png"
               alt=""
               width={84}
               height={82}

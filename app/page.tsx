@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ContactSection } from "@/components/contact-section";
-import { LogoMark } from "@/components/logo-mark";
+import { HomeHeroPreload } from "@/components/home-hero-preload";
 import { SiteShell } from "@/components/site-shell";
 import { TextCarousel } from "@/components/text-carousel";
 import { content, getDetailServices, resolveLanguage } from "@/lib/site-content";
@@ -54,6 +54,7 @@ export default async function Home({ searchParams }: HomePageProps) {
 
   return (
     <SiteShell language={language}>
+      <HomeHeroPreload />
       <main className="site-main container">
         <script
           type="application/ld+json"
@@ -61,7 +62,6 @@ export default async function Home({ searchParams }: HomePageProps) {
         />
         <section className="therapist-hero">
           <div className="hero-copy">
-            <LogoMark className="hero-logo-mark" priority />
             <p className="hero-kicker">{t.hero.kicker}</p>
             <h1>{t.hero.title}</h1>
             <p className="hero-quote-author">{t.hero.attribution}</p>

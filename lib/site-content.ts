@@ -36,8 +36,7 @@ export const content = {
     htmlLang: "el",
     brand: "Ζωή Πάντου",
     brandMark: "ΖΠ",
-    metaTitle:
-      "Ζωή Πάντου | ψυχολόγος και ψυχοθεραπεύτρια online",
+    metaTitle: "Ζωή Πάντου | Ψυχολόγος",
     metaDescription:
       "Ψυχολόγος και ψυχοθεραπεύτρια για online συστημική ψυχοθεραπεία στα ελληνικά σε σταθερό και εμπιστευτικό πλαίσιο.",
     nav: {
