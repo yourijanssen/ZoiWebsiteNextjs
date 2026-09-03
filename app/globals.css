@@ -217,7 +217,7 @@ a:focus {
   flex-shrink: 0;
   margin-top: 4rem;
   position: relative;
-  background: #f0f0ed;
+  background: #fff;
   border-top: 2px solid #111;
   border-bottom: 0;
   color: #000;
@@ -1991,7 +1991,7 @@ body::after,
 }
 
 .site-footer {
-  background: #f0f0ed;
+  background: #fff;
   color: #000;
   border-top: 2px solid #111;
 }
