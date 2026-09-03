@@ -58,8 +58,8 @@ export const content = {
       title: "«Η βάση όλων των ανθρώπινων σχέσεων είναι η επικοινωνία· όμως η επικοινωνία δεν είναι απλώς η ικανότητα να μιλάς ή να κατανοείς λέξεις, αλλά η ικανότητα να συνδέεσαι συναισθηματικά με τον άλλον.»",
       attribution: "—Virginia Satir",
       lead: "Στον ασφαλή χώρο της ψυχοθεραπείας, στόχος μας είναι να χτίσουμε μαζί αυτή την ουσιαστική σύνδεση. Μέσα από τη συστημική ματιά, αναγνωρίζουμε τα μοτίβα που σας δυσκολεύουν και διερευνούμε νέες οπτικές και νοηματοδοτήσεις, δημιουργώντας χώρο για πιο αυθεντικές συνδέσεις στη ζωή σας.",
-      servicesCta: "Ας επικοινωνήσουμε",
-      contactCta: "Ας γνωριστούμε",
+      servicesCta: "Ας γνωριστούμε",
+      contactCta: "Ας επικοινωνήσουμε",
       imagePlaceholder:
         "Online συστημική ψυχοθεραπεία στα ελληνικά με ψυχολόγο και ψυχοθεραπεύτρια.",
     },
@@ -261,8 +261,8 @@ export const content = {
       title: "“The foundation of all human relationships is communication; however, communication is not simply the ability to speak or understand words, but the ability to connect emotionally with another person.”",
       attribution: "—Virginia Satir",
       lead: "Within the safe space of therapy, our goal is to build this meaningful connection together. Through a systemic perspective, we recognize the patterns that create difficulty and explore new viewpoints and meanings, creating space for more authentic connections in your life.",
-      servicesCta: "Let's connect",
-      contactCta: "Let's communicate",
+      servicesCta: "Let's meet",
+      contactCta: "Let's connect",
       imagePlaceholder:
         "Online systemic psychotherapy in Greek with a psychologist and psychotherapist.",
     },

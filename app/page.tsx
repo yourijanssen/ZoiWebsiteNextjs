@@ -67,12 +67,12 @@ export default async function Home({ searchParams }: HomePageProps) {
             <p className="hero-quote-author">{t.hero.attribution}</p>
             <p className="hero-lead">{t.hero.lead}</p>
             <div className="hero-actions">
-              <a className="button" href="#epikoinonia">
+              <Link className="button" href={`/sxetika${langQuery}`}>
                 {t.hero.servicesCta}
-              </a>
+              </Link>
               <Link
                 className="button button-outline"
-                href={`/sxetika${langQuery}`}
+                href="#epikoinonia"
               >
                 {t.hero.contactCta}
               </Link>
