@@ -3170,11 +3170,22 @@ body::after,
   .footer-meta {
     align-items: flex-start;
     flex-direction: column;
-    gap: 0.45rem;
+    gap: 0.65rem;
+  }
+
+  .site-footer {
+    margin-top: 1.5rem;
+  }
+
+  .footer-inner {
+    padding-block: 1rem calc(1rem + env(safe-area-inset-bottom));
   }
 
   .footer-credit {
-    text-align: left;
+    position: static;
+    align-self: flex-end;
+    font-size: 0.78rem;
+    text-align: right;
   }
 
   .menu-toggle {
