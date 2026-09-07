@@ -1764,17 +1764,6 @@ a:focus {
   text-align: right;
 }
 
-.footer-credit-link {
-  color: inherit;
-  text-decoration: underline;
-  text-underline-offset: 0.16em;
-}
-
-.footer-credit-link:hover,
-.footer-credit-link:focus-visible {
-  color: var(--accent-hover);
-}
-
 .privacy-page {
   padding-top: clamp(2.5rem, 6vw, 5rem);
 }
