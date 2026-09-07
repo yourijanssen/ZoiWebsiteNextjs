@@ -51,10 +51,8 @@ export default async function Home({ searchParams }: HomePageProps) {
   const localizedServices = getDetailServices(language);
   const langQuery = `?lang=${language}`;
   const structuredData = buildHomeStructuredData(language);
-  const primaryHeroCtaHref =
-    language === "el" ? "#epikoinonia" : `/sxetika${langQuery}`;
-  const secondaryHeroCtaHref =
-    language === "el" ? `/sxetika${langQuery}` : "#epikoinonia";
+  const primaryHeroCtaHref = `/epikoinonia${langQuery}`;
+  const secondaryHeroCtaHref = `/sxetika${langQuery}`;
 
   return (
     <SiteShell language={language}>
@@ -72,10 +70,10 @@ export default async function Home({ searchParams }: HomePageProps) {
             <p className="hero-lead">{t.hero.lead}</p>
             <div className="hero-actions">
               <Link className="button" href={primaryHeroCtaHref}>
-                {t.hero.servicesCta}
+                {t.hero.contactCta}
               </Link>
               <Link className="button button-outline" href={secondaryHeroCtaHref}>
-                {t.hero.contactCta}
+                {t.hero.servicesCta}
               </Link>
             </div>
           </div>
