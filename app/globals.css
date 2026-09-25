@@ -574,6 +574,39 @@ a:focus {
   opacity: 0.18;
 }
 
+.not-found-page {
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - var(--header-offset) - 11rem);
+  padding-block: clamp(3rem, 9vw, 7rem);
+}
+
+.not-found-card {
+  width: min(100%, 42rem);
+  margin-inline: auto;
+  padding: clamp(2.25rem, 6vw, 4.5rem);
+  text-align: center;
+}
+
+.not-found-code {
+  margin: 0 0 0.35rem;
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-size: clamp(4.5rem, 14vw, 8rem);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 0.9;
+}
+
+.not-found-card h1 {
+  margin-bottom: 0.7rem;
+}
+
+.not-found-card > p:not(.not-found-code) {
+  max-width: 34rem;
+  margin: 0 auto 1.7rem;
+}
+
 .therapist-hero {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
