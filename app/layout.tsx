@@ -13,7 +13,6 @@ export const metadata: Metadata = {
     default: content.el.metaTitle,
     template: `%s | ${content.el.brand}`,
   },
-  description: content.el.metaDescription,
   alternates: {
     canonical: languageUrls.el,
     languages: {
@@ -23,7 +22,6 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: content.el.metaTitle,
-    description: content.el.metaDescription,
     url: languageUrls.el,
     siteName: content.el.brand,
     locale: "el_GR",
@@ -32,7 +30,6 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary",
     title: content.el.metaTitle,
-    description: content.el.metaDescription,
   },
 };
 

@@ -21,7 +21,6 @@ export async function generateMetadata({
     title: {
       absolute: t.metaTitle,
     },
-    description: t.metaDescription,
     alternates: {
       canonical: languageUrls[language],
       languages: {
@@ -31,7 +30,6 @@ export async function generateMetadata({
     },
     openGraph: {
       title: t.metaTitle,
-      description: t.metaDescription,
       url: languageUrls[language],
       siteName: t.brand,
       locale: language === "el" ? "el_GR" : "en_US",
@@ -40,7 +38,6 @@ export async function generateMetadata({
     twitter: {
       card: "summary",
       title: t.metaTitle,
-      description: t.metaDescription,
     },
   };
 }

@@ -37,8 +37,6 @@ export const content = {
     brand: "Ζωή Πάντου",
     brandMark: "ΖΠ",
     metaTitle: "Ζωή Πάντου | Ψυχολόγος",
-    metaDescription:
-      "Ψυχολόγος και ψυχοθεραπεύτρια για online συστημική ψυχοθεραπεία στα ελληνικά σε σταθερό και εμπιστευτικό πλαίσιο.",
     nav: {
       mainLabel: "Κεντρικό μενού",
       footerLabel: "Μενού υποσέλιδου",
@@ -240,8 +238,6 @@ export const content = {
     brand: "Zoi Pantou",
     brandMark: "ZP",
     metaTitle: "Zoi Pantou | psychologist and psychotherapist online",
-    metaDescription:
-      "Psychologist and psychotherapist for online systemic psychotherapy in Greek within a steady and confidential framework.",
     nav: {
       mainLabel: "Main menu",
       footerLabel: "Footer menu",
