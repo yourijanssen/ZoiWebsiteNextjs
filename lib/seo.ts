@@ -1,6 +1,6 @@
 import { content, type Language, type Service } from "@/lib/site-content";
 
-export const siteUrl = "https://zoi-website-nextjs.vercel.app";
+export const siteUrl = "https://zoipantou.gr";
 
 export const languageUrls: Record<Language, string> = {
   el: `${siteUrl}/?lang=el`,
